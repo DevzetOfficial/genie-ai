@@ -1,4 +1,3 @@
-import { HeroContent } from "@/components/app/shared/hero-content";
 import Layout from "@/components/app/layout/layout";
 import { BrandsMarquee } from "@/components/app/shared/brands";
 import SectionTitle from "@/components/app/shared/title";
@@ -8,16 +7,21 @@ import Statistics from "@/components/app/home/statistics";
 import FingerPrint from "@/components/app/home/fingerprint";
 import FAQ from "@/components/app/shared/faq";
 import Testimonial from "@/components/app/shared/testimonial";
-import {  ComparisonTable } from "@/components/app/home/compareCard";
-
+import { ComparisonTable } from "@/components/app/home/compareCard";
+import Hero from "@/components/app/shared/Hero";
 function HomePage() {
   return (
     <Layout>
       {/* bg-[linear-gradient(270deg,rgba(0,0,0,0.00)_0%,rgba(0,0,0,0.90)_100%)] */}
       <section className="bg-black">
-        <div className="container pb-16">
-          <div className="lg:pt-[100px] lg:pb-[260px] max-w-[902px]">
-            <HeroContent />
+        <div className="container pb-10 md:pb-16">
+          <div className="lg:pt-[100px] pb-8 md:pb-20 lg:pb-[260px] max-w-[902px]">
+            <Hero
+              title={"Smart Sales,<br/>Strategic Marketing."}
+              shortDesc={
+                "Using Al-Driven Operations to Accelerate Business Growth"
+              }
+            />
           </div>
           <BrandsMarquee />
         </div>
@@ -57,7 +61,7 @@ function HomePage() {
         </div>
       </section>
       {/* fingerprint section  */}
-      <section className="pt-20 bg-[#E9EAEC]">
+      <section className="pt-10 md:pt-20 bg-[#E9EAEC]">
         <div className="container">
           <FingerPrint />
         </div>
@@ -74,12 +78,14 @@ function HomePage() {
         <div className="container">
           <div className="space-y-8 text-white text-center mb-20">
             <h3 className="text-5xl font-semibold ">Testimonials</h3>
-            <p className="text-2xl opacity-70">Our features makes AI SDRs a valuable asset for any business.</p>
+            <p className="text-2xl opacity-70">
+              Our features makes AI SDRs a valuable asset for any business.
+            </p>
           </div>
-        <Testimonial/>
+          <Testimonial />
         </div>
       </section>
-  
+
       {/* faq  */}
       <section className="section_gap ">
         <div className="container">

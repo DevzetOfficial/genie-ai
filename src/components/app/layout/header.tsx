@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -6,8 +5,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { AlignLeft } from "lucide-react";
+import { AlignRight, ArrowRight } from "lucide-react";
 import logo from "@/assets/logo-w.png";
+import { Button } from "../shared/frontend-button";
 function Header() {
   return (
     <nav className="bg-black">
@@ -16,7 +16,7 @@ function Header() {
           <a className="text-white" href="#">
             <img src={logo} alt="" />
           </a>
-          <ul className="hidden lg:flex items-center gap-10">
+          <ul className="hidden lg:flex items-center  gap-10">
             <li>
               <a className="text-white" href="#">
                 Features
@@ -43,38 +43,31 @@ function Header() {
 
           <Sheet>
             <SheetTrigger className="lg:hidden">
-              <Button size={"icon"} variant={"ghost"}>
-                <AlignLeft />
-              </Button>
+              <AlignRight color="#ffffff" />
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
+                <SheetTitle className="!text-left">Menu</SheetTitle>
               </SheetHeader>
 
-              <ul className="flex flex-col items-center gap-10">
+              <ul className="flex flex-col items-start gap-5 mt-5">
                 <li>
-                  <a className="text-white" href="#">
-                    Features
-                  </a>
+                  <a href="#">Features</a>
                 </li>
                 <li>
                   {" "}
-                  <a className="text-white" href="#">
-                    Pricing
-                  </a>
+                  <a href="#">Pricing</a>
                 </li>
                 <li>
-                  <a className="text-white" href="#">
-                    Documentation
-                  </a>
+                  <a href="#">Documentation</a>
                 </li>
                 <li>
                   {" "}
-                  <a className="text-white" href="#">
-                    Blog
-                  </a>
+                  <a href="#">Blog</a>
                 </li>
+                <Button size={"sm"} variant={"default"}>
+                  Contact <ArrowRight className="h-8 w-8 shrink-0" />
+                </Button>
               </ul>
             </SheetContent>
           </Sheet>

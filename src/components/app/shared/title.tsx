@@ -1,9 +1,9 @@
 import React from "react";
 
 type SectionTitleProps = {
-  color: string; // The color prop expects a string
-  weight: number; // The weight prop expects a number
-  children: string; // The children prop expects a string
+  color?: string;
+  weight?: number;
+  children?: string;
 };
 
 const SectionTitle: React.FC<SectionTitleProps> = ({
