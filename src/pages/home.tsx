@@ -4,10 +4,11 @@ import { BrandsMarquee } from "@/components/app/shared/brands";
 import SectionTitle from "@/components/app/shared/title";
 import Agent from "@/components/app/home/agent";
 import InteligenceSlider from "@/components/app/home/InteligenceSlider";
-import StatisticsTop from "@/components/app/home/statisticsTop";
 import Statistics from "@/components/app/home/statistics";
 import FingerPrint from "@/components/app/home/fingerprint";
 import FAQ from "@/components/app/shared/faq";
+import Testimonial from "@/components/app/shared/testimonial";
+import {  ComparisonTable } from "@/components/app/home/compareCard";
 
 function HomePage() {
   return (
@@ -61,6 +62,24 @@ function HomePage() {
           <FingerPrint />
         </div>
       </section>
+
+      <section className="section_gap ">
+        <div className="container">
+          <ComparisonTable />
+        </div>
+      </section>
+
+      {/* TestimonialCard  */}
+      <section className="section_gap bg-[rgba(32,34,35,1)]">
+        <div className="container">
+          <div className="space-y-8 text-white text-center mb-20">
+            <h3 className="text-5xl font-semibold ">Testimonials</h3>
+            <p className="text-2xl opacity-70">Our features makes AI SDRs a valuable asset for any business.</p>
+          </div>
+        <Testimonial/>
+        </div>
+      </section>
+  
       {/* faq  */}
       <section className="section_gap ">
         <div className="container">
