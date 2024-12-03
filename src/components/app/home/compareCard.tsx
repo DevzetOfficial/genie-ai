@@ -42,24 +42,23 @@ const otherAIFeatures = [
 export const ComparisonTable: React.FC = () => {
   return (
     <div className="flex flex-wrap justify-center items-end text-base font-medium leading-snug">
-      <div className="flex overflow-hidden flex-col bg-white rounded-[20px] border-l border-[#E9EAEC] min-w-[240px]  w-[252px]">
+      <div className="flex overflow-hidden flex-col rounded-[20px] border-l border-[#E9EAEC] min-w-[240px]  w-[252px]">
         {categories.map((category, index) => (
             <React.Fragment key={index}>
             <div
-              className={`flex gap-3 items-center py-5 pr-4 pl-6 w-full min-h-[60px] bg-white'
-              } max-md:pl-5 max-md:max-w-full`}
+              className="flex gap-3 items-center py-5 pr-4 pl-6 w-full min-h-[60px] bg-white 
+               max-md:pl-5 max-md:max-w-full"
             >
-              <div className="flex-1 shrink self-stretch my-auto basis-0 max-md:max-w-full">
+              <div className="flex-1 shrink self-stretch my-auto basis-0 max-md:max-w-full overflow-hidden">
                 {category}
               </div>
             </div>
             <div
-              className={`w-full border border-solid min-h-[1px] border-[#E9EAEC] max-md:max-w-full`}
+              className="w-full border border-solid  border-[#E9EAEC] max-md:max-w-full"
             />
           </React.Fragment>
           
         ))}
-        <div className="w-full border border-[#E9EAEC] border-solid min-h-[1px]" />
       </div>
 
       <ComparisonColumn
