@@ -88,4 +88,4 @@ const blogs = [
       type: "featured",
     },
   ];
-export {blogs};
+export default {blogs};
