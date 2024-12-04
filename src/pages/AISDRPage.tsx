@@ -9,7 +9,6 @@ import SalesDrive from "@/components/app/sdr_page/SalesDrive";
 import AiDrivenOutreach from "@/components/app/sdr_page/AiDrivenOutreach";
 import RevenueOportunities from "@/components/app/sdr_page/RevenueOportunities";
 import CompareToCallCenter from "@/components/app/sdr_page/CompareToCallCenter";
-
 function AISDRPage() {
   return (
     <Layout>
@@ -66,5 +65,4 @@ function AISDRPage() {
     </Layout>
   );
 }
-
 export default AISDRPage;

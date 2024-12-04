@@ -12,3 +12,9 @@ export type BlogProp = {
   coverImage: string;
   type: "featured" | "top-story";
 };
+
+export type typeRevulationDataProp = {
+  id: number;
+  title: string;
+  description: string;
+};

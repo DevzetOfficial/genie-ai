@@ -3,13 +3,12 @@ import { BrandsMarquee } from "@/components/app/shared/brands";
 import Hero from "@/components/app/shared/Hero";
 import heroImg from "@/assets/phone_representitive.webp";
 import SectionTitle from "@/components/app/shared/title";
-import RevenueOportunities from "@/components/app/sdr_page/RevenueOportunities";
-import CompareToCallCenter from "@/components/app/sdr_page/CompareToCallCenter";
 import SuccessSteps from "@/components/app/phone_representitive_page/SuccessSteps";
 import WhyChooseSonya from "@/components/app/phone_representitive_page/WhyChooseSonya";
 import SalesDrive from "@/components/app/phone_representitive_page/SalesDrive";
 import RealWorldApp from "@/components/app/phone_representitive_page/RealWorldApp";
 import AiDrivenCustomerSupport from "@/components/app/phone_representitive_page/CustomerSupport";
+import AiWorkforceRevulation from "@/components/app/ai-worker-page/AiWorkforceRevulation";
 
 function AIPhoneRepresentPage() {
   return (
@@ -54,19 +53,20 @@ function AIPhoneRepresentPage() {
           <RealWorldApp />
         </div>
       </section>
-      <section className="section_gap bg-[#E1E9FE]">
+      <section className="section_gap">
         <div className="container">
-          <RevenueOportunities />
+          <RealWorldApp />
         </div>
       </section>
-      <section className="section_gap ">
-        <div className="container px-20">
-          <CompareToCallCenter />
-        </div>
-      </section>
+
       <section className="section_gap bg-[#E1E9FE]">
         <div className="container">
           <AiDrivenCustomerSupport />
+        </div>
+      </section>
+      <section className="section_gap">
+        <div className="container">
+          <AiWorkforceRevulation />
         </div>
       </section>
     </Layout>

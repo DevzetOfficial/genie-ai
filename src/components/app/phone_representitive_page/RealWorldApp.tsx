@@ -37,7 +37,7 @@ const realWorldAppInfo = [
 function RealWorldApp() {
   return (
     <>
-      <div className="mb-6 md:mb-10 text-center lg:mb-14 space-y-2 md:space-y-8 max-w-[638px] mx-auto">
+      <div className="mb-6 md:mb-10 text-center lg:mb-14 space-y-2 md:space-y-8 max-w-screen-md mx-auto">
         <SectionTitle weight={600}>Real-World Applications</SectionTitle>
         <p className="text-lg text-[#010609B2]">
           From E-commerce to Financial Services
