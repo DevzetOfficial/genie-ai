@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Sheet,
   SheetContent,
@@ -6,44 +7,50 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignRight, ArrowRight } from "lucide-react";
-import logo from "@/assets/logo-w.png";
+import logow from "@/assets/logo-w.png";
+import logob from "@/assets/logo-black.svg";
 import { Button } from "../shared/frontend-button";
-function Header() {
+import { Link, useLocation } from "react-router-dom";
+
+const Header: React.FC = () => {
+  const location = useLocation();
+
+  const isWhiteNavbar: boolean = location.pathname.includes("blog");
+
   return (
-    <nav className="bg-black">
+    <nav
+      className={`${
+        isWhiteNavbar ? "bg-white text-black" : "bg-black text-white"
+      }`}
+    >
       <div className="container py-8">
         <div className="flex items-center justify-between">
-          <a className="text-white" href="#">
-            <img src={logo} alt="" />
-          </a>
-          <ul className="hidden lg:flex items-center  gap-10">
+          <Link to="/">
+            {isWhiteNavbar ? (
+              <img src={logob} alt="Logo Black" />
+            ) : (
+              <img src={logow} alt="Logo White" />
+            )}
+          </Link>
+
+          <ul className="hidden lg:flex items-center gap-10">
             <li>
-              <a className="text-white" href="#">
-                Features
-              </a>
+              <Link to="/">Features</Link>
             </li>
             <li>
-              {" "}
-              <a className="text-white" href="#">
-                Pricing
-              </a>
+              <Link to="/">Pricing</Link>
             </li>
             <li>
-              <a className="text-white" href="#">
-                Documentation
-              </a>
+              <Link to="/">Documentation</Link>
             </li>
             <li>
-              {" "}
-              <a className="text-white" href="#">
-                Blog
-              </a>
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
 
           <Sheet>
             <SheetTrigger className="lg:hidden">
-              <AlignRight color="#ffffff" />
+              <AlignRight color={isWhiteNavbar ? "#000000" : "#ffffff"} />
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
@@ -52,28 +59,31 @@ function Header() {
 
               <ul className="flex flex-col items-start gap-5 mt-5">
                 <li>
-                  <a href="#">Features</a>
+                  <Link to="/">Features</Link>
                 </li>
                 <li>
-                  {" "}
-                  <a href="#">Pricing</a>
+                  <Link to="/">Pricing</Link>
                 </li>
                 <li>
-                  <a href="#">Documentation</a>
+                  <Link to="/">Documentation</Link>
                 </li>
                 <li>
-                  {" "}
-                  <a href="#">Blog</a>
+                  <Link to="/blog">Blog</Link>
                 </li>
-                <Button size={"sm"} variant={"default"}>
+                <Button size="sm" variant="default">
                   Contact <ArrowRight className="h-8 w-8 shrink-0" />
                 </Button>
               </ul>
             </SheetContent>
           </Sheet>
 
+          {/* Contact Button */}
           <a
-            className="hidden lg:inline-flex items-center hover:text-primary text-white py-5 px-6 text-base leading-[22px] font-medium  rounded-[32px] h-12 border hover:bg-[#030303] border-[rgba(255,255,255,0.20)] transition-all duration-300"
+            className={`hidden lg:inline-flex items-center hover:text-primary ${
+              isWhiteNavbar
+                ? "bg-[#010609]"
+                : "bg-transparent border-[rgba(255,255,255,0.20)]"
+            } text-white py-5 px-6 text-base leading-[22px] font-medium rounded-[32px] h-12 border hover:bg-[#030303] transition-all duration-300`}
             href="#"
           >
             Contact
@@ -82,6 +92,6 @@ function Header() {
       </div>
     </nav>
   );
-}
+};
 
 export default Header;

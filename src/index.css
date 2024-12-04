@@ -81,7 +81,10 @@
   .section_gap {
     @apply py-10 md:py-14 lg:py-[120px];
   }
-  .titleTwo{
-    @apply text-2xl md:text-3xl lg:text-[40px] text-[#010609] font-semibold leading-snug duration-200 transition-all
+  .titleTwo {
+    @apply text-xl md:text-3xl lg:text-[40px] text-[#010609] font-semibold leading-snug duration-200 transition-all;
+  }
+  .titleThree {
+    @apply text-xl md:text-2xl font-medium text-[#010609];
   }
 }
