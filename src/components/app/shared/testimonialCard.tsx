@@ -43,7 +43,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       ) : (
         <div className=" size-full flex flex-col justify-between gap-12">
           {review && (
-            <p className="text-2xl font-semibold text-[rgba(0,0,0,0.70)]">
+            <p className="text-xl md:text-2xl font-semibold text-[rgba(0,0,0,0.70)]">
               “{review}”
             </p>
           )}

@@ -2,11 +2,11 @@ import KeyFeature from "./keyfeatures";
 import SectionTitle from "./title";
 
 interface WhyChooseProps {
-  title: string;
-  details: string;
-  image: string;
-  feature: boolean;
-  featureDatas: { id: number; featureData: string }[];
+  title?: string;
+  details?: string;
+  image?: string;
+  feature?: boolean;
+  featureDatas?: { id: number; featureData: string }[];
 }
 
 const WhyChoose: React.FC<WhyChooseProps> = ({
@@ -28,8 +28,8 @@ const WhyChoose: React.FC<WhyChooseProps> = ({
           {feature && (
             <span className="text-xl font-semibold ">Key Features</span>
           )}
-          <ul className="space-y-6">
-            {featureDatas.map((featureItem) => (
+          <ul className="space-y-3 md:space-y-5">
+            {featureDatas?.map((featureItem) => (
               <KeyFeature key={featureItem.id}>
                 {featureItem.featureData}
               </KeyFeature>

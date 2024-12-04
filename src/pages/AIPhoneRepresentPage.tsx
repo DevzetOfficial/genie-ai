@@ -1,14 +1,15 @@
 import Layout from "@/components/app/layout/layout";
 import { BrandsMarquee } from "@/components/app/shared/brands";
 import Hero from "@/components/app/shared/Hero";
-import heroImg from "@/assets/sdrimg.webp";
+import heroImg from "@/assets/phone_representitive.webp";
 import SectionTitle from "@/components/app/shared/title";
-import SuccessSteps from "@/components/app/sdr_page/SuccessSteps";
-import WhyChooseFrank from "@/components/app/sdr_page/WhyChoseFrank";
-import SalesDrive from "@/components/app/sdr_page/SalesDrive";
-import AiDrivenOutreach from "@/components/app/sdr_page/AiDrivenOutreach";
 import RevenueOportunities from "@/components/app/sdr_page/RevenueOportunities";
 import CompareToCallCenter from "@/components/app/sdr_page/CompareToCallCenter";
+import SuccessSteps from "@/components/app/phone_representitive_page/SuccessSteps";
+import WhyChooseSonya from "@/components/app/phone_representitive_page/WhyChooseSonya";
+import SalesDrive from "@/components/app/phone_representitive_page/SalesDrive";
+import RealWorldApp from "@/components/app/phone_representitive_page/RealWorldApp";
+import AiDrivenCustomerSupport from "@/components/app/phone_representitive_page/CustomerSupport";
 
 function AIPhoneRepresentPage() {
   return (
@@ -18,7 +19,8 @@ function AIPhoneRepresentPage() {
           <div className="py-10 md:py-14">
             <Hero
               heroImage={heroImg}
-              title={"Frank - <br/> Genie  Al SDR"}
+              title={"Sonya - <br/>Genie Al Phone Representative"}
+              titleClass={"xl:text-[80px]"}
               shortDesc={
                 "Put Your Sales on Autopilot. Boost Engagement, Reach More Leads, and Close Deals- All with Genie."
               }
@@ -39,7 +41,7 @@ function AIPhoneRepresentPage() {
       </section>
       <section className="section_gap bg-[#E1E9FE]">
         <div className="container">
-          <WhyChooseFrank />
+          <WhyChooseSonya />
         </div>
       </section>
       <section className="bg-[#00224D] section_gap">
@@ -49,7 +51,7 @@ function AIPhoneRepresentPage() {
       </section>
       <section className="section_gap">
         <div className="container">
-          <AiDrivenOutreach />
+          <RealWorldApp />
         </div>
       </section>
       <section className="section_gap bg-[#E1E9FE]">
@@ -60,6 +62,11 @@ function AIPhoneRepresentPage() {
       <section className="section_gap ">
         <div className="container px-20">
           <CompareToCallCenter />
+        </div>
+      </section>
+      <section className="section_gap bg-[#E1E9FE]">
+        <div className="container">
+          <AiDrivenCustomerSupport />
         </div>
       </section>
     </Layout>

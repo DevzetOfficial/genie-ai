@@ -9,10 +9,12 @@ function InteligenceCard({
 }) {
   return (
     <a href="">
-      <div className="rounded-2xl aspect-[416/320] overflow-hidden mb-8">
+      <div className="rounded-2xl aspect-[416/320] overflow-hidden mb-4 md:mb-8">
         <img className="size-full object-cover" src={img} alt="" />
       </div>
-      <h4 className="text-2xl font-semibold mb-4 text-black">{title}</h4>
+      <h4 className="text-2xl font-semibold mb-2 md:mb-4 text-black">
+        {title}
+      </h4>
       <p className="text-[rgba(0,0,0,0.70)]">{shortDesc}</p>
     </a>
   );

@@ -4,6 +4,7 @@ import inteligenceOne from "@/assets/inteligence-1.png";
 import inteligenceTwo from "@/assets/inteligence-2.png";
 import inteligenceThree from "@/assets/inteligence-3.png";
 import IntelligenceCard from "./InteligenceCard";
+import { Autoplay } from "swiper/modules";
 
 const inteligences = [
   {
@@ -49,6 +50,11 @@ function InteligenceSlider() {
     <Swiper
       spaceBetween={20}
       loop={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      modules={[Autoplay]}
       slidesPerView={1}
       centeredSlides={true}
       onSlideChange={() => console.log("slide change")}
@@ -58,9 +64,6 @@ function InteligenceSlider() {
           slidesPerView: 2,
         },
         768: {
-          slidesPerView: 2.5,
-        },
-        1028: {
           slidesPerView: 3,
         },
         1224: {

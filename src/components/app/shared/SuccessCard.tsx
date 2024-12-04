@@ -18,7 +18,7 @@ const SuccessCard: React.FC<SuccessCardProps> = ({
   return (
     <div
       className={cn(
-        `overflow-hidden flex-col p-4 lg:px-8 lg:pt-8 lg:pb-10 rounded-2xl border border-white/20 group`,
+        `overflow-hidden flex-col rounded-2xl border border-white/20 group p-6 md:p-8`,
         className
       )}
       aria-label="Email targeting features"
@@ -34,8 +34,8 @@ const SuccessCard: React.FC<SuccessCardProps> = ({
       >
         <img className="size-6" src={icon} />
       </div>
-      <div className="flex flex-col gap-5 mt-7 w-full">
-        <h2 className="text-3xl font-semibold leading-tight text-[#010609]">
+      <div className="flex flex-col gap-5 mt-4 md:mt-7 w-full">
+        <h2 className=" text-2xl md:text-3xl font-semibold leading-tight text-[#010609]">
           {title}
         </h2>
         <p className="text-xl leading-normal text-[#010609B2] text-opacity-70">

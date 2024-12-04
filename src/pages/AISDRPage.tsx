@@ -15,10 +15,11 @@ function AISDRPage() {
     <Layout>
       <section className="bg-black">
         <div className="container pb-10 md:pb-16">
-          <div className="py-10 md:py-14">
+          <div className="py-5 md:py-14">
             <Hero
               heroImage={heroImg}
               title={"Frank - <br/> Genie  Al SDR"}
+              titleClass={"xl:text-[80px]"}
               shortDesc={
                 "Put Your Sales on Autopilot. Boost Engagement, Reach More Leads, and Close Deals- All with Genie."
               }
@@ -29,7 +30,7 @@ function AISDRPage() {
       </section>
       <section className="section_gap">
         <div className="container">
-          <div className="max-w-[964px] mx-auto text-center mb-20">
+          <div className="max-w-[964px] mx-auto text-center mb-6 md:mb-20">
             <SectionTitle weight={600}>
               Simplify, Scale, and Succeed
             </SectionTitle>
@@ -58,7 +59,7 @@ function AISDRPage() {
         </div>
       </section>
       <section className="section_gap ">
-        <div className="container px-20">
+        <div className="container lg:px-20">
           <CompareToCallCenter />
         </div>
       </section>

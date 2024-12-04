@@ -53,7 +53,7 @@ const aiDrivenData: aiDrivenData[] = [
 function AiDrivenOutreach() {
   return (
     <>
-      <div className="mb-6 md:mb-10 text-center lg:mb-20 space-y-8 max-w-[638px] mx-auto">
+      <div className="mb-6 md:mb-10 text-center lg:mb-20 space-y-2 md:space-y-8 max-w-[638px] mx-auto">
         <SectionTitle weight={600}>
           Humanly Awesome AI-Driven Outreach
         </SectionTitle>
@@ -61,7 +61,7 @@ function AiDrivenOutreach() {
           Outbound Lead Management: Convert Connections into Opportunities
         </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-4 md:gap-8">
         {aiDrivenData.map((data) => (
           <OutReach
             key={data.id}

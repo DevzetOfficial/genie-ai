@@ -13,7 +13,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
 }) => {
   return (
     <h1
-      className="text-3xl md:text-5xl lg:text-[64px]"
+      className="text-3xl md:text-5xl xl:text-[64px]"
       style={{ color, fontWeight: weight }}
     >
       {children}

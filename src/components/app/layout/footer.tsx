@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
   return (
     <section className="bg-black">
-      <footer className="pt-28 md:pt-[222px] font-instrument">
+      <footer className="pt-20 md:pt-[222px] font-instrument">
         <div className="container">
           <div className="grid md:grid-cols-3 lg:grid-cols-[5fr,2fr,2fr,2fr,1fr] gap-8 md:gap-4">
             <div>

@@ -1,13 +1,13 @@
-import Header from "./Header";
-import Footer from "./Footer";
 import CTA from "../shared/cta";
+import Footer from "./footer";
+import Header from "./header";
 
 function Layout({ children }) {
   return (
     <>
       <Header />
       {children}
-      <CTA/>
+      <CTA />
       <Footer />
     </>
   );

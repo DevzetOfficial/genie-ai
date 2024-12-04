@@ -51,7 +51,7 @@ const SalesDrive: React.FC = () => {
           How Genie Drives Your Sales
         </SectionTitle>
       </div>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-5 lg:gap-8">
         {salesDriveData.map((data) => (
           <SingleSaleDrive
             key={data.id}

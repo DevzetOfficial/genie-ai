@@ -27,8 +27,8 @@ function HomePage() {
         </div>
       </section>
       <section className="section_gap">
-        <div className="container flex flex-col gap-16">
-          <div className="max-w-[662px] flex flex-col gap-8 text-center mx-auto">
+        <div className="container flex flex-col gap-8 md:gap-16">
+          <div className="max-w-[662px] flex flex-col gap-4 md:gap-8 text-center mx-auto">
             {
               <SectionTitle color={"#010609"} weight={600}>
                 Meet our digital agents
@@ -44,8 +44,8 @@ function HomePage() {
           <Agent />
         </div>
       </section>
-      <section className="section_gap bg-[#E1E9FE] px-4 md:px-0">
-        <div className="max-w-[660px] mx-auto mb-16 text-center">
+      <section className="section_gap bg-[#E1E9FE] px-4 lg:px-0">
+        <div className="max-w-[660px] mx-auto mb-8 md:mb-16 text-center">
           <SectionTitle color={"#010609"} weight={600}>
             Business Intelligence at Your Fingertips.
           </SectionTitle>
@@ -62,7 +62,6 @@ function HomePage() {
           <FingerPrint />
         </div>
       </section>
-
       <section className="section_gap ">
         <div className="container">
           <ComparisonTable />
@@ -71,9 +70,11 @@ function HomePage() {
 
       <section className="section_gap bg-[rgba(32,34,35,1)]">
         <div className="container">
-          <div className="space-y-8 text-white text-center mb-20">
-            <h3 className="text-5xl font-semibold ">Testimonials</h3>
-            <p className="text-2xl opacity-70">
+          <div className=" space-y-4 md:space-y-8 text-white text-center  mb-10 md:mb-20">
+            <h3 className="text-3xl md:text-5xl font-semibold ">
+              Testimonials
+            </h3>
+            <p className="text-xl md:text-2xl opacity-70">
               Our features makes AI SDRs a valuable asset for any business.
             </p>
           </div>

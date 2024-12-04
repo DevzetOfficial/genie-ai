@@ -1,8 +1,8 @@
-import HomePage from "./pages/home";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AISDRPage from "./pages/AISDRPage";
+import HomePage from "./pages/home";
 import AIPhoneRepresentPage from "./pages/AIPhoneRepresentPage";
 
 function App() {
@@ -11,16 +11,16 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/sdr" element={<AISDRPage />} />
-        <Route
+        {/* <Route
           path="/ai-phone-representitive"
           element={<AIPhoneRepresentPage />}
-        />
+        /> */}
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogDetailPage />} />
-        {/* <Route
+        <Route
           path="/phone-representative"
-          element={<PhoneRepresentativePage />}
-        /> */}
+          element={<AIPhoneRepresentPage />}
+        />
         {/* <Route path="/worker" element={<WorkerPage />} /> */}
       </Routes>
     </Router>

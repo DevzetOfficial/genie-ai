@@ -50,7 +50,7 @@ function SuccessSteps() {
           title={step.title}
           shortDetails={step.shortDetails}
           icon={step.icon}
-          className={step.id > 3 ? "col-span-3" : "col-span-2"}
+          className={step.id > 3 ? "lg:col-span-3" : "lg:col-span-2"}
         />
       ))}
     </div>
