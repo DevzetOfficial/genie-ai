@@ -8,6 +8,7 @@ import WhyChooseFrank from "@/components/app/sdr_page/WhyChoseFrank";
 import SalesDrive from "@/components/app/sdr_page/SalesDrive";
 import AiDrivenOutreach from "@/components/app/sdr_page/AiDrivenOutreach";
 import RevenueOportunities from "@/components/app/sdr_page/RevenueOportunities";
+import CompareToCallCenter from "@/components/app/sdr_page/CompareToCallCenter";
 
 function SDRPage() {
   return (
@@ -54,6 +55,11 @@ function SDRPage() {
       <section className="section_gap bg-[#E1E9FE]">
         <div className="container">
           <RevenueOportunities />
+        </div>
+      </section>
+      <section className="section_gap ">
+        <div className="container px-20">
+          <CompareToCallCenter />
         </div>
       </section>
     </Layout>
