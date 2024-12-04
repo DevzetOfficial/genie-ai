@@ -35,7 +35,7 @@ function Agent() {
   const navigate = useNavigate();
 
   const handleNavigation = (route: string) => {
-    navigate(route); // Navigate to the specific route
+    navigate(route);
   };
 
   return (

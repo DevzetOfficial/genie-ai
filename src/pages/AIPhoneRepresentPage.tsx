@@ -10,7 +10,7 @@ import AiDrivenOutreach from "@/components/app/sdr_page/AiDrivenOutreach";
 import RevenueOportunities from "@/components/app/sdr_page/RevenueOportunities";
 import CompareToCallCenter from "@/components/app/sdr_page/CompareToCallCenter";
 
-function SDRPage() {
+function AIPhoneRepresentPage() {
   return (
     <Layout>
       <section className="bg-black">
@@ -65,5 +65,4 @@ function SDRPage() {
     </Layout>
   );
 }
-
-export default SDRPage;
+export default AIPhoneRepresentPage;

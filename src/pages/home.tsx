@@ -26,7 +26,6 @@ function HomePage() {
           <BrandsMarquee />
         </div>
       </section>
-      {/* agents section  */}
       <section className="section_gap">
         <div className="container flex flex-col gap-16">
           <div className="max-w-[662px] flex flex-col gap-8 text-center mx-auto">
@@ -45,7 +44,6 @@ function HomePage() {
           <Agent />
         </div>
       </section>
-      {/* business Intelligence setion  */}
       <section className="section_gap bg-[#E1E9FE] px-4 md:px-0">
         <div className="max-w-[660px] mx-auto mb-16 text-center">
           <SectionTitle color={"#010609"} weight={600}>
@@ -54,13 +52,11 @@ function HomePage() {
         </div>
         <InteligenceSlider />
       </section>
-      {/* statistics  */}
       <section className="section_gap bg-[#1D2427]">
         <div className="container">
           <Statistics />
         </div>
       </section>
-      {/* fingerprint section  */}
       <section className="pt-10 md:pt-20 bg-[#E9EAEC]">
         <div className="container">
           <FingerPrint />
@@ -73,7 +69,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* TestimonialCard  */}
       <section className="section_gap bg-[rgba(32,34,35,1)]">
         <div className="container">
           <div className="space-y-8 text-white text-center mb-20">
@@ -86,7 +81,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* faq  */}
       <section className="section_gap ">
         <div className="container">
           <div className="max-w-[864px] mx-auto">
