@@ -1,25 +1,65 @@
-import featureBlog from "@/assets/blog-1.webp"
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function Blog() {
-    return (
-        <div>
-            <div className='mb-5 aspect-[640/420] rounded-3xl overflow-hidden '>
-                <img className="size-full object-cover" src={featureBlog} alt="blog cover picture" />
-            </div>
-            <div className='flex items-center gap-2 mb-2'>
-                <span className='px-3 py-1 border text-[#010609] border-[#9EA3AE] text-xs rounded-[40px]'>Tech</span>
-            </div>
-            <a href="#" className='titleTwo  mb-2  hover:text-primary'>How to build a loyal community online and offline</a>
-            <p className='mb-4 text-[#010609B2]'>The United States said for the first time on Wednesday that it had seen evidence that North Korea has sent 3,000 troops to Russia for possible deployment in Ukraine, a move that could mark a significant escalation in Russia's war against its neighbor.</p>
-            <div className='flex items-center gap-2'>
-                <span className='text-base text-[#9FA4AD]'>10 min read</span>
-                <span className='text-base text-[#9FA4AD] pl-3 relative before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:size-1 before:bg-[#6E6E6E] before:rounded-full'>2 hours ago</span>
-                <span className='text-base text-[#9FA4AD] pl-3 relative before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:size-1 before:bg-[#6E6E6E] before:rounded-full'>Harris Lang</span>
-
-            </div>
-
-        </div>
-    )
+interface BlogProps {
+  title: string;
+  category: string[];
+  description: string;
+  author: string;
+  time: string;
+  readingTime: string;
+  coverImage: string;
+  id: string; // Unique identifier for navigation
 }
 
-export default Blog
+const Blog: React.FC<BlogProps> = ({
+  title,
+  category,
+  description,
+  author,
+  time,
+  readingTime,
+  coverImage,
+  id,
+}) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate(`/blog/${id}`); // Navigate to blog details page
+  };
+
+  return (
+    <div onClick={handleNavigation} className="cursor-pointer">
+      <div className="mb-5 aspect-[640/420] rounded-3xl overflow-hidden">
+        <img
+          className="w-full h-full object-cover"
+          src={coverImage}
+          alt={`${title} cover`}
+        />
+      </div>
+      <div className="flex items-center gap-2 mb-2">
+        {category.map((cat, index) => (
+          <span
+            key={index}
+            className="px-3 py-1 border text-[#010609] border-[#9EA3AE] text-xs rounded-[40px]"
+          >
+            {cat}
+          </span>
+        ))}
+      </div>
+      <h3 className="titleTwo mb-2 hover:text-primary">{title}</h3>
+      <p className="mb-4 text-[#010609B2]">{description}</p>
+      <div className="flex items-center gap-2 text-base text-[#9FA4AD]">
+        <span>{readingTime}</span>
+        <span className="pl-3 relative before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-[#6E6E6E] before:rounded-full">
+          {time}
+        </span>
+        <span className="pl-3 relative before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-[#6E6E6E] before:rounded-full">
+          {author}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;

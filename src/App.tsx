@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/sdr" element={<SDRPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
         {/* <Route
           path="/phone-representative"
           element={<PhoneRepresentativePage />}

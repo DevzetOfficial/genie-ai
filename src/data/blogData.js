@@ -1,4 +1,4 @@
-const blogs = [
+export const blogs = [
     {
       title: "How to build a loyal community online and offline",
       category: ["Tech", "Community"],
@@ -88,4 +88,4 @@ const blogs = [
       type: "featured",
     },
   ];
-export default {blogs};
+
