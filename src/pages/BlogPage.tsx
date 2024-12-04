@@ -1,6 +1,6 @@
 import React from "react";
-import { blogs } from "./data/blogs";
-import Blog from "./components/Blog";
+import { blogs } from "@/data/blogData"; // Ensure correct path to your data file
+import Blog from "@/components/Blog";
 
 const BlogPage: React.FC = () => {
   return (
