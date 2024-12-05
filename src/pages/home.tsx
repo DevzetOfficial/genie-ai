@@ -63,7 +63,10 @@ function HomePage() {
         </div>
       </section>
       <section className="section_gap ">
-        <div className="container">
+        <div className="container ">
+          <div className="text-center mb-16">
+            <SectionTitle weight={600}>Genie AI VS Other AI</SectionTitle>
+          </div>
           <ComparisonTable />
         </div>
       </section>
