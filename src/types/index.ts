@@ -18,3 +18,11 @@ export type typeRevulationDataProp = {
   title: string;
   description: string;
 };
+
+export type comparisonDataType={
+  id:number;
+  category:string;
+  genieFeature:string;
+  otherAIFeature:string;
+  }
+  

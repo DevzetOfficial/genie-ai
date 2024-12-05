@@ -7,7 +7,7 @@ import Statistics from "@/components/app/home/statistics";
 import FingerPrint from "@/components/app/home/fingerprint";
 import FAQ from "@/components/app/shared/faq";
 import Testimonial from "@/components/app/shared/testimonial";
-import { ComparisonTable } from "@/components/app/home/compareCard";
+import { ComparisonTable } from "@/components/app/home/ComparisonTable";
 import Hero from "@/components/app/shared/Hero";
 function HomePage() {
   return (
@@ -63,9 +63,11 @@ function HomePage() {
         </div>
       </section>
       <section className="section_gap ">
-        <div className="container ">
-          <div className="text-center mb-16">
-            <SectionTitle weight={600}>Genie AI VS Other AI</SectionTitle>
+        <div className="container">
+          <div className=" space-y-4 md:space-y-8  text-center  mb-10 md:mb-20">
+            <h3 className="text-3xl md:text-5xl font-semibold ">
+              Genie VS Other AI
+            </h3>
           </div>
           <ComparisonTable />
         </div>
