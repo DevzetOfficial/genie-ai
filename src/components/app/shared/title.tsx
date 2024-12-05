@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import React from "react";
-
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 type SectionTitleProps = {
   color?: string;
   weight?: number;
@@ -14,13 +14,23 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   children,
   className,
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   return (
-    <h1
-      className={cn(`text-3xl md:text-5xl xl:text-[64px]`, className)}
+    <motion.h1
+      ref={ref}
+      className={cn(
+        `text-3xl md:text-5xl xl:text-[64px] duration-700  ${
+          isInView
+            ? "opacity-100 translate-y-0 rotate-0"
+            : "translate-y-[100px] opacity-0"
+        }`,
+        className
+      )}
       style={{ color, fontWeight: weight }}
     >
       {children}
-    </h1>
+    </motion.h1>
   );
 };
 

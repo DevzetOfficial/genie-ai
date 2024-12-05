@@ -1,13 +1,12 @@
 import { FC } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./frontend-button";
-import footerImg from "@/assets/footer-img.png";
+import CtaVideo from "@/assets/videos/cta-video.mp4";
 
 const CTA: FC = () => {
   return (
     <div className="container relative -bottom-10 md:-bottom-20">
       <div className="bg-primary grid lg:grid-cols-2 items-center gap-4 md:gap-8 p-4 md:p-6 rounded-3xl">
-        {/* Video Section */}
         <div className=" lg:px-20">
           <h3 className="text-3xl md:text-[40px] font-semibold text-white mb-4 md:mb-8">
             Revolutionize Your <br /> Sales Process?
@@ -22,10 +21,17 @@ const CTA: FC = () => {
           </Button>
         </div>
 
-        {/* Image Section */}
         <div>
-          <div className="aspect-[616/402] lg:ml-auto max-w-[616px]">
-            <img className="size-full" src={footerImg} alt="footer top image" />
+          <div className="aspect-[616/402] lg:ml-auto max-w-[616px] relative overflow-hidden rounded-3xl">
+            <video
+              id="ctaVideo"
+              className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2"
+              autoPlay
+              loop
+              muted
+            >
+              <source src={CtaVideo} type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>

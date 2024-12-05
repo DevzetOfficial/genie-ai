@@ -2,6 +2,24 @@ import { agentData } from "@/data";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SectionTitle from "../shared/title";
+import { motion } from "framer-motion";
+import ShortDesc from "../shared/short-details";
+import { cn } from "@/lib/utils";
+import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.2 * index,
+    },
+  }),
+};
 
 function Agent() {
   return (
@@ -11,23 +29,28 @@ function Agent() {
           <SectionTitle color={"#010609"} weight={600}>
             Meet our digital agents
           </SectionTitle>
-
-          <p className="text-lg text-black/70">
-            Repetitive administrative tasks eat up nearly a third of employee
-            time, limiting their focus on strategic goals. These bottlenecks
-            drain resources, stall growth, and pull your team away from
-            high-impact initiatives.
-          </p>
+          <ShortDesc
+            text={
+              "Repetitive administrative tasks eat up nearly a third of employee time, limiting their focus on strategic goals. These bottlenecks  drain resources, stall growth, and pull your team away from high-impact initiatives."
+            }
+          />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {agentData.map((agent) => (
-            <div
+          {agentData.map((agent, index) => (
+            <motion.div
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
               key={agent.id}
               className="flex flex-col group rounded-none"
               role="article"
             >
-              <div className="bg-[#EDF0F9] overflow-hidden aspect-[416/520] rounded-2xl md:rounded-[32px]">
+              <div className="bg-[#EDF0F9] overflow-hidden aspect-[416/520] rounded-2xl md:rounded-[32px] duration-500">
                 <img
                   loading="lazy"
                   src={agent.agentImg}
@@ -40,12 +63,18 @@ function Agent() {
                   <h2 className="self-stretch my-auto text-[32px] text-zinc-950">
                     {agent.name}
                   </h2>
-
-                  <div className="px-3 py-2 border border-black rounded-[32px] flex items-center">
-                    <span className="text-gradient leading-none text-xl font-medium">
+                  {/* <div className="px-3 py-2 border border-black rounded-[32px] flex items-center">
+                    <span className="text-gradient leading-none text-xl font-medium"></span>
+                  </div> */}
+                  <AnimatedGradientText className="mr-auto ml-0">
+                    <span
+                      className={cn(
+                        `inline animate-gradient  bg-gradient-to-r from-[#0475ff] via-[#d103c0] to-[#0475ff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+                      )}
+                    >
                       {agent.designation}
                     </span>
-                  </div>
+                  </AnimatedGradientText>
                 </div>
                 <p className="mt-4 md:mt-6 w-full text-base leading-6 text-[rgba(1,6,9,0.70)] pb-4 md:pb-8 border-b border-black border-opacity-20">
                   {agent.about}
@@ -61,7 +90,7 @@ function Agent() {
                   <ArrowRight />
                 </button>
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

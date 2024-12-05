@@ -22,7 +22,7 @@ function FingerPrint() {
           </div>
           <div className="aspect-[752/480] ">
             <img
-              className="size-full object-cover rounded-2xl"
+              className="size-full object-cover rounded-t-2xl"
               src={fingerprint}
               alt="fingerprint security ensure image"
             />

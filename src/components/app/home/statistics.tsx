@@ -1,6 +1,7 @@
 import statisticsImage from "@/assets/statistics.webp";
 import { Button } from "@/components/app/shared/frontend-button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 function Statistics() {
   return (
@@ -9,7 +10,19 @@ function Statistics() {
         <div className="container">
           <div className="max-w-[882px] mx-auto mb-[60px] text-center">
             <div className="space-y-3 flex flex-col items-center justify-center lg:space-y-10 text-white">
-              <span>Did You Know?</span>
+              <motion.span
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                variants={{
+                  visible: { opacity: 1, translateY: 0, rotate: 0 },
+                  hidden: { opacity: 0, translateY: -100, rotate: -15 },
+                }}
+              >
+                Did You Know?
+              </motion.span>
+
               <h2 className="text-2xl md:text-3xl lg:text-[40px] lg:leading-[50px] font-semibold">
                 Companies lose over 70% of potential sales leads due to delays
                 in qualification and follow-up?

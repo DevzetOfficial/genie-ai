@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -14,9 +14,16 @@ import { Link, useLocation } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Header: React.FC = () => {
+  const [scroll, setScroll] = useState<boolean>(false);
   const location = useLocation();
   const isWhiteNavbar: boolean = location.pathname.includes("blog");
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 0);
+    });
+  });
 
   let content;
 
@@ -54,7 +61,7 @@ const Header: React.FC = () => {
   } else {
     content = (
       <>
-        <ul className="flex items-center gap-10">
+        <ul className="flex items-center gap-10 text-white">
           <li>
             <Link to="/">Features</Link>
           </li>
@@ -85,11 +92,11 @@ const Header: React.FC = () => {
 
   return (
     <nav
-      className={`${
-        isWhiteNavbar ? "bg-white text-black" : "bg-black text-white"
-      }`}
+      className={`fixed top-0 left-0 w-full z-10 py-8 duration-300 ${
+        scroll ? "isSticky" : ""
+      } [&.isSticky]:bg-black [&.isSticky]:py-4`}
     >
-      <div className="container py-8">
+      <div className="container">
         <div className="flex items-center justify-between">
           <Link to="/">
             {isWhiteNavbar ? (

@@ -9,37 +9,51 @@ import Hero from "@/components/app/shared/Hero";
 import Inteligence from "@/components/app/home/Inteligence";
 import ComparisonTable from "@/components/app/shared/comparison-table";
 import { homePageComparisonData } from "@/data";
+import HeroVideo from "@/assets/videos/hero-video.mp4";
+import SmoothScroll from "@/components/app/animation/smooth-scrool";
 
 function HomePage() {
   return (
     <Layout>
-      <section className="bg-black ">
-        <div className="container pb-10 md:pb-16">
-          <div className="lg:pt-[100px] pb-8 md:pb-20 lg:pb-[260px] max-w-[902px]">
-            <Hero
-              title={"Smart Sales,<br/>Strategic Marketing."}
-              shortDesc={
-                "Using Al-Driven Operations to Accelerate Business Growth"
-              }
-            />
+      <SmoothScroll>
+        <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
+          <div className="container pb-10 md:pb-16 pt-20 lg:pt-28 ">
+            <div className="py-10 md:pb-14 lg:pb-56 ">
+              <Hero
+                title={"Smart Sales,<br/>Strategic Marketing."}
+                shortDesc={
+                  "Using Al-Driven Operations to Accelerate Business Growth"
+                }
+              />
+            </div>
+            <BrandsMarquee />
           </div>
-          <BrandsMarquee />
-        </div>
-      </section>
 
-      <Agent />
+          <video
+            id="heroVideo"
+            className="z-[-2] absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            autoPlay
+            loop
+            muted
+          >
+            <source src={HeroVideo} type="video/mp4" />
+          </video>
+        </section>
 
-      <Inteligence />
+        <Agent />
 
-      <Statistics />
+        <Inteligence />
 
-      <FingerPrint />
+        <Statistics />
 
-      <ComparisonTable data={homePageComparisonData} />
+        <FingerPrint />
 
-      <Testimonial />
+        <ComparisonTable data={homePageComparisonData} />
 
-      <FAQ />
+        <Testimonial />
+
+        <FAQ />
+      </SmoothScroll>
     </Layout>
   );
 }
