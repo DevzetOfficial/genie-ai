@@ -11,11 +11,77 @@ import logow from "@/assets/logo-w.png";
 import logob from "@/assets/logo-black.svg";
 import { Button } from "../shared/frontend-button";
 import { Link, useLocation } from "react-router-dom";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Header: React.FC = () => {
   const location = useLocation();
-
   const isWhiteNavbar: boolean = location.pathname.includes("blog");
+  const isMobile = useIsMobile();
+
+  let content;
+
+  if (isMobile) {
+    content = (
+      <Sheet>
+        <SheetTrigger>
+          <AlignRight color={isWhiteNavbar ? "#000000" : "#ffffff"} />
+        </SheetTrigger>
+        <SheetContent>
+          <SheetHeader>
+            <SheetTitle className="!text-left">Menu</SheetTitle>
+          </SheetHeader>
+
+          <ul className="flex flex-col items-start gap-5 mt-5">
+            <li>
+              <Link to="/">Features</Link>
+            </li>
+            <li>
+              <Link to="/">Pricing</Link>
+            </li>
+            <li>
+              <Link to="/">Documentation</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <Button size="sm" variant="default">
+              Contact <ArrowRight className="h-8 w-8 shrink-0" />
+            </Button>
+          </ul>
+        </SheetContent>
+      </Sheet>
+    );
+  } else {
+    content = (
+      <>
+        <ul className="flex items-center gap-10">
+          <li>
+            <Link to="/">Features</Link>
+          </li>
+          <li>
+            <Link to="/">Pricing</Link>
+          </li>
+          <li>
+            <Link to="/">Documentation</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+        </ul>
+
+        <Link
+          to={"/"}
+          className={`inline-flex items-center hover:text-primary ${
+            isWhiteNavbar
+              ? "bg-[#010609]"
+              : "bg-transparent border-[rgba(255,255,255,0.20)]"
+          } text-white py-5 px-6 text-base leading-[22px] font-medium rounded-[32px] h-12 border hover:bg-[#030303] transition-all duration-300`}
+        >
+          Contact
+        </Link>
+      </>
+    );
+  }
 
   return (
     <nav
@@ -33,61 +99,7 @@ const Header: React.FC = () => {
             )}
           </Link>
 
-          <ul className="hidden lg:flex items-center gap-10">
-            <li>
-              <Link to="/">Features</Link>
-            </li>
-            <li>
-              <Link to="/">Pricing</Link>
-            </li>
-            <li>
-              <Link to="/">Documentation</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-          </ul>
-
-          <Sheet>
-            <SheetTrigger className="lg:hidden">
-              <AlignRight color={isWhiteNavbar ? "#000000" : "#ffffff"} />
-            </SheetTrigger>
-            <SheetContent>
-              <SheetHeader>
-                <SheetTitle className="!text-left">Menu</SheetTitle>
-              </SheetHeader>
-
-              <ul className="flex flex-col items-start gap-5 mt-5">
-                <li>
-                  <Link to="/">Features</Link>
-                </li>
-                <li>
-                  <Link to="/">Pricing</Link>
-                </li>
-                <li>
-                  <Link to="/">Documentation</Link>
-                </li>
-                <li>
-                  <Link to="/blog">Blog</Link>
-                </li>
-                <Button size="sm" variant="default">
-                  Contact <ArrowRight className="h-8 w-8 shrink-0" />
-                </Button>
-              </ul>
-            </SheetContent>
-          </Sheet>
-
-          {/* Contact Button */}
-          <a
-            className={`hidden lg:inline-flex items-center hover:text-primary ${
-              isWhiteNavbar
-                ? "bg-[#010609]"
-                : "bg-transparent border-[rgba(255,255,255,0.20)]"
-            } text-white py-5 px-6 text-base leading-[22px] font-medium rounded-[32px] h-12 border hover:bg-[#030303] transition-all duration-300`}
-            href="#"
-          >
-            Contact
-          </a>
+          {content}
         </div>
       </div>
     </nav>

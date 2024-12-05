@@ -81,10 +81,28 @@
   .section_gap {
     @apply py-10 md:py-14 lg:py-[120px];
   }
+
   .titleTwo {
     @apply text-xl md:text-3xl lg:text-[40px] text-[#010609] font-semibold leading-snug duration-200 transition-all;
   }
+
   .titleThree {
     @apply text-xl md:text-2xl font-medium text-[#010609];
+  }
+
+  .table-feature-block {
+    @apply py-3 md:py-5 lg:py-6 px-4 group-first:hidden lg:group-first:block group-first:text-center lg:group-[:nth-child(2)]:border-t group-first:border-t relative max-lg:border-b max-lg:group-last:border-b-0;
+  }
+
+  .table-mobile-label {
+    @apply block md:hidden group-first:hidden text-lg mb-1 md:mb-3;
+  }
+
+  .table-feature-icon {
+    @apply group-first:hidden absolute top-1/2 -translate-y-1/2 left-0;
+  }
+
+  .table-content {
+    @apply ml-8 group-first:ml-0;
   }
 }

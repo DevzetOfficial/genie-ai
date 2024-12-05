@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import logo1 from "@/assets/brand-logo-1.png";
 import logo2 from "@/assets/brand-logo-2.png";
 import logo3 from "@/assets/brand-logo-3.png";
