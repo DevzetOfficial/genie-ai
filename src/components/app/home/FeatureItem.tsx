@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FeatureItemProps } from './comparisonColumn';
+import { FeatureItemProps } from '../shared/comparisonColumn';
 
  const FeatureItem: React.FC<FeatureItemProps> = ({ text, iconSrc, isPositive = true }) => {
   return (
