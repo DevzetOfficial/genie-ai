@@ -22,13 +22,13 @@ const Hero: React.FC<HeroProps> = ({
 
   return (
     <div
+      ref={ref}
       className={cn(
         heroImage ? "grid md:grid-cols-2 gap-10 lg:gap-24 items-center" : "grid"
       )}
     >
       <div className={`text-white `}>
         <motion.h1
-          ref={ref}
           className={cn(
             `[&_br]:hidden lg:[&_br]:inline-block text-3xl md:text-5xl lg:text-6xl xl:text-[96px] font-bold  leading-none mb-5 md:mb-10 duration-700 delay-100 ${
               isInView
@@ -65,7 +65,11 @@ const Hero: React.FC<HeroProps> = ({
 
       {heroImage && (
         <motion.div
-          className={`aspect-[640/600] rounded-2xl overflow-hidden order-first md:order-last`}
+          className={`aspect-[640/600] rounded-2xl overflow-hidden order-first md:order-last duration-1000  ${
+            isInView
+              ? "opacity-100 translate-x-0 rotate-0"
+              : "translate-x-[300px] opacity-0"
+          }`}
         >
           <img
             className=" object-cover size-full object-top"

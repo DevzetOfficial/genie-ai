@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { genieFAQ } from "@/data";
 import SectionTitle from "./title";
-
+import { motion } from "framer-motion";
 function FAQ() {
   return (
     <section className="section_gap">
@@ -15,7 +15,17 @@ function FAQ() {
           Frequently Asked Questions
         </SectionTitle>
 
-        <div className="max-w-[864px] mx-auto">
+        <motion.div
+          className="max-w-[864px] mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          variants={{
+            visible: { opacity: 1, translateY: 0 },
+            hidden: { opacity: 0, translateY: 200 },
+          }}
+        >
           <Accordion type="single" collapsible>
             {genieFAQ?.map((item) => (
               <AccordionItem key={item.id} value={`item-${item.id}`}>
@@ -24,7 +34,7 @@ function FAQ() {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

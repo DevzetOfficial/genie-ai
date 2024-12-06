@@ -1,15 +1,37 @@
 import { ComparisonDataProp } from "@/types";
 import checkIcon from "@/assets/check-circle.svg";
 import cancelIcon from "@/assets/x-circle.svg";
-
+import { motion } from "framer-motion";
 const ComparisonTable = ({ data }: { data: ComparisonDataProp }) => {
   return (
     <section className="section_gap ">
       <div className="container lg:px-14">
-        <div className=" space-y-4 md:space-y-8  text-center  mb-10 md:mb-20">
-          <h3 className="text-3xl md:text-5xl font-semibold ">{data.title}</h3>
+        <div className=" space-y-4 md:space-y-8   max-w-4xl text-center mx-auto mb-10 md:mb-20">
+          <motion.h3
+            className="text-3xl md:text-5xl font-semibold"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            variants={{
+              visible: { opacity: 1, translateY: 0 },
+              hidden: { opacity: 0, translateY: 100 },
+            }}
+          >
+            {data.title}
+          </motion.h3>
         </div>
-        <div className=" rounded-2xl max-lg:overflow-hidden border lg:border-none">
+        <motion.div
+          className=" rounded-2xl max-lg:overflow-hidden border lg:border-none"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          variants={{
+            visible: { opacity: 1, translateY: 0 },
+            hidden: { opacity: 0, translateY: 200 },
+          }}
+        >
           {data?.items.map((item) => (
             <div
               key={item.id}
@@ -44,7 +66,7 @@ const ComparisonTable = ({ data }: { data: ComparisonDataProp }) => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -22,8 +22,8 @@ function InteligenceCard({
         transition={{ duration: 0.7 }}
         className="text-2xl font-semibold mb-2 md:mb-4 text-black"
         variants={{
-          visible: { opacity: 1, translateY: 0, rotate: 0 },
-          hidden: { opacity: 0, translateY: -100, rotate: -15 },
+          visible: { opacity: 1, translateY: 0 },
+          hidden: { opacity: 0, translateY: -50 },
         }}
       >
         {title}
@@ -34,8 +34,8 @@ function InteligenceCard({
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
         variants={{
-          visible: { opacity: 1, translateY: 0, rotate: 0 },
-          hidden: { opacity: 0, translateY: -100, rotate: -15 },
+          visible: { opacity: 1, translateY: 0 },
+          hidden: { opacity: 0, translateY: -50 },
         }}
         className={"text-black/70"}
       >

@@ -22,10 +22,12 @@ const BlogDetailPage: React.FC = () => {
 
   return (
     <Layout>
-      <div className="container space-y-14">
-        <BlogDetailsInfo blog={blog} />
-        <ReadNext />
-      </div>
+      <section className="section_gap max-lg:!pt-24">
+        <div className="container space-y-14">
+          <BlogDetailsInfo blog={blog} />
+          <ReadNext />
+        </div>
+      </section>
     </Layout>
   );
 };

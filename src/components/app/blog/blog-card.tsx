@@ -1,8 +1,9 @@
 import { BlogProp } from "@/types";
 import { getImgUrl } from "@/utils/helper";
 import { useNavigate } from "react-router-dom";
-
-const BlogCard = ({ blog }: { blog: BlogProp }) => {
+import { fadeInAnimationSlowVarients } from "@/lib/utils";
+import { motion } from "framer-motion";
+const BlogCard = ({ blog, index }: { blog: BlogProp; index: number }) => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
@@ -10,7 +11,17 @@ const BlogCard = ({ blog }: { blog: BlogProp }) => {
   };
 
   return (
-    <div onClick={handleNavigation} className="cursor-pointer">
+    <motion.div
+      className="cursor-pointer"
+      variants={fadeInAnimationSlowVarients}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+      custom={index}
+      onClick={handleNavigation}
+    >
       <div
         className={` ${
           blog.type === "featured"
@@ -57,7 +68,7 @@ const BlogCard = ({ blog }: { blog: BlogProp }) => {
           {blog.author}
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

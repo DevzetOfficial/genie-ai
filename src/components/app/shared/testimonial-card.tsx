@@ -1,5 +1,20 @@
 import { cn } from "@/lib/utils";
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.2 * index,
+    },
+  }),
+};
 
 interface TestimonialCardProps {
   logo: boolean;
@@ -10,6 +25,7 @@ interface TestimonialCardProps {
   designation?: string;
   bgColor: string;
   className?: string;
+  index: number;
 }
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
   logo,
@@ -20,16 +36,25 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   designation,
   bgColor,
   className,
+  index,
 }) => {
   return (
-    <div
+    <motion.div
       className={cn(
         "rounded-2xl p-4 md:p-6 lg:p-8 min-h-64 md:[&:nth-of-type(3)]:col-span-2 [&:nth-of-type(5)]:order-last md:[&:nth-of-type(5)]:col-span-2 lg:[&:nth-of-type(5)]:order-none",
+
         className
       )}
       style={{
         backgroundColor: bgColor,
       }}
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+      custom={index}
     >
       {logo ? (
         <div className="flex justify-center items-center size-full">
@@ -75,7 +100,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

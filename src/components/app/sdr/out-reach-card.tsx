@@ -11,10 +11,11 @@ const OutReachCard = ({ outreach }: { outreach: AiDrivenProp }) => {
           </h3>
           <p className="text-black/70 font-medium">{outreach.details}</p>
         </div>
-
         <ul className="space-y-2 md:space-y-5">
           {outreach.features.map((text, index) => (
-            <KeyFeature key={index}>{text}</KeyFeature>
+            <KeyFeature key={index} index={index}>
+              {text}
+            </KeyFeature>
           ))}
         </ul>
       </div>

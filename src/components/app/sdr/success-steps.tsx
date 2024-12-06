@@ -51,13 +51,14 @@ function SuccessSteps() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8">
-          {successSteps.map((step) => (
+          {successSteps.map((step, index) => (
             <SuccessCard
               key={step.id}
               bgColor={step.bgColor}
               title={step.title}
               shortDetails={step.shortDetails}
               icon={step.icon}
+              index={index}
               className={step.id > 3 ? "lg:col-span-3" : "lg:col-span-2"}
             />
           ))}

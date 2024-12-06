@@ -3,6 +3,7 @@ import graph from "@/assets/graph.svg";
 import mail from "@/assets/mail.svg";
 import SuccessCard from "@/components/app/shared/success-card";
 import SectionTitle from "@/components/app/shared/title";
+import ShortDesc from "../shared/short-details";
 
 interface realWorldAppInfo {
   id: number;
@@ -38,15 +39,14 @@ function RealWorldApp() {
   return (
     <section className="section_gap">
       <div className="container">
-        <div className="mb-6 md:mb-10 text-center lg:mb-14 space-y-2 md:space-y-8 max-w-[638px] mx-auto">
+        <div className="mb-6 md:mb-10 text-center lg:mb-14 space-y-2 md:space-y-8 max-w-3xl mx-auto">
           <SectionTitle weight={600}>Real-World Applications</SectionTitle>
-          <p className="text-lg text-[#010609B2]">
-            From E-commerce to Financial Services
-          </p>
+          <ShortDesc text="From E-commerce to Financial Services" />
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8">
-          {realWorldAppInfo.map((step) => (
+          {realWorldAppInfo.map((step, index) => (
             <SuccessCard
+              index={index}
               bgColor={step.bgColor}
               title={step.title}
               shortDetails={step.shortDetails}

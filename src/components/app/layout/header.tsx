@@ -31,7 +31,9 @@ const Header: React.FC = () => {
     content = (
       <Sheet>
         <SheetTrigger>
-          <AlignRight color={isWhiteNavbar ? "#000000" : "#ffffff"} />
+          <AlignRight
+            color={isWhiteNavbar && !scroll ? "#000000" : "#ffffff"}
+          />
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
@@ -61,7 +63,15 @@ const Header: React.FC = () => {
   } else {
     content = (
       <>
-        <ul className="flex items-center gap-10 text-white">
+        <ul
+          className={`flex items-center gap-10 ${
+            isWhiteNavbar && !scroll
+              ? "text-black"
+              : isWhiteNavbar && scroll
+              ? "text-white"
+              : "text-white"
+          }`}
+        >
           <li>
             <Link to="/">Features</Link>
           </li>
@@ -99,8 +109,10 @@ const Header: React.FC = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <Link to="/">
-            {isWhiteNavbar ? (
+            {isWhiteNavbar && !scroll ? (
               <img src={logob} alt="Logo Black" />
+            ) : isWhiteNavbar && scroll ? (
+              <img src={logow} alt="Logo White" />
             ) : (
               <img src={logow} alt="Logo White" />
             )}

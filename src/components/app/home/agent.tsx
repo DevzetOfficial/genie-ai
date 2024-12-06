@@ -48,7 +48,6 @@ function Agent() {
               custom={index}
               key={agent.id}
               className="flex flex-col group rounded-none"
-              role="article"
             >
               <div className="bg-[#EDF0F9] overflow-hidden aspect-[416/520] rounded-2xl md:rounded-[32px] duration-500">
                 <img

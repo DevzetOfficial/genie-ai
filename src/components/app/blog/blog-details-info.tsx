@@ -4,7 +4,7 @@ import { getImgUrl } from "@/utils/helper";
 const BlogDetailsInfo = ({ blog }: { blog: BlogProp }) => {
   return (
     <>
-      <div className="max-w-4xl mx-auto space-y-4 md:space-y-8">
+      <div className="max-w-4xl mx-auto space-y-4 md:space-y-8 ">
         <h1 className="text-2xl md:text-4xl lg:text-6xl text-[#010609] font-semibold">
           {blog.title}
         </h1>
@@ -19,7 +19,7 @@ const BlogDetailsInfo = ({ blog }: { blog: BlogProp }) => {
         </div>
       </div>
 
-      <div className="rounded-[32px] overflow-hidden w-full max-h-[600px]">
+      <div className="rounded-2xl md:rounded-[32px] overflow-hidden w-full max-h-[600px]">
         <img
           className="size-full object-cover"
           src={getImgUrl(blog.coverImage)}

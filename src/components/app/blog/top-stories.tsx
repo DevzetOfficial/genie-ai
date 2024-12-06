@@ -13,15 +13,15 @@ const TopStories = () => {
   };
 
   return (
-    <section>
+    <section className="section_gap pt-0 md:pt-0 lg:pt-0">
       <div className="container">
         <div className="mb-14">
           <h2 className="titleTwo pb-3 md:pb-6 border-b border-[#E9EAEC] mb-6 md:mb-20">
             Top Stories
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-            {topStories.slice(0, visibleCount).map((blog) => (
-              <BlogCard key={blog.id} blog={blog} />
+            {topStories.slice(0, visibleCount).map((blog, index) => (
+              <BlogCard index={index} key={blog.id} blog={blog} />
             ))}
           </div>
         </div>

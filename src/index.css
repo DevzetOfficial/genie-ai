@@ -77,12 +77,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .btn-svg-rotation:hover svg{
+  /* .btn-svg-rotation:hover svg{
     transform: rotate(-45deg) !important;
     transition: all .4s;
 
-
-  }
+  } */
   .section_gap {
     @apply py-10 md:py-14 lg:py-[120px];
   }
@@ -120,5 +119,3 @@
     width: auto;
   }
 }
-
-

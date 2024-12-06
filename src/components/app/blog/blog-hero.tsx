@@ -2,7 +2,7 @@ import { Button } from "@/components/app/shared/frontend-button";
 
 const BlogHero = () => {
   return (
-    <section className="py-10 lg:pt-48 lg:pb-[120px]">
+    <section className="py-20 lg:pt-48 lg:pb-[120px]">
       <div className="container">
         <div className=" grid lg:grid-cols-[8fr_4fr]">
           <div className="space-y-4 md:space-y-10">

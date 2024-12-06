@@ -11,8 +11,8 @@ const FeaturedArticles = () => {
         <div className="grid md:grid-cols-2 gap-4 md:gap-8">
           {blogs
             .filter((blog) => blog.type === "featured")
-            .map((blog) => (
-              <BlogCard key={blog.id} blog={blog} />
+            .map((blog, index) => (
+              <BlogCard key={blog.id} blog={blog} index={index} />
             ))}
         </div>
       </div>

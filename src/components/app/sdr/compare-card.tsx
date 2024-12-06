@@ -1,8 +1,15 @@
 import { CompareToCallProp } from "@/types";
 import cancelIcon from "@/assets/cancel-circle-compare.svg";
 import checkMarkIcon from "@/assets/checkmark-circle-compare.svg";
-
-const CompareCard = ({ data }: { data: CompareToCallProp }) => {
+import { motion } from "framer-motion";
+import { fadeInAnimationSlowVarients } from "@/lib/utils";
+const CompareCard = ({
+  data,
+  index,
+}: {
+  data: CompareToCallProp;
+  index: number;
+}) => {
   const icon = data.withGenie ? checkMarkIcon : cancelIcon;
 
   return (
@@ -16,13 +23,20 @@ const CompareCard = ({ data }: { data: CompareToCallProp }) => {
       </span>
       <ul className="space-y-3 md:space-y-4 lg:space-y-6">
         {data.items.map((item, i) => (
-          <li
-            key={i}
+          <motion.li
+            key={data.id}
             className="text-lg lg:text-xl font-medium text-[#282828] flex items-center gap-4"
+            variants={fadeInAnimationSlowVarients}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={index}
           >
             <img src={icon} alt="" />
             {item}
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>

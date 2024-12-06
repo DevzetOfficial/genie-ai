@@ -67,8 +67,6 @@ function Inteligence() {
         modules={[Autoplay]}
         slidesPerView={1}
         centeredSlides={true}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
         breakpoints={{
           575: {
             slidesPerView: 2,
