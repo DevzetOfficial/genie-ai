@@ -10,12 +10,11 @@ import Inteligence from "@/components/app/home/Inteligence";
 import ComparisonTable from "@/components/app/shared/comparison-table";
 import { homePageComparisonData } from "@/data";
 import HeroVideo from "@/assets/videos/hero-video.mp4";
-import SmoothScroll from "@/components/app/animation/smooth-scrool";
+// import SmoothScroll from "@/components/app/animation/smooth-scrool";
 
 function HomePage() {
   return (
     <Layout>
-      <SmoothScroll>
         <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
           <div className="container pb-10 md:pb-16 pt-20 lg:pt-28 ">
             <div className="py-10 md:pb-14 lg:pb-56 ">
@@ -53,7 +52,6 @@ function HomePage() {
         <Testimonial />
 
         <FAQ />
-      </SmoothScroll>
     </Layout>
   );
 }

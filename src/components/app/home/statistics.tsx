@@ -14,39 +14,79 @@ function Statistics() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
+                transition={{ duration: 0.5 }}
                 variants={{
-                  visible: { opacity: 1, translateY: 0, rotate: 0 },
-                  hidden: { opacity: 0, translateY: -100, rotate: -15 },
+                  visible: { opacity: 1, translateY: 0, },
+                  hidden: { opacity: 0, translateY: 100, },
                 }}
               >
                 Did You Know?
               </motion.span>
-
-              <h2 className="text-2xl md:text-3xl lg:text-[40px] lg:leading-[50px] font-semibold">
+              <motion.h2
+                className="text-2xl md:text-3xl lg:text-[40px] lg:leading-[50px] font-semibold"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                variants={{
+                  visible: { opacity: 1, translateY: 0, },
+                  hidden: { opacity: 0, translateY: 100, },
+                }}
+              >
                 Companies lose over 70% of potential sales leads due to delays
                 in qualification and follow-up?
-              </h2>
-              <p className="opacity-70">
+              </motion.h2>
+
+
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                variants={{
+                  visible: { opacity: 1, translateY: 0, },
+                  hidden: { opacity: 0, translateY: 100, },
+                }} className="opacity-70">
                 Repetitive administrative tasks eat up nearly a third of
                 employee time, limiting their focus on strategic goals. These
                 bottlenecks drain resources, stall growth, and pull your team
                 away from high-impact initiatives.
-              </p>
-              <Button>
-                Start your free trial today{" "}
-                <ArrowRight className="h-8 w-8 shrink-0" />
-              </Button>
+              </motion.p>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8,
+                  visible: { opacity: 1, translateY: 0, },
+                  hidden: { opacity: 0, translateY: 200, },
+                }} className="opacity-70">
+                <Button>
+                  Start your free trial today{" "}
+                  <ArrowRight className="h-8 w-8 shrink-0" />
+                </Button>
+              </motion.div>
             </div>
           </div>
 
-          <div className="aspect-[1312/726] ">
-            <img
-              className="size-full object-cover rounded-2xl"
-              src={statisticsImage}
-              alt="statistics details image"
-            />
-          </div>
+          <motion.div
+  className="aspect-[1312/726] overflow-hidden"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  transition={{ duration: 0.7, ease: "easeInOut" }}
+  variants={{
+    hidden: { opacity: 0.5, scale:.7 }, // Start squashed horizontally
+    visible: { opacity: 1, scale:1 }, // Expand to full height
+  }}
+>
+  <img
+    className="size-full object-cover rounded-2xl"
+    src={statisticsImage}
+    alt="statistics details image"
+  />
+</motion.div>
+
+
         </div>
       </section>
     </>

@@ -15,12 +15,10 @@ import RealWorldApp from "@/components/app/phone-representitive/real-world-app";
 import CustomerSupport from "@/components/app/phone-representitive/customer-support";
 import ComparisonTable from "@/components/app/shared/comparison-table";
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
-import SmoothScroll from "@/components/app/animation/smooth-scrool";
 
 function AIPhoneRepresentivePage() {
   return (
     <Layout>
-      <SmoothScroll>
         <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
           <div className="container pb-10 md:pb-16 ">
             <div className="py-10 md:pb-14 lg:pt-28">
@@ -61,7 +59,6 @@ function AIPhoneRepresentivePage() {
         <Testimonial />
 
         <FAQ />
-      </SmoothScroll>
     </Layout>
   );
 }
