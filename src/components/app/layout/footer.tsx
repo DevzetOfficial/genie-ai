@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "@/assets/footer-logo.png";
+import footerLogo from "@/assets/logo-w.svg";
 import { Link } from "react-router-dom";
 
 const FooterNavTitle = ({ text }: { text: string }) => (
@@ -81,6 +81,10 @@ const Footer: React.FC = () => {
                     label: "Documentation",
                     href: "/",
                   },
+                  {
+                    label: "Blog",
+                    href: "/blog",
+                  },
                 ]}
               />
             </div>
@@ -113,10 +117,6 @@ const Footer: React.FC = () => {
                 lists={[
                   {
                     label: "Help Center",
-                    href: "/",
-                  },
-                  {
-                    label: "Contact",
                     href: "/",
                   },
                   {

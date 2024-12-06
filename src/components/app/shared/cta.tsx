@@ -11,7 +11,7 @@ const CTA: FC = () => {
       <div className="bg-primary grid lg:grid-cols-2 items-center gap-4 md:gap-8 p-4 md:p-6 rounded-3xl">
         <div className=" lg:px-20" ref={ref}>
           <motion.h3
-            className={`text-3xl md:text-[40px] font-semibold text-white mb-4 md:mb-8 duration-700 ${
+            className={`text-3xl md:text-[40px] font-semibold text-white mb-4 md:mb-8 duration-700 leading-[120%] ${
               isInView
                 ? "opacity-100 translate-y-0 rotate-0"
                 : "translate-y-[200px] opacity-0"

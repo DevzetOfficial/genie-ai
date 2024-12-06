@@ -15,43 +15,45 @@ import HeroVideo from "@/assets/videos/hero-video.mp4";
 function HomePage() {
   return (
     <Layout>
-        <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
-          <div className="container pb-10 md:pb-16 pt-20 lg:pt-28 ">
-            <div className="py-10 md:pb-14 lg:pb-56 ">
-              <Hero
-                title={"Smart Sales,<br/>Strategic Marketing."}
-                shortDesc={
-                  "Using Al-Driven Operations to Accelerate Business Growth"
-                }
-              />
-            </div>
-            <BrandsMarquee />
+      <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
+        <div className="container pb-10 md:pb-16 pt-16 lg:pt-28 ">
+          <div className="py-10 md:pb-14 lg:pb-56 ">
+            <Hero
+              title={
+                "More Meetings, Zero Stress.<br/> AI-Powered Conversations <br/> That Convert."
+              }
+              shortDesc={
+                "Using Al-Driven Operations to Accelerate Business Growth"
+              }
+            />
           </div>
+          <BrandsMarquee />
+        </div>
 
-          <video
-            id="heroVideo"
-            className="z-[-2] absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            autoPlay
-            loop
-            muted
-          >
-            <source src={HeroVideo} type="video/mp4" />
-          </video>
-        </section>
+        <video
+          id="heroVideo"
+          className="max-sm:hidden z-[-2] absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={HeroVideo} type="video/mp4" />
+        </video>
+      </section>
 
-        <Agent />
+      <Agent />
 
-        <Inteligence />
+      <Inteligence />
 
-        <Statistics />
+      <Statistics />
 
-        <FingerPrint />
+      <FingerPrint />
 
-        <ComparisonTable data={homePageComparisonData} />
+      <ComparisonTable data={homePageComparisonData} />
 
-        <Testimonial />
+      <Testimonial />
 
-        <FAQ />
+      <FAQ />
     </Layout>
   );
 }

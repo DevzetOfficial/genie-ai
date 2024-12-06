@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className={`text-white `}>
         <motion.h1
           className={cn(
-            `[&_br]:hidden lg:[&_br]:inline-block text-3xl md:text-5xl lg:text-6xl xl:text-[96px] font-bold  leading-none mb-5 md:mb-10 duration-700 delay-100 ${
+            `[&_br]:hidden lg:[&_br]:inline-block text-3xl md:text-5xl lg:text-6xl xl:text-[64px] font-bold  leading-tight mb-5 md:mb-10 duration-700 delay-100 ${
               isInView
                 ? "opacity-100 translate-y-0 rotate-0"
                 : "translate-y-[200px] opacity-0"

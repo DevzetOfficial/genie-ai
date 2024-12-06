@@ -39,7 +39,7 @@ const brands = [
   },
 ];
 
-const firstRow = brands.slice(0, brands.length / 2);
+const firstRow = brands.slice(0, brands.length);
 
 const Brand = ({ img }: { img: string }) => {
   return (

@@ -49,7 +49,7 @@ function Statistics() {
                   visible: { opacity: 1, translateY: 0 },
                   hidden: { opacity: 0, translateY: 100 },
                 }}
-                className="opacity-70"
+                className=" text-white/70"
               >
                 Repetitive administrative tasks eat up nearly a third of
                 employee time, limiting their focus on strategic goals. These
@@ -90,7 +90,7 @@ function Statistics() {
           </div>
 
           <motion.div
-            className="aspect-[1312/726] overflow-hidden"
+            className="aspect-[1312/625] overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

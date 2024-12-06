@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignRight, ArrowRight } from "lucide-react";
-import logow from "@/assets/logo-w.png";
+import logow from "@/assets/logo-w.svg";
 import logob from "@/assets/logo-black.svg";
 import { Button } from "../shared/frontend-button";
 import { Link, useLocation } from "react-router-dom";
@@ -42,19 +42,16 @@ const Header: React.FC = () => {
 
           <ul className="flex flex-col items-start gap-5 mt-5">
             <li>
-              <Link to="/">Features</Link>
+              <Link to="/ai-sdr">Sonya - AI SDR</Link>
             </li>
             <li>
-              <Link to="/">Pricing</Link>
+              <Link to="/ai-phone-representative">
+                Frank - AI Phone Representative
+              </Link>
             </li>
-            <li>
-              <Link to="/">Documentation</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
+
             <Button size="sm" variant="default">
-              Contact <ArrowRight className="h-8 w-8 shrink-0" />
+              Book a Demo Button <ArrowRight className="h-8 w-8 shrink-0" />
             </Button>
           </ul>
         </SheetContent>
@@ -72,17 +69,13 @@ const Header: React.FC = () => {
               : "text-white"
           }`}
         >
-          <li>
-            <Link to="/">Features</Link>
+          <li className="hover:text-primary duration-200 transition-all">
+            <Link to="/ai-sdr">Sonya - AI SDR</Link>
           </li>
-          <li>
-            <Link to="/">Pricing</Link>
-          </li>
-          <li>
-            <Link to="/">Documentation</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
+          <li className="hover:text-primary duration-200 transition-all">
+            <Link to="/ai-phone-representative">
+              Frank - AI Phone Representative
+            </Link>
           </li>
         </ul>
 
@@ -94,7 +87,7 @@ const Header: React.FC = () => {
               : "bg-transparent border-[rgba(255,255,255,0.20)]"
           } text-white py-5 px-6 text-base leading-[22px] font-medium rounded-[32px] h-12 border hover:bg-[#030303] transition-all duration-300`}
         >
-          Contact
+          Book a Demo Button
         </Link>
       </>
     );

@@ -2,51 +2,11 @@
 /* @ts-ignore: Unreachable code error */
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import inteligenceOne from "@/assets/inteligence-1.png";
-import inteligenceTwo from "@/assets/inteligence-2.png";
-import inteligenceThree from "@/assets/inteligence-3.png";
+
 import IntelligenceCard from "./inteligence-card";
 import { Autoplay } from "swiper/modules";
 import SectionTitle from "../shared/title";
-
-const inteligences = [
-  {
-    id: 0,
-    img: inteligenceOne,
-    title: "Markets with Intelligence",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
-  },
-  {
-    id: 1,
-    img: inteligenceTwo,
-    title: "Markets with Intelligence",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
-  },
-  {
-    id: 2,
-    img: inteligenceThree,
-    title: "Markets with Intelligence",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
-  },
-  {
-    id: 3,
-    img: inteligenceOne,
-    title: "Markets with Intelligence",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
-  },
-  {
-    id: 4,
-    img: inteligenceOne,
-    title: "Markets with Intelligence",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
-  },
-  {
-    id: 5,
-    img: inteligenceOne,
-    title: "Markets with Intelligence",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
-  },
-];
+import { inteligences } from "@/data";
 
 function Inteligence() {
   return (

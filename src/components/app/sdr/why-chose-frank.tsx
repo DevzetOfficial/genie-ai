@@ -1,11 +1,11 @@
 import { WhyChooseProp } from "@/types";
 import WhyChoose from "@/components/app/shared/why-chose";
-import whyChoseCover from "@/assets/whychose.webp";
+import franksImg from "@/assets/frank.webp";
 
 const whyChoose: WhyChooseProp = {
   title: "Why Choose Frank?",
   details: `Genie handles your prospecting, outreach, and lead engagement so your sales team can focus on closing deals. It seamlessly automates your sales processes, identifies hot leads, and provides hyper-personalized outreach at a scale humans can't achieve.`,
-  image: whyChoseCover,
+  image: franksImg,
   features: [
     {
       id: 1,

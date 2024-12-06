@@ -6,16 +6,62 @@ import {
   SalesDriveProp,
   WorkforceRevulationProp,
 } from "@/types";
+import inteligenceOne from "@/assets/inteligence-1.webp";
+import inteligenceTwo from "@/assets/inteligence-2.webp";
+import inteligenceThree from "@/assets/inteligence-3.webp";
 import profile from "@/assets/profile.png";
 import testimonialBrandLogo from "@/assets/testimonial-brand.png";
 import testimonialBrandLogoTwo from "@/assets/testimonial-brand2.png";
-import salesDriveImageOne from "@/assets/sales-driveone.webp";
-import salesDriveImageTwo from "@/assets/sales-drivetwo.webp";
-import salesDriveImageFour from "@/assets/sales-drivefour.webp";
-import salesDriveImageThree from "@/assets/sales-drivethree.webp";
-import agentOne from "@/assets/agent-one.png";
-import agentTwo from "@/assets/agent-two.png";
-import agentThree from "@/assets/agent-three.png";
+import aiPhoneSalesImgOne from "@/assets/ai-sales-drive-1.webp";
+import aiPhoneSalesImgTwo from "@/assets/ai-sales-drive-2.webp";
+import aiPhoneSalesImgThree from "@/assets/ai-sales-drive-3.webp";
+import aiPhoneSalesImgFour from "@/assets/ai-sales-drive-4.webp";
+import aiSDRImgOne from "@/assets/ai-sdr-1.webp";
+import aiSDRImgTwo from "@/assets/ai-sdr-2.webp";
+import aiSDRImgThree from "@/assets/ai-sdr-3.webp";
+import aiSDRImgFour from "@/assets/ai-sdr-4.webp";
+
+import sonyasImg from "@/assets/sonya.webp";
+import franksImg from "@/assets/frank.webp";
+
+export const inteligences = [
+  {
+    id: 0,
+    img: inteligenceOne,
+    title: "Markets with Intelligence",
+    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+  },
+  {
+    id: 1,
+    img: inteligenceTwo,
+    title: "Book More Meetings with Al",
+    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+  },
+  {
+    id: 2,
+    img: inteligenceThree,
+    title: "Empower Sales Engagement",
+    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+  },
+  {
+    id: 3,
+    img: inteligenceOne,
+    title: "Markets with Intelligence",
+    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+  },
+  {
+    id: 4,
+    img: inteligenceOne,
+    title: "Markets with Intelligence",
+    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+  },
+  {
+    id: 5,
+    img: inteligenceOne,
+    title: "Markets with Intelligence",
+    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+  },
+];
 
 export const testimonials = [
   {
@@ -124,7 +170,7 @@ export const blogs: BlogProp[] = [
     type: "featured",
     longDesc: `<p> By definition, an interface is a layer between the user and a system, serving the purpose of communication between them. Interacting with the interface usually requires users to perform certain actions. </p> <p> Different actions can lead to various outcomes, some of which might be critical. </p> <p> While we often need to provide additional protection in case users attempt to perform dangerous or irreversible actions, it’s good to remember that one of the <a href="#">ten usability heuristics</a> called "Error Prevention" says: </p> <blockquote> “Good error messages are important, but the best designs carefully prevent problems from occurring in the first place. Either eliminate error-prone conditions or check for them and present users with a confirmation option before they commit to the action.” </blockquote>
     <p> By definition, an interface is a layer between the user and a system, serving the purpose of communication between them. Interacting with the interface usually requires users to perform certain actions. </p> <p> Different actions can lead to various outcomes, some of which might be critical. </p> <p> While we often need to provide additional protection in case users attempt to perform dangerous or irreversible actions, it’s good to remember that one of the <a href="#">ten usability heuristics</a> called "Error Prevention" says: </p> 
-    <h2>What Is A Dangerous Action?</h2> <p> Surprisingly, when we talk about dangerous actions, it doesn’t necessarily mean that something is being deleted. </p> <p> Here’s an example of a dangerous action from the banking application use: </p> <figure> <img src="http://localhost:5173/src/assets/blog-1.webp" alt="A screenshot from a bank application showing loan details."> <figcaption>A screenshot from the bank application showing a loan.</figcaption> </figure> <p> The bank approved a loan for me, and as soon as I clicked “Get Money,” it meant that I had signed the necessary documents and accepted the loan. All I have to do is tap the yellow button, and I’ll get the money. </p> <p> As a result of an accidental tap, you might end up taking a loan when you didn’t intend to, which is why this action can be considered significant and dangerous. </p> <b><p> Therefore, a dangerous action does not necessarily mean deleting somethin</b>g. </p> <p> Some examples may include the following: </p> <ul> <li>Sending an email</li> <li>Placing an order</li> <li>Publishing a post</li> <li>Making a bank transaction</li> <li>Signing a legal document</li> <li>Granting or blocking a user</li> <li>Granting or revoking permissions</li> </ul>`,
+    <h2>What Is A Dangerous Action?</h2> <p> Surprisingly, when we talk about dangerous actions, it doesn’t necessarily mean that something is being deleted. </p> <p> Here’s an example of a dangerous action from the banking application use: </p> <figure> <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A screenshot from a bank application showing loan details."> <figcaption>A screenshot from the bank application showing a loan.</figcaption> </figure> <p> The bank approved a loan for me, and as soon as I clicked “Get Money,” it meant that I had signed the necessary documents and accepted the loan. All I have to do is tap the yellow button, and I’ll get the money. </p> <p> As a result of an accidental tap, you might end up taking a loan when you didn’t intend to, which is why this action can be considered significant and dangerous. </p> <b><p> Therefore, a dangerous action does not necessarily mean deleting somethin</b>g. </p> <p> Some examples may include the following: </p> <ul> <li>Sending an email</li> <li>Placing an order</li> <li>Publishing a post</li> <li>Making a bank transaction</li> <li>Signing a legal document</li> <li>Granting or blocking a user</li> <li>Granting or revoking permissions</li> </ul>`,
   },
   {
     id: 2,
@@ -303,99 +349,65 @@ export const PhoneRepresentativeSalesDrive: SalesDriveProp = {
   items: [
     {
       id: 1,
-      title: "1. Instant Responses That Keep Customers Engaged",
-      details:
-        "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
-      image: salesDriveImageOne,
-    },
-    {
-      id: 2,
-      title: "2. Personalized, Data-Driven Interactions",
-      details:
-        "Engage consistently through email, Linkedin, and other platforms, ensuring a unified approach to every prospect. Genie automates follow-ups, keeping leads warm and engaged across channels without extra manual input.",
-      image: salesDriveImageTwo,
-    },
-    {
-      id: 3,
-      title: "3. Real-Time Call Routing and Escalation",
-      details:
-        "Genie's Al-driven insights allow for targeted outreach with precision that goes beyond human capabilities. Each email and message is customized based on the prospect's role, industry, and specific pain points, resulting in higher engagement and conversion rates.",
-      image: salesDriveImageThree,
-    },
-    {
-      id: 4,
-      title: "4. Multi-Language Capabilities for Global Reach",
-      details:
-        "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
-      image: salesDriveImageFour,
-    },
-  ],
-};
-
-export const AIWorkerSalesDrive: SalesDriveProp = {
-  title: "How Genie Drives Your Sales",
-  items: [
-    {
-      id: 1,
-      title: "1. Data Entry and Processing",
-      details:
-        "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
-      image: salesDriveImageOne,
-    },
-    {
-      id: 2,
-      title: "2. Document Management and Compliance",
-      details:
-        "Engage consistently through email, Linkedin, and other platforms, ensuring a unified approach to every prospect. Genie automates follow-ups, keeping leads warm and engaged across channels without extra manual input.",
-      image: salesDriveImageTwo,
-    },
-    {
-      id: 3,
-      title: "3. Customer Support and Interaction",
-      details:
-        "Genie's Al-driven insights allow for targeted outreach with precision that goes beyond human capabilities. Each email and message is customized based on the prospect's role, industry, and specific pain points, resulting in higher engagement and conversion rates.",
-      image: salesDriveImageThree,
-    },
-    {
-      id: 4,
-      title: "4. Task Automation in Accounting and Finance",
-      details:
-        "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
-      image: salesDriveImageFour,
-    },
-  ],
-};
-
-export const SDRSalesDrive: SalesDriveProp = {
-  title: "How Genie Drives Your Sales",
-  items: [
-    {
-      id: 1,
       title: "1. Find Your Ideal Buyers ",
       details:
         "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
-      image: salesDriveImageOne,
+      image: aiPhoneSalesImgOne,
     },
     {
       id: 2,
       title: "2. Unified Multi-Channel Engagement",
       details:
         "Engage consistently through email, Linkedin, and other platforms, ensuring a unified approach to every prospect. Genie automates follow-ups, keeping leads warm and engaged across channels without extra manual input.",
-      image: salesDriveImageTwo,
+      image: aiPhoneSalesImgTwo,
     },
     {
       id: 3,
       title: "3. Hyper-Personalization at Scale",
       details:
         "Genie's Al-driven insights allow for targeted outreach with precision that goes beyond human capabilities. Each email and message is customized based on the prospect's role, industry, and specific pain points, resulting in higher engagement and conversion rates.",
-      image: salesDriveImageThree,
+      image: aiPhoneSalesImgThree,
     },
     {
       id: 4,
       title: "4. Always-On Functionality",
       details:
         "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
-      image: salesDriveImageFour,
+      image: aiPhoneSalesImgFour,
+    },
+  ],
+};
+export const aiSalesDrive: SalesDriveProp = {
+  title: "How Genie Drives Your Sales",
+
+  items: [
+    {
+      id: 1,
+      title: "1. Instant Responses That Keep Customers Engaged",
+      details:
+        "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
+      image: aiSDRImgOne,
+    },
+    {
+      id: 2,
+      title: "2. Personalized, Data-Driven Interactions",
+      details:
+        "Engage consistently through email, Linkedin, and other platforms, ensuring a unified approach to every prospect. Genie automates follow-ups, keeping leads warm and engaged across channels without extra manual input.",
+      image: aiSDRImgTwo,
+    },
+    {
+      id: 3,
+      title: "3. Real-Time Call Routing and Escalation",
+      details:
+        "Genie's Al-driven insights allow for targeted outreach with precision that goes beyond human capabilities. Each email and message is customized based on the prospect's role, industry, and specific pain points, resulting in higher engagement and conversion rates.",
+      image: aiSDRImgThree,
+    },
+    {
+      id: 4,
+      title: "4. Multi-Language Capabilities for Global Reach",
+      details:
+        "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
+      image: aiSDRImgFour,
     },
   ],
 };
@@ -470,26 +482,18 @@ export const agentData = [
   {
     id: 1,
     name: "Frank",
-    agentImg: agentOne,
-    designation: "AI SDR",
+    agentImg: franksImg,
+    designation: "Al Phone Representative",
     about: `Frank optimizes the frontlines of your sales process, enhancing your team's ability to reach, connect with, and engage prospective clients.`,
     route: "/ai-sdr",
   },
   {
     id: 2,
     name: "Sonya",
-    agentImg: agentTwo,
-    designation: "AI Phone Representative",
+    agentImg: sonyasImg,
+    designation: "Al SDR",
     about: `Sonya optimizes the frontlines of your sales process, enhancing your team's ability to reach, connect with, and engage prospective clients.`,
     route: "/ai-phone-representative",
-  },
-  {
-    id: 3,
-    name: "Mark",
-    agentImg: agentThree,
-    designation: "AI Worker",
-    about: `Mark optimizes the frontlines of your sales process, enhancing your team's ability to reach, connect with, and engage prospective clients.`,
-    route: "/ai-worker",
   },
 ];
 
@@ -531,48 +535,54 @@ export const homePageComparisonData: ComparisonDataProp = {
     },
     {
       id: 2,
+      category: "Sales Impact",
+      genieFeature: "Engages, Qualifies, & Nurtures Leads",
+      otherAIFeature: "Basic lead capture, no advanced qualification ",
+    },
+    {
+      id: 3,
       category: "Marketing Precision",
       genieFeature: "Business intelligence with real-time optimization.",
       otherAIFeature: "Limited automation, lacks real-time adaptation.",
     },
     {
-      id: 3,
+      id: 4,
       category: "Growth Focus",
       genieFeature: "Streamlines pipelines & enhances customer satisfaction",
       otherAIFeature: "Lacks growth-oriented strategy.",
     },
     {
-      id: 4,
+      id: 5,
       category: "Technology",
       genieFeature: "Integrates seamlessly with CRM, ERP, & analytics tools.",
       otherAIFeature: "Requires extensive customization to fit workflows.",
     },
     {
-      id: 5,
+      id: 6,
       category: "Management Efficiency",
       genieFeature: "Automates across departments, reducing workload",
       otherAIFeature: "Single-purpose tools that require manual",
     },
     {
-      id: 6,
+      id: 7,
       category: "Customer Experience",
       genieFeature: "Provides 24/7 support with seamless escalation",
       otherAIFeature: "Lacking real-time assistance & escalation.",
     },
     {
-      id: 7,
+      id: 8,
       category: "Data Security",
       genieFeature: "Industry-standard encryption & compliance",
       otherAIFeature: "Lack security measures & compliance standards.",
     },
     {
-      id: 8,
+      id: 9,
       category: "Scalability",
       genieFeature: "Grows with your business",
       otherAIFeature: "Often requires additional resources",
     },
     {
-      id: 9,
+      id: 10,
       category: "ROI Tracking",
       genieFeature: "Built-in analytics for clear insights",
       otherAIFeature: "Limited performance metrics & ROI tracking",

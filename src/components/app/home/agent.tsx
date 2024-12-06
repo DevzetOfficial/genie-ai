@@ -24,7 +24,7 @@ const fadeInAnimationVariants = {
 function Agent() {
   return (
     <section className="section_gap">
-      <div className="container flex flex-col gap-8 md:gap-16">
+      <div className="container flex flex-col gap-8 md:gap-16 max-w-[1064px]">
         <div className="max-w-[662px] flex flex-col gap-4 md:gap-8 text-center mx-auto">
           <SectionTitle color={"#010609"} weight={600}>
             Meet our digital agents
@@ -36,7 +36,7 @@ function Agent() {
           />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-14 lg:gap-28">
           {agentData.map((agent, index) => (
             <motion.div
               variants={fadeInAnimationVariants}
@@ -49,7 +49,7 @@ function Agent() {
               key={agent.id}
               className="flex flex-col group rounded-none"
             >
-              <div className="bg-[#EDF0F9] overflow-hidden aspect-[416/520] rounded-2xl md:rounded-[32px] duration-500">
+              <div className="bg-[#EDF0F9] overflow-hidden aspect-[472/520] rounded-2xl md:rounded-[32px] duration-500">
                 <img
                   loading="lazy"
                   src={agent.agentImg}
@@ -57,7 +57,7 @@ function Agent() {
                   alt={`${agent.name}, ${agent.designation}`}
                 />
               </div>
-              <div className="flex flex-col mt-3 md:mt-6 w-full">
+              <div className="flex flex-col mt-3 md:mt-5 w-full">
                 <div className="flex gap-2 items-center w-full font-semibold">
                   <h2 className="self-stretch my-auto text-[32px] text-zinc-950">
                     {agent.name}
@@ -75,7 +75,7 @@ function Agent() {
                     </span>
                   </AnimatedGradientText>
                 </div>
-                <p className="mt-4 md:mt-6 w-full text-base leading-6 text-[rgba(1,6,9,0.70)] pb-4 md:pb-8 border-b border-black border-opacity-20">
+                <p className="mt-4 md:mt-5 w-full text-base leading-6 text-[rgba(1,6,9,0.70)] pb-4 md:pb-7 border-b border-black border-opacity-20">
                   {agent.about}
                 </p>
               </div>
@@ -83,7 +83,7 @@ function Agent() {
               <Link to={`${agent.route}`}>
                 <button
                   type="button"
-                  className="group-hover:text-primary transition-all duration-300 hover:pl-2 flex gap-4 justify-center items-center self-start mt-3 md:mt-6 text-xl font-medium leading-snug text-black"
+                  className="group-hover:text-primary transition-all duration-300 hover:pl-2 flex gap-4 justify-center items-center self-start mt-3 md:mt-5 text-xl font-medium leading-snug text-black"
                 >
                   Learn more
                   <ArrowRight />

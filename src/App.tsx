@@ -7,11 +7,11 @@ import {
 import { useEffect } from "react";
 import BlogPage from "@/pages/blog-page";
 import HomePage from "@/pages/home-page";
-import AISDRPage from "@/pages/ai-sdr-page";
 import NotFoundPage from "@/pages/not-found-page";
 import BlogDetailPage from "@/pages/blog-detail-page";
-import AIPhoneRepresentivePage from "@/pages/ai-phone-representative-page";
-import AIWorker from "./pages/ai-worker";
+import AISDRPage from "@/pages/ai-sdr-page";
+import AIPhoneRepresentativePage from "@/pages/ai-phone-representative-page";
+// import AIWorker from "./pages/ai-worker";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,10 +33,10 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogDetailPage />} />
         <Route path="/ai-sdr" element={<AISDRPage />} />
-        <Route path="/ai-worker" element={<AIWorker />} />
+        {/* <Route path="/ai-worker" element={<AIWorker />} /> */}
         <Route
           path="/ai-phone-representative"
-          element={<AIPhoneRepresentivePage />}
+          element={<AIPhoneRepresentativePage />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -114,8 +114,7 @@
 @media (orientation: landscape) {
   #ctaVideo,
   #heroVideo {
-    height: 110%;
     max-width: 120%;
-    width: auto;
+    width: 120%;
   }
 }
