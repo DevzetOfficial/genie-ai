@@ -9,8 +9,8 @@ const ReadNext = () => {
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-        {blogs?.slice(4, 7).map((blog) => (
-          <BlogCard key={blog.id} blog={blog} />
+        {blogs?.slice(4, 7).map((blog, index) => (
+          <BlogCard index={index} key={blog.id} blog={blog} />
         ))}
       </div>
     </div>

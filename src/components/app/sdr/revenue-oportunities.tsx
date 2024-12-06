@@ -1,11 +1,10 @@
-import BlurIn from "@/components/ui/blur-in";
 import NumberTicker from "@/components/ui/number-ticker";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 function RevenueOportunities() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+
   return (
     <section className="section_gap bg-[#E1E9FE]">
       <div ref={ref} className="container">

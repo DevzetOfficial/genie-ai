@@ -1,6 +1,7 @@
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-function FadeDown({ children }) {
+import React, { useRef } from "react";
+
+function FadeDown({ children }: { children: React.ReactNode }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

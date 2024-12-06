@@ -2,9 +2,10 @@ import React, { useRef, useState, useCallback, useLayoutEffect } from "react";
 import ResizeObserver from "resize-observer-polyfill";
 import { useScroll, useTransform, useSpring, motion } from "framer-motion";
 
-const SmoothScroll = ({ children }) => {
+const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
   const scrollRef = useRef(null);
   const [pageHeight, setPageHeight] = useState(0);
+  // @ts-ignore
   const resizePageHeight = useCallback((entries) => {
     for (let entry of entries) {
       setPageHeight(entry.contentRect.height);
@@ -15,6 +16,7 @@ const SmoothScroll = ({ children }) => {
     const resizeObserver = new ResizeObserver((entries) =>
       resizePageHeight(entries)
     );
+    // @ts-ignore
     scrollRef && resizeObserver.observe(scrollRef.current);
     return () => resizeObserver.disconnect();
   }, [scrollRef, resizePageHeight]);

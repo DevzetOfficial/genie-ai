@@ -22,7 +22,7 @@ const CompareCard = ({
         {data.withGenie ? "With Genie" : "Before Genie"}
       </span>
       <ul className="space-y-3 md:space-y-4 lg:space-y-6">
-        {data.items.map((item, i) => (
+        {data.items.map((item) => (
           <motion.li
             key={data.id}
             className="text-lg lg:text-xl font-medium text-[#282828] flex items-center gap-4"
