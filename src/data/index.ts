@@ -51,14 +51,14 @@ export const inteligences = [
   },
   {
     id: 4,
-    img: inteligenceOne,
-    title: "Markets with Intelligence",
+    img: inteligenceTwo,
+    title: "Book More Meetings with Al",
     shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
   },
   {
     id: 5,
-    img: inteligenceOne,
-    title: "Markets with Intelligence",
+    img: inteligenceThree,
+    title: "Empower Sales Engagement",
     shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
   },
 ];
