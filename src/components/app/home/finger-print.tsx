@@ -30,9 +30,10 @@ function FingerPrint() {
                   : "translate-y-[200px] opacity-0"
               }`}
             >
-              Intelligence, rigorously tested marketing methodologies, refined
-              sales strategies, and Adaptive Artificial Intelligence to deliver
-              optimized solutions for businesses.
+              Genie integrates advanced Business Intelligence, rigorously tested
+              marketing methodologies, refined sales strategies, and Adaptive
+              Artificial Intelligence to deliver optimized solutions for
+              businesses.
             </motion.p>
             <motion.div
               className={` duration-1000  ${
@@ -42,7 +43,7 @@ function FingerPrint() {
               }`}
             >
               <Button variant={"default"}>
-                Start your free trial today{" "}
+                Book a Demo
                 <ArrowRight className="h-8 w-8 shrink-0 " />
               </Button>
             </motion.div>

@@ -41,7 +41,7 @@ const CTA: FC = () => {
             }`}
           >
             <Button variant="footer">
-              Start your free trial <ArrowRight className="h-8 w-8 shrink-0" />
+              Book a Demo <ArrowRight className="h-8 w-8 shrink-0" />
             </Button>
           </motion.div>
         </div>

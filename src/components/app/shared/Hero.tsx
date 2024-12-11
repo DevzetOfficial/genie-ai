@@ -57,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({
           }`}
         >
           <Button variant={"default"}>
-            Start your free trial today{" "}
+            Book a Demo
             <ArrowRight className="h-8 w-8 shrink-0 " />
           </Button>
         </motion.div>

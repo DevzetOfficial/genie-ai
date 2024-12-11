@@ -16,7 +16,10 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const Header: React.FC = () => {
   const [scroll, setScroll] = useState<boolean>(false);
   const location = useLocation();
-  const isWhiteNavbar: boolean = location.pathname.includes("blog");
+  const keywords = ["blog", "contact"]; // Add all your keywords here
+  const isWhiteNavbar: boolean = keywords.some((keyword) =>
+    location.pathname.includes(keyword)
+  );
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -51,7 +54,10 @@ const Header: React.FC = () => {
             </li>
 
             <Button size="sm" variant="default">
-              Book a Demo Button <ArrowRight className="h-8 w-8 shrink-0" />
+              <Link to={"/contact"}>
+                {" "}
+                Book a Demo <ArrowRight className="h-8 w-8 shrink-0" />
+              </Link>
             </Button>
           </ul>
         </SheetContent>
@@ -79,15 +85,10 @@ const Header: React.FC = () => {
           </li>
         </ul>
 
-        <Link
-          to={"/"}
-          className={`inline-flex items-center hover:text-primary ${
-            isWhiteNavbar
-              ? "bg-[#010609]"
-              : "bg-transparent border-[rgba(255,255,255,0.20)]"
-          } text-white py-5 px-6 text-base leading-[22px] font-medium rounded-[32px] h-12 border hover:bg-[#030303] transition-all duration-300`}
-        >
-          Book a Demo Button
+        <Link to={"/"}>
+          <Button size="md" variant="default">
+            <Link to={"/contact"}> Book a Demo</Link>
+          </Button>
         </Link>
       </>
     );

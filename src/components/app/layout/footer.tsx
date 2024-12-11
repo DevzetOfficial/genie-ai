@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
                   },
                   {
                     label: "Contact",
-                    href: "/",
+                    href: "/contact",
                   },
                 ]}
               />
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                   },
                   {
                     label: "Contact",
-                    href: "/",
+                    href: "/contact",
                   },
                 ]}
               />

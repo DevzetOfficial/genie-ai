@@ -7,15 +7,16 @@ const BlogHero = () => {
         <div className=" grid lg:grid-cols-[8fr_4fr]">
           <div className="space-y-4 md:space-y-10">
             <h1 className="text-2xl md:text-5xl lg:text-[80px] text-[#010609] font-semibold">
-              Insights, Trends, and Best Practices in Al-Powered Solutionsv
+              Insights, Trends, and Best Practices in Al-Powered Solutions
             </h1>
             <p className="text-xl text-[#010609B2]">
               Welcome to the Genie Blog-your go-to resource for the latest in
               Al, customer support automation, digital workers, and sales
-              innovation. Read through insights, success stories, and actionable
-              tips that will help you harness the power of Al to drive growth,
-              streamline operations, and deliver unparalleled customer
-              experiences.
+              innovation.
+              <br />
+              Read through insights, success stories, and actionable tips that
+              will help you harness the power of Al to drive growth, streamline
+              operations, and deliver unparalleled customer experiences.
             </p>
             <form
               className="pt-2 flex gap-y-1 flex-wrap md:flex-nowrap items-center "

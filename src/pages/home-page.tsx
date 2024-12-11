@@ -20,10 +20,10 @@ function HomePage() {
           <div className="py-10 md:pb-14 lg:pb-56 ">
             <Hero
               title={
-                "More Meetings, Zero Stress.<br/> AI-Powered Conversations <br/> That Convert."
+                "More Meetings, Zero Stress.<br/> AI-Powered Conversations That Convert."
               }
               shortDesc={
-                "Using Al-Driven Operations to Accelerate Business Growth"
+                "For Sales, RevOps, and Go-to-Market Teams Ready to Scale Smarter"
               }
             />
           </div>

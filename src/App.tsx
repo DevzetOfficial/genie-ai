@@ -11,6 +11,7 @@ import NotFoundPage from "@/pages/not-found-page";
 import BlogDetailPage from "@/pages/blog-detail-page";
 import AISDRPage from "@/pages/ai-sdr-page";
 import AIPhoneRepresentativePage from "@/pages/ai-phone-representative-page";
+import ContactPage from "@/pages/contact-page";
 // import AIWorker from "./pages/ai-worker";
 
 function ScrollToTop() {
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog/:id" element={<BlogDetailPage />} />
         <Route path="/ai-sdr" element={<AISDRPage />} />
         {/* <Route path="/ai-worker" element={<AIWorker />} /> */}

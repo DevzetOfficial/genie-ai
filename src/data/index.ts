@@ -481,18 +481,18 @@ export const compareToCallData: CompareToCallProp[] = [
 export const agentData = [
   {
     id: 1,
-    name: "Frank",
-    agentImg: franksImg,
-    designation: "Al Phone Representative",
-    about: `Frank optimizes the frontlines of your sales process, enhancing your team's ability to reach, connect with, and engage prospective clients.`,
-    route: "/ai-sdr",
-  },
-  {
-    id: 2,
     name: "Sonya",
     agentImg: sonyasImg,
     designation: "Al SDR",
     about: `Sonya optimizes the frontlines of your sales process, enhancing your team's ability to reach, connect with, and engage prospective clients.`,
+    route: "/ai-sdr",
+  },
+  {
+    id: 2,
+    name: "Frank",
+    agentImg: franksImg,
+    designation: "Al Phone Representative",
+    about: `Frank optimizes the frontlines of your sales process, enhancing your team's ability to reach, connect with, and engage prospective clients.`,
     route: "/ai-phone-representative",
   },
 ];
@@ -536,56 +536,73 @@ export const homePageComparisonData: ComparisonDataProp = {
     {
       id: 2,
       category: "Sales Impact",
-      genieFeature: "Engages, Qualifies, & Nurtures Leads",
-      otherAIFeature: "Basic lead capture, no advanced qualification ",
+      genieFeature:
+        "Engages, qualifies, and nurtures leads, freeing up sales teams to focus on conversions.",
+      otherAIFeature:
+        "Basic lead capture without advanced qualification or nurturing.",
     },
     {
       id: 3,
       category: "Marketing Precision",
-      genieFeature: "Business intelligence with real-time optimization.",
+      genieFeature:
+        "Combines Business Intelligence with adaptive, real-time campaign optimization.",
       otherAIFeature: "Limited automation, lacks real-time adaptation.",
     },
     {
       id: 4,
       category: "Growth Focus",
-      genieFeature: "Streamlines pipelines & enhances customer satisfaction",
-      otherAIFeature: "Lacks growth-oriented strategy.",
+      genieFeature:
+        "Streamlines pipelines and enhances customer satisfaction, driving sustainable growth.",
+      otherAIFeature:
+        "Primarily enhances productivity but lacks a growth-oriented strategy.",
     },
     {
       id: 5,
       category: "Technology",
-      genieFeature: "Integrates seamlessly with CRM, ERP, & analytics tools.",
-      otherAIFeature: "Requires extensive customization to fit workflows.",
+      genieFeature:
+        "Plug-and-play, integrates seamlessly with CRM, ERP, and analytics tools",
+      otherAIFeature:
+        "Requires extensive setup and customization to fit workflows.",
     },
     {
       id: 6,
       category: "Management Efficiency",
-      genieFeature: "Automates across departments, reducing workload",
-      otherAIFeature: "Single-purpose tools that require manual",
+      genieFeature:
+        "Automates across departments, reducing management workload and allowing teams to focus on high-impact tasks.",
+      otherAIFeature:
+        "Single-purpose tools that require manual coordination across systems.",
     },
     {
       id: 7,
       category: "Customer Experience",
-      genieFeature: "Provides 24/7 support with seamless escalation",
-      otherAIFeature: "Lacking real-time assistance & escalation.",
+      genieFeature:
+        "Provides 24/7 support with seamless escalation, boosting satisfaction and loyalty.",
+      otherAIFeature:
+        "Limited customer support options, often lacking real-time assistance and escalation.",
     },
     {
       id: 8,
       category: "Data Security",
-      genieFeature: "Industry-standard encryption & compliance",
-      otherAIFeature: "Lack security measures & compliance standards.",
+      genieFeature:
+        "Industry-standard encryption and compliance, ensuring customer and business data remain secure",
+      otherAIFeature:
+        "May lack comprehensive security measures and compliance standards.",
     },
     {
       id: 9,
       category: "Scalability",
-      genieFeature: "Grows with your business",
-      otherAIFeature: "Often requires additional resources",
+      genieFeature:
+        "Grows with your business—handles increasing volume without sacrificing performance or quality.",
+      otherAIFeature:
+        "Often requires additional resources or customization to scale effectively",
     },
     {
       id: 10,
       category: "ROI Tracking",
-      genieFeature: "Built-in analytics for clear insights",
-      otherAIFeature: "Limited performance metrics & ROI tracking",
+      genieFeature:
+        "Built-in analytics for clear insights on AI-driven performance and ROI across all functions",
+      otherAIFeature:
+        "Limited insights into performance metrics and ROI tracking, often requires third-party tools",
     },
   ],
 };
