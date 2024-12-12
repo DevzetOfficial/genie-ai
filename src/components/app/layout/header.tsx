@@ -9,17 +9,31 @@ import {
 import { AlignRight } from "lucide-react";
 import logow from "@/assets/logo-w.svg";
 import logob from "@/assets/logo-black.svg";
-import { Button } from "../shared/frontend-button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "../shared/frontend-button";
+import ContactForm from "../shared/contact-form";
+
 const Header: React.FC = () => {
+  let navigate = useNavigate();
+  const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState<boolean>(false);
   const location = useLocation();
   const keywords = ["blog", "contact"]; // Add all your keywords here
   const isWhiteNavbar: boolean = keywords.some((keyword) =>
     location.pathname.includes(keyword)
   );
+
+  const handleModalOpen = () => {
+    if (location.pathname === "/contact") {
+      navigate("/contact");
+    } else {
+      setOpen(true);
+    }
+  };
+
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -83,11 +97,15 @@ const Header: React.FC = () => {
           </li>
         </ul>
 
-        <Link to={"/contact"}>
-          <Button size="md" variant="default">
-            Book a Demo
-          </Button>
-        </Link>
+        <Button size="md" onClick={handleModalOpen} variant="default">
+          Book a Demo
+        </Button>
+
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogContent className="!p-0 max-w-2xl">
+            <ContactForm />
+          </DialogContent>
+        </Dialog>
       </>
     );
   }
