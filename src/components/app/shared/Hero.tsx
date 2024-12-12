@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/app/shared/frontend-button";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 
 type HeroProps = {
   heroImage?: string;
@@ -56,10 +57,12 @@ const Hero: React.FC<HeroProps> = ({
               : "translate-y-[200px] opacity-0"
           }`}
         >
-          <Button variant={"default"}>
-            Book a Demo
-            <ArrowRight className="h-8 w-8 shrink-0 " />
-          </Button>
+          <Link to="/contact">
+            <Button variant={"default"}>
+              Book a Demo
+              <ArrowRight className="h-8 w-8 shrink-0 " />
+            </Button>
+          </Link>
         </motion.div>
       </div>
 
