@@ -1,9 +1,4 @@
 "use client";
-
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Button } from "@/components/app/shared/frontend-button";
 import {
   Form,
   FormControl,
@@ -12,8 +7,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import Layout from "@/components/app/layout";
 import {
   Select,
   SelectContent,
@@ -21,46 +14,71 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import Layout from "@/components/app/layout";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/app/shared/frontend-button";
+import { useToast } from "@/hooks/use-toast";
 
 const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
+  name: z
+    .string({
+      required_error: "Please enter your name",
+    })
+    .min(2, {
+      message: "Name must be at least 2 characters.",
+    }),
   email: z.string().email().min(1, {
     message: "Email is required",
   }),
+  team: z.string({
+    required_error: "Please select an team.",
+  }),
+  worker_type: z.string({
+    required_error: "Please select an worker type.",
+  }),
+  message: z.string().optional(),
 });
 
 export default function ContactPage() {
+  const { toast } = useToast();
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: "",
+      name: "",
       email: "",
+      team: "",
+      worker_type: "",
+      message: "",
     },
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
-
-    await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer re_iQbYiMiF_CFP657nrZwQsUWJTeMfeftec",
-      },
-      body: JSON.stringify({
-        from: "Acme <onboarding@resend.dev>",
-        to: [data.email],
-        subject: "hello world",
-        html: `<strong>it works! ${data.username}</strong>`,
-      }),
-    });
+    try {
+      await fetch("https://genie-ai-server.vercel.app/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {
+      console.log("Something is error", error);
+      toast({
+        title: "Something is error",
+      });
+    } finally {
+      toast({
+        title: "Your message submitted",
+      });
+    }
 
     form.reset();
   }
-
   return (
     <Layout>
       <section className="section_gap max-lg:!pt-28">
@@ -73,7 +91,7 @@ export default function ContactPage() {
               >
                 <FormField
                   control={form.control}
-                  name="username"
+                  name="name"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Name *</FormLabel>
@@ -84,7 +102,6 @@ export default function ContactPage() {
                     </FormItem>
                   )}
                 />
-
                 <FormField
                   control={form.control}
                   name="email"
@@ -92,16 +109,19 @@ export default function ContactPage() {
                     <FormItem>
                       <FormLabel>Email *</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your email" {...field} />
+                        <Input
+                          type="email"
+                          placeholder="Your email"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-
                 <FormField
                   control={form.control}
-                  name="email"
+                  name="team"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>How large is your team? *</FormLabel>
@@ -122,14 +142,13 @@ export default function ContactPage() {
                           <SelectItem value="500+">500+</SelectItem>
                         </SelectContent>
                       </Select>
-
                       <FormMessage />
                     </FormItem>
                   )}
                 />
                 <FormField
                   control={form.control}
-                  name="email"
+                  name="worker_type"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>
@@ -156,14 +175,24 @@ export default function ContactPage() {
                     </FormItem>
                   )}
                 />
-                <div className="grid w-full gap-1.5">
-                  <FormLabel>Your message</FormLabel>
-                  <Textarea
-                    placeholder="Type your message here."
-                    id="message"
-                    className="min-h-32"
-                  />
-                </div>
+
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Your message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          {...field}
+                          placeholder="Type your message here."
+                          className="min-h-32"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
                 <Button size={"md"} type="submit" variant={"default"}>
                   Submit

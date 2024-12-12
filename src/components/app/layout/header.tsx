@@ -52,13 +52,11 @@ const Header: React.FC = () => {
                 Frank - AI Phone Representative
               </Link>
             </li>
-
-            <Button size="sm" variant="default">
-              <Link to={"/contact"}>
-                {" "}
-                Book a Demo <ArrowRight className="h-8 w-8 shrink-0" />
-              </Link>
-            </Button>
+            <Link to={"/contact"}>
+              <Button size="sm" variant="default">
+                Book a Demo
+              </Button>
+            </Link>
           </ul>
         </SheetContent>
       </Sheet>
@@ -85,9 +83,9 @@ const Header: React.FC = () => {
           </li>
         </ul>
 
-        <Link to={"/"}>
+        <Link to={"/contact"}>
           <Button size="md" variant="default">
-            <Link to={"/contact"}> Book a Demo</Link>
+            Book a Demo
           </Button>
         </Link>
       </>

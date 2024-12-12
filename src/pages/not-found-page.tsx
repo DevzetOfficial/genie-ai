@@ -14,7 +14,6 @@ const NotFoundPage = ({
           <svg
             width="314"
             height="171"
-            viewBox="0 0 314 171"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
