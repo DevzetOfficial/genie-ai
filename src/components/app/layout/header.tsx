@@ -34,6 +34,10 @@ const Header: React.FC = () => {
     }
   };
 
+  const handleCloseModal = () => {
+    setOpen(false);
+  };
+
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -103,7 +107,7 @@ const Header: React.FC = () => {
 
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent className="!p-0 max-w-2xl">
-            <ContactForm />
+            <ContactForm handleCloseModal={handleCloseModal} />
           </DialogContent>
         </Dialog>
       </>

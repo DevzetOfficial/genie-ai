@@ -43,7 +43,13 @@ const FormSchema = z.object({
   message: z.string().optional(),
 });
 
-export default function ContactForm({ className }: { className?: string }) {
+export default function ContactForm({
+  className,
+  handleCloseModal,
+}: {
+  className?: string;
+  handleCloseModal?: () => void;
+}) {
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -75,8 +81,11 @@ export default function ContactForm({ className }: { className?: string }) {
       toast({
         title: "Your message submitted",
       });
+      form.reset();
+      if (handleCloseModal) {
+        handleCloseModal();
+      }
     }
-    form.reset();
   }
   return (
     <div
@@ -189,8 +198,13 @@ export default function ContactForm({ className }: { className?: string }) {
             )}
           />
 
-          <Button size={"md"} type="submit" variant={"default"}>
-            Submit
+          <Button
+            disabled={form.formState.isSubmitting}
+            size={"md"}
+            type="submit"
+            variant={"default"}
+          >
+            {form.formState.isSubmitting ? "Submitting" : "Submit"}
           </Button>
         </form>
       </Form>
