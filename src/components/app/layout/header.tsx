@@ -6,6 +6,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { AlignRight } from "lucide-react";
 import logow from "@/assets/logo-w.svg";
 import logob from "@/assets/logo-black.svg";
 import { Button } from "../shared/frontend-button";
