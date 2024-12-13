@@ -1,8 +1,8 @@
 import mail from "@/assets/mail.svg";
 import graph from "@/assets/graph.svg";
 import lighting from "@/assets/lighting.svg";
-import SectionTitle from "@/components/app/shared/title";
 import SuccessCard from "@/components/app/shared/success-card";
+import { motion } from "framer-motion";
 
 const successSteps = [
   {
@@ -32,11 +32,39 @@ function SuccessSteps() {
   return (
     <section className="section_gap">
       <div className="container">
-        <div className="max-w-[964px] mx-auto text-center mb-20">
-          <SectionTitle weight={600}>Simplify, Scale, and Succeed</SectionTitle>
+        <div className="max-w-[784px] mx-auto mb-[60px] text-center grid gap-6 lg:gap-7">
+          <motion.h2
+            className="text-2xl md:text-3xl lg:text-[40px] lg:leading-[50px] font-semibold"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            variants={{
+              visible: { opacity: 1, translateY: 0 },
+              hidden: { opacity: 0, translateY: 100 },
+            }}
+          >
+            Features Built for the Modern Business
+          </motion.h2>
+
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              visible: { opacity: 1, translateY: 0 },
+              hidden: { opacity: 0, translateY: 100 },
+            }}
+            className="text-[#010609]/70 [&_br]:hidden [&_br]:lg:block lg:text-xl"
+            dangerouslySetInnerHTML={{
+              __html:
+                "Genie AI Phone Representative integrates smoothly with your existing CRM, customer support, and communication platforms. If you’re using HubSpot, Salesforce, Zendesk, or other systems, Genie syncs data instantly, providing full customer insights to agents and maintaining consistent service",
+            }}
+          />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-6 md:gap-6 lg:gap-8">
           {successSteps.map((step, index) => (
             <SuccessCard
               index={index}

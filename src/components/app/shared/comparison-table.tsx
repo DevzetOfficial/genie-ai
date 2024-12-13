@@ -1,11 +1,12 @@
 import { ComparisonDataProp } from "@/types";
 import checkIcon from "@/assets/check-circle.svg";
 import cancelIcon from "@/assets/x-circle.svg";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
+import { motion, useInView } from "framer-motion";
 import { Button } from "./frontend-button";
 import { ArrowRight } from "lucide-react";
+import { useRef } from "react";
 const ComparisonTable = ({
   data,
   className,
@@ -14,6 +15,8 @@ const ComparisonTable = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   const { pathname } = useLocation();
 
   const isHomePage = pathname === "/";
@@ -21,9 +24,9 @@ const ComparisonTable = ({
   return (
     <section className={cn("section_gap", className)}>
       <div className="container lg:px-14">
-        <div className=" space-y-4 md:space-y-8   max-w-4xl text-center mx-auto mb-10 md:mb-20">
+        <div className="max-w-4xl mx-auto mb-10 space-y-4 text-center md:space-y-8 md:mb-20">
           <motion.h3
-            className="text-3xl md:text-5xl font-semibold"
+            className="text-3xl font-semibold md:text-5xl [&_br]:hidden md:[&_br]:block"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
@@ -32,12 +35,11 @@ const ComparisonTable = ({
               visible: { opacity: 1, translateY: 0 },
               hidden: { opacity: 0, translateY: 100 },
             }}
-          >
-            {data.title}
-          </motion.h3>
+            dangerouslySetInnerHTML={{ __html: data.title || "" }}
+          />
         </div>
         <motion.div
-          className=" rounded-2xl max-lg:overflow-hidden border lg:border-none"
+          className="border rounded-2xl max-lg:overflow-hidden lg:border-none"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -76,14 +78,16 @@ const ComparisonTable = ({
                     isHomePage && "bg-white"
                   } group-first:border-b-0 border-b border-[#E9EAEC]`}
                 >
-                  <div className="table-mobile-label text-black">Other AI</div>
+                  <div className="text-black table-mobile-label">Other AI</div>
                   <div className="relative">
                     <img
                       className="table-feature-icon "
                       src={cancelIcon}
                       alt=" cancel icon"
                     />
-                    <div className="table-content">{item.otherAIFeature}</div>
+                    <div className="text-black/70 table-content">
+                      {item.otherAIFeature}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -92,12 +96,21 @@ const ComparisonTable = ({
         </motion.div>
 
         {isHomePage && (
-          <Link to="/contact">
-            <Button className="mx-auto mt-14 lg:mt-16">
-              Start your free trial today
-              <ArrowRight className="h-8 w-8 shrink-0 " />
-            </Button>
-          </Link>
+          <motion.div
+            ref={ref}
+            viewport={{ once: true }}
+            className={` duration-700 delay-100 flex justify-center items-center mt-6 md:mt-10 lg:mt-14 ${
+              isInView
+                ? "opacity-100 translate-y-0 "
+                : "translate-y-[100px] opacity-0"
+            }`}
+          >
+            <Link to={"/contact"}>
+              <Button variant={"default"}>
+                Book a Demo <ArrowRight className="w-8 h-8 shrink-0 " />
+              </Button>
+            </Link>
+          </motion.div>
         )}
       </div>
     </section>

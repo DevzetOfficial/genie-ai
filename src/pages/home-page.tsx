@@ -6,7 +6,7 @@ import FingerPrint from "@/components/app/home/finger-print";
 import FAQ from "@/components/app/shared/faq";
 import Testimonial from "@/components/app/shared/testimonial";
 import Hero from "@/components/app/shared/Hero";
-import Inteligence from "@/components/app/home/Inteligence";
+// import Inteligence from "@/components/app/home/Inteligence";
 import ComparisonTable from "@/components/app/shared/comparison-table";
 import { homePageComparisonData } from "@/data";
 import HeroVideo from "@/assets/videos/hero-video.mp4";
@@ -20,7 +20,7 @@ function HomePage() {
   return (
     <Layout>
       <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
-        <div className="container pb-10 md:pb-16 pt-16 lg:pt-28 ">
+        <div className="container pt-16 pb-10 md:pb-16 lg:pt-28 ">
           <div className="py-10 md:pb-14 lg:pb-56 ">
             <Hero
               title={
@@ -49,13 +49,13 @@ function HomePage() {
 
       <GetStartedVideo
         className="pt-0 md:pt-0 lg:pt-0"
-        shortDesc="Experience the power of Genie, your 24/7 Al Sales Development Representative, at a fraction of the cost of a human SDR."
+        shortDesc="Experience the power of Genie, your 24/7 Al Sales Development <br/> Representative, at a fraction of the cost of a human SDR."
         title="Get Started With Genie Today."
         videoUrl="https://www.youtube.com/embed/Oa0ZHfcalCM?si=u3DXwGf1_8N16I8I?autoplay=1"
         thumbnail={HomeGetStartedVideoThumb}
       />
 
-      <Inteligence />
+      {/* <Inteligence /> */}
 
       <Statistics />
 

@@ -6,9 +6,9 @@ function Testimonial() {
   return (
     <section className="section_gap bg-[rgba(32,34,35,1)]">
       <div className="container">
-        <div className=" space-y-4 md:space-y-8 text-white text-center  mb-10 md:mb-20">
+        <div className="mb-10 space-y-4 text-center text-white md:space-y-8 md:mb-20">
           <motion.h3
-            className="text-3xl md:text-5xl font-semibold"
+            className="text-3xl font-semibold md:text-5xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -22,7 +22,7 @@ function Testimonial() {
           </motion.h3>
 
           <motion.p
-            className="text-xl md:text-2xl opacity-70"
+            className="text-xl md:text-2xl text-white/70"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -35,7 +35,7 @@ function Testimonial() {
             Our features makes AI SDRs a valuable asset for any business.
           </motion.p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-8">
           {testimonials?.map((testimonial, index) => (
             <TestimonialCard
               key={testimonial.id}

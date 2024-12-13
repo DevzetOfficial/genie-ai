@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "@/assets/logo-w.svg";
+import footerLogo from "@/assets/foooter-logo.svg";
 import { Link } from "react-router-dom";
 import NewsLetter from "../shared/news-letter";
 
@@ -33,12 +33,12 @@ const Footer: React.FC = () => {
     <section className="bg-black">
       <footer className="pt-20 md:pt-[222px] font-instrument">
         <div className="container">
-          <div className="grid grid-cols-2 sm:grid-cols-12 items-start gap-8 md:gap-4">
+          <div className="grid items-start grid-cols-2 gap-8 sm:grid-cols-12 md:gap-4">
             <div className="col-span-2 sm:col-span-4 sm:row-span-2 lg:row-span-1 lg:col-span-5">
               <Link to="/">
                 <img src={footerLogo} alt="Footer Logo" />
               </Link>
-              <p className="mb-8 mt-14 text-lg text-white">
+              <p className="mb-8 text-lg text-white mt-14">
                 Join our newsletter to stay up to date on features and releases.
               </p>
               <NewsLetter inputClass="max-w-[351px] border-white/30 text-white" />
@@ -137,7 +137,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between py-10 md:py-16 text-xs text-white/50">
+          <div className="flex flex-wrap items-center justify-between py-10 text-xs md:py-16 text-white/50">
             <div className="flex items-center gap-1">
               <Link to="/">Privacy Policy</Link>
               <svg

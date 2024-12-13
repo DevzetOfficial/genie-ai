@@ -148,8 +148,32 @@ export const genieFAQ = [
   {
     id: 5,
     question: "Can I control which tasks Genie automates?",
-    answer:
-      "Yes, Genie gives you full control over automation settings, allowing you to choose which tasks to automate while keeping oversight on crucial processes.",
+    answer: "Need content of this question",
+  },
+  {
+    id: 6,
+    question: "How quickly can Genie be integrated into my existing systems?",
+    answer: "Need content of this question",
+  },
+  {
+    id: 7,
+    question: "How does Genie ensure data security and compliance?",
+    answer: "Need content of this question",
+  },
+  {
+    id: 8,
+    question: "What kind of ROl can I expect from using Genie?",
+    answer: "Need content of this question",
+  },
+  {
+    id: 9,
+    question: "How does Genie adapt to my business's specific needs?",
+    answer: "Need content of this question",
+  },
+  {
+    id: 10,
+    question: "What support and training do you provide for Genie users?",
+    answer: "Need content of this question",
   },
 ];
 
@@ -349,40 +373,6 @@ export const PhoneRepresentativeSalesDrive: SalesDriveProp = {
   items: [
     {
       id: 1,
-      title: "1. Find Your Ideal Buyers ",
-      details:
-        "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
-      image: aiPhoneSalesImgOne,
-    },
-    {
-      id: 2,
-      title: "2. Unified Multi-Channel Engagement",
-      details:
-        "Engage consistently through email, Linkedin, and other platforms, ensuring a unified approach to every prospect. Genie automates follow-ups, keeping leads warm and engaged across channels without extra manual input.",
-      image: aiPhoneSalesImgTwo,
-    },
-    {
-      id: 3,
-      title: "3. Hyper-Personalization at Scale",
-      details:
-        "Genie's Al-driven insights allow for targeted outreach with precision that goes beyond human capabilities. Each email and message is customized based on the prospect's role, industry, and specific pain points, resulting in higher engagement and conversion rates.",
-      image: aiPhoneSalesImgThree,
-    },
-    {
-      id: 4,
-      title: "4. Always-On Functionality",
-      details:
-        "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
-      image: aiPhoneSalesImgFour,
-    },
-  ],
-};
-export const aiSalesDrive: SalesDriveProp = {
-  title: "How Genie Drives Your Sales",
-
-  items: [
-    {
-      id: 1,
       title: "1. Instant Responses That Keep Customers Engaged",
       details:
         "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
@@ -408,6 +398,39 @@ export const aiSalesDrive: SalesDriveProp = {
       details:
         "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
       image: aiSDRImgFour,
+    },
+  ],
+};
+export const aiSalesDrive: SalesDriveProp = {
+  title: "How Genie Drives Your Sales",
+  items: [
+    {
+      id: 1,
+      title: "1. Find Your Ideal Buyers ",
+      details:
+        "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
+      image: aiPhoneSalesImgOne,
+    },
+    {
+      id: 2,
+      title: "2. Unified Multi-Channel Engagement",
+      details:
+        "Engage consistently through email, Linkedin, and other platforms, ensuring a unified approach to every prospect. Genie automates follow-ups, keeping leads warm and engaged across channels without extra manual input.",
+      image: aiPhoneSalesImgTwo,
+    },
+    {
+      id: 3,
+      title: "3. Hyper-Personalization at Scale",
+      details:
+        "Genie's Al-driven insights allow for targeted outreach with precision that goes beyond human capabilities. Each email and message is customized based on the prospect's role, industry, and specific pain points, resulting in higher engagement and conversion rates.",
+      image: aiPhoneSalesImgThree,
+    },
+    {
+      id: 4,
+      title: "4. Always-On Functionality",
+      details:
+        "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
+      image: aiPhoneSalesImgFour,
     },
   ],
 };
@@ -525,7 +548,7 @@ export const workforceRevolutionData: WorkforceRevulationProp[] = [
 ];
 
 export const homePageComparisonData: ComparisonDataProp = {
-  title: "Genie VS Other AI",
+  title: "Genie AI Agents VS <br/> Other Generic AI Platforms",
   items: [
     {
       id: 1,
@@ -613,45 +636,56 @@ export const aiPhonePageComparisonData: ComparisonDataProp = {
     {
       id: 1,
       category: "",
-      genieFeature: "Sonya - Genie AI",
+      genieFeature: "Genie AI Phone Representative",
       otherAIFeature: "Traditional Call Centers",
     },
     {
       id: 2,
       category: "Cost Efficiency",
-      genieFeature: "Automates high-volume inquiries",
-      otherAIFeature: "Requires extensive staffing and training",
+      genieFeature:
+        "Automates high-volume inquiries, reducing the need for additional staffing and associated costs. ",
+      otherAIFeature:
+        "Requires extensive staffing and training, leading to higher costs.",
     },
     {
       id: 3,
       category: "24/7 Availability",
-      genieFeature: "Operates continuously regardless of time zones.",
+      genieFeature:
+        "Operates continuously, providing round-the-clock service to customers, regardless of time zones. ",
       otherAIFeature:
-        "Limited to business hours or high cost after-hours coverage.",
+        "Limited to business hours or incurs significant extra costs for after-hours coverage",
     },
     {
       id: 4,
       category: "Consistency In Quality",
-      genieFeature: "Delivers uniform, standardized responses",
-      otherAIFeature: "Quality can vary between agents due to fatigue",
+      genieFeature:
+        "Delivers uniform, standardized responses with every interaction, ensuring a consistent experience.",
+      otherAIFeature:
+        "Quality can vary between agents due to fatigue or knowledge gaps.",
     },
     {
       id: 5,
       category: "Personalization Capabilities",
-      genieFeature: "Leverages CRM data & AI to tailor responses",
-      otherAIFeature: "Personalization depends on agents' memory or notes",
+      genieFeature:
+        "Leverages CRM data and AI to tailor responses based on customer history and preferences, creating a personalized experience.",
+      otherAIFeature:
+        "Personalization depends on agents’ memory or use of notes, which can lead to inconsistency.",
     },
     {
       id: 6,
       category: "Call Routing & Escalation",
-      genieFeature: "Identifies & routes complex issues to appropriate team",
-      otherAIFeature: "Often involves lengthy transfers",
+      genieFeature:
+        "Instantly identifies and routes complex issues to the appropriate team, with context provided for seamless handoffs.",
+      otherAIFeature:
+        "Often involves lengthy transfers and customers may need to repeat information.",
     },
     {
       id: 7,
       category: "Multi-Language Support",
-      genieFeature: "Provides support across multiple languages",
-      otherAIFeature: "Limited language support",
+      genieFeature:
+        "Provides support across multiple languages automatically, improving access for a global customer base",
+      otherAIFeature:
+        "Limited language support, dependent on availability of multilingual agents.",
     },
   ],
 };

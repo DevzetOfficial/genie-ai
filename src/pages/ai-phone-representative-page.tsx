@@ -7,7 +7,7 @@ import Hero from "@/components/app/shared/Hero";
 import Layout from "@/components/app/layout";
 import SalesDrive from "@/components/app/shared/sales-drive";
 import { BrandsMarquee } from "@/components/app/shared/brands";
-import SuccessSteps from "@/components/app/sdr/success-steps";
+import SuccessSteps from "@/components/app/phone-representitive/success-steps";
 import WhyChooseFrank from "@/components/app/sdr/why-chose-frank";
 
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
@@ -23,14 +23,14 @@ function AIPhoneRepresentativePage() {
   return (
     <Layout>
       <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
-        <div className="container pb-10 md:pb-16 pt-16 lg:pt-28 ">
+        <div className="container pt-16 pb-10 md:pb-16 lg:pt-28 ">
           <div className="py-10 md:pb-14 lg:pb-56 ">
             <Hero
               heroImage={franksImg}
-              title={"Frank - AI Phone <br/> Representative"}
+              title={"Frank - Genie AI Phone <br/> Representative"}
               titleClass={"xl:text-[80px]"}
               shortDesc={
-                "Put Your Sales on Autopilot. Boost Engagement, Reach More Leads, and Close Deals- All with Genie."
+                "Using AI-Driven Operations to Accelerate Business Growth"
               }
             />
           </div>
@@ -47,7 +47,7 @@ function AIPhoneRepresentativePage() {
         </video>
       </section>
 
-      <FeatureHighlight title="Experience the power of Frank, your 24/7 <br/> Al Sales Development Representative, at a fraction of <br/> the cost of a human SDR." />
+      <FeatureHighlight title="Customer Support Without <br/> Extra Costs or Complexity" />
 
       <SuccessSteps />
 

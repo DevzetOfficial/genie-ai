@@ -27,7 +27,7 @@ const GetStartedVideo = ({
   return (
     <section className={cn("section_gap", className)}>
       <div className="container">
-        <div className="max-w-[784px] mx-auto mb-[60px] text-center grid gap-6 lg:gap-8">
+        <div className="max-w-[784px] mx-auto mb-[60px] text-center grid gap-6 lg:gap-7">
           <motion.h2
             className="text-2xl md:text-3xl lg:text-[40px] lg:leading-[50px] font-semibold"
             initial="hidden"
@@ -51,10 +51,9 @@ const GetStartedVideo = ({
               visible: { opacity: 1, translateY: 0 },
               hidden: { opacity: 0, translateY: 100 },
             }}
-            className="text-[#010609]/70"
-          >
-            {shortDesc}
-          </motion.p>
+            className="text-[#010609]/70 [&_br]:hidden [&_br]:lg:block lg:text-xl"
+            dangerouslySetInnerHTML={{ __html: shortDesc }}
+          />
         </div>
 
         <motion.div
@@ -87,7 +86,7 @@ const GetStartedVideo = ({
             ></iframe>
           ) : (
             <button
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
               onClick={handlePlayVideo}
             >
               <img src={YoutubePlayIcon} alt="Youtube play icon" />

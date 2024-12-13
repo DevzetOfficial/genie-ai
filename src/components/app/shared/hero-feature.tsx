@@ -1,4 +1,6 @@
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeInAnimationVariants } from "@/lib/utils";
 
 const HeroFeature = () => {
   const { pathname } = useLocation();
@@ -14,7 +16,17 @@ const HeroFeature = () => {
         "Improved Customer Loyality",
         "Optimized Business Efficiency",
       ].map((item, index) => (
-        <div key={index} className="flex items-center gap-4">
+        <motion.div
+          key={index}
+          className="flex items-center gap-4"
+          variants={fadeInAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          custom={index}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -44,8 +56,8 @@ const HeroFeature = () => {
               </linearGradient>
             </defs>
           </svg>
-          <span className="text-white font-medium">{item}</span>
-        </div>
+          <span className="font-medium text-white">{item}</span>
+        </motion.div>
       ))}
     </div>
   );

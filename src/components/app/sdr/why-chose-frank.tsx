@@ -3,10 +3,12 @@ import franksImg from "@/assets/frank.webp";
 import FeatureBox from "../shared/feature-box";
 
 const whyChoose: FeatureBoxProp = {
-  title: "Why Choose Frank?",
-  description: `Genie handles your prospecting, outreach, and lead engagement so your sales team can focus on closing deals. It seamlessly automates your sales processes, identifies hot leads, and provides hyper-personalized outreach at a scale humans can't achieve.`,
+  title: "Why Frank ? - Genie AI Phone Representative",
+  description: `Traditional customer service models can’t keep
+up with rising demands for round-the-clock
+availability and fast, reliable service.`,
   image: franksImg,
-  shortDesc: "Experience the Power of Al-Driven Customer Support",
+  shortDesc: "Key Benefits of Genie AI Phone Representative:",
   capabilities: [
     "Always on Service",
     "Reduced Costs",
@@ -20,7 +22,7 @@ const WhyChoseFrank: React.FC = () => {
   return (
     <section className="section_gap bg-[#E1E9FE]">
       <div className="container">
-        <FeatureBox featureData={whyChoose} />
+        <FeatureBox index={1} featureData={whyChoose} />
       </div>
     </section>
   );

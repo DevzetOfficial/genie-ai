@@ -3,15 +3,16 @@ import { ArrowRight } from "lucide-react";
 import fingerprint from "@/assets/fingerprint.webp";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 function FingerPrint() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   return (
-    <section className="pt-10 md:pt-20 bg-[#E9EAEC]">
+    <section className="section_gap bg-[#E1E9FE]">
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-[5fr_7fr] gap-8">
-          <div className="space-y-5 md:space-y-10 lg:mr-20 pt-5 md:pt-14">
+          <div className="pt-5 space-y-5 md:space-y-10 lg:mr-20 md:pt-14">
             <motion.h3
               className={`text-3xl md:text-[40px] font-semibold leading-tight  text-[#010609] mb-4 md:mb-8 duration-700 ${
                 isInView
@@ -42,10 +43,13 @@ function FingerPrint() {
                   : "translate-y-[200px] opacity-0"
               }`}
             >
-              <Button variant={"default"}>
-                Book a Demo
-                <ArrowRight className="h-8 w-8 shrink-0 " />
-              </Button>
+              <Link to={"/contact"}>
+                {" "}
+                <Button variant={"default"}>
+                  Book a Demo
+                  <ArrowRight className="w-8 h-8 shrink-0 " />
+                </Button>
+              </Link>
             </motion.div>
           </div>
           <motion.div
@@ -56,7 +60,7 @@ function FingerPrint() {
             }`}
           >
             <img
-              className="size-full object-cover rounded-t-2xl"
+              className="object-cover size-full rounded-2xl"
               src={fingerprint}
               alt="fingerprint security ensure image"
             />
