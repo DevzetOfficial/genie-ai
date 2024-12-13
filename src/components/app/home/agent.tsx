@@ -62,9 +62,7 @@ function Agent() {
                   <h2 className="self-stretch my-auto text-[32px] text-zinc-950">
                     {agent.name}
                   </h2>
-                  {/* <div className="px-3 py-2 border border-black rounded-[32px] flex items-center">
-                    <span className="text-gradient leading-none text-xl font-medium"></span>
-                  </div> */}
+
                   <AnimatedGradientText className="mr-auto ml-0">
                     <span
                       className={cn(

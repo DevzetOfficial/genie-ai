@@ -67,21 +67,11 @@
     @apply leading-normal text-[];
   }
 }
-@layer utilities {
+@layer components {
   .text-gradient {
-    background: var(
-      --g,
-      linear-gradient(133deg, #0475ff 0%, #d103c0 45.08%, #0475ff 100%)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @apply text-transparent bg-clip-text bg-[linear-gradient(133deg,#0475FF_0%,#D103C0_45.08%,#0475FF_100%)];
   }
-  /* .btn-svg-rotation:hover svg{
-    transform: rotate(-45deg) !important;
-    transition: all .4s;
 
-  } */
   .section_gap {
     @apply py-10 md:py-14 lg:py-[120px];
   }

@@ -12,6 +12,8 @@ import { homePageComparisonData } from "@/data";
 import HeroVideo from "@/assets/videos/hero-video.mp4";
 import GetStartedVideo from "@/components/app/shared/get-started-video";
 import HomeGetStartedVideoThumb from "@/assets/home-video-thumbnail.webp";
+import NotRegularAi from "@/components/app/home/not-regular-ai";
+import Showcase from "@/components/app/home/showcase";
 
 function HomePage() {
   return (
@@ -57,6 +59,10 @@ function HomePage() {
       <Statistics />
 
       <FingerPrint />
+
+      <NotRegularAi />
+
+      <Showcase />
 
       <ComparisonTable data={homePageComparisonData} />
 
