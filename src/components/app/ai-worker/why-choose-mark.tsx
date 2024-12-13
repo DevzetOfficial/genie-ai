@@ -18,7 +18,7 @@ const WhyChooseMark: React.FC = () => {
   return (
     <section className="section_gap bg-[#E1E9FE]">
       <div className="container">
-        <FeatureBox featureData={whyChoose} />
+        <FeatureBox index={1} featureData={whyChoose} />
       </div>
     </section>
   );

@@ -25,7 +25,7 @@ export type FeatureBoxProp = {
     label: string;
     url: string;
   };
-  capabilities: string[];
+  capabilities?: string[];
 };
 
 export type SalesDriveProp = {
