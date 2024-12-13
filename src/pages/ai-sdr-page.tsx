@@ -14,6 +14,7 @@ import ComparisonTable from "@/components/app/shared/comparison-table";
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
 import GetStartedVideo from "@/components/app/shared/get-started-video";
 import SoniaGetStartedVideoThumb from "@/assets/sonya.webp";
+import FeatureHighlight from "@/components/app/shared/feature-highlight";
 
 function AISDRPage() {
   return (
@@ -43,6 +44,8 @@ function AISDRPage() {
           <source src={AiPageVideo} type="video/mp4" />
         </video>
       </section>
+
+      <FeatureHighlight title="Customer Support <br/> Without Extra Costs or Complexity" />
 
       <SuccessSteps />
 

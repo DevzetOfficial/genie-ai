@@ -14,6 +14,7 @@ import Testimonial from "@/components/app/shared/testimonial";
 import FAQ from "@/components/app/shared/faq";
 import GetStartedVideo from "@/components/app/shared/get-started-video";
 import FrankGetStartedVideoThumb from "@/assets/frank.webp";
+import FeatureHighlight from "@/components/app/shared/feature-highlight";
 
 function AIPhoneRepresentativePage() {
   return (
@@ -42,6 +43,9 @@ function AIPhoneRepresentativePage() {
           <source src={AiPageVideo} type="video/mp4" />
         </video>
       </section>
+
+      <FeatureHighlight title="Experience the power of Frank, your 24/7 <br/> Al Sales Development Representative, at a fraction of <br/> the cost of a human SDR." />
+
       <SuccessSteps />
 
       <GetStartedVideo
