@@ -56,22 +56,7 @@ function Statistics() {
                 bottlenecks drain resources, stall growth, and pull your team
                 away from high-impact initiatives.
               </motion.p>
-              {/* <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.8,
-                  visible: { opacity: 1, translateY: 0 },
-                  hidden: { opacity: 0, translateY: 200 },
-                }}
-                className="opacity-70"
-              >
-                <Button>
-                  Start your free trial today{" "}
-                  <ArrowRight className="h-8 w-8 shrink-0" />
-                </Button>
-              </motion.div> */}
+
               <motion.div
                 ref={ref}
                 viewport={{ once: true }}

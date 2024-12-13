@@ -12,6 +12,8 @@ import CompareToCallCenter from "@/components/app/sdr/compare-to-call-center";
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
 import Testimonial from "@/components/app/shared/testimonial";
 import FAQ from "@/components/app/shared/faq";
+import GetStartedVideo from "@/components/app/shared/get-started-video";
+import FrankGetStartedVideoThumb from "@/assets/frank.webp";
 
 function AIPhoneRepresentativePage() {
   return (
@@ -41,6 +43,16 @@ function AIPhoneRepresentativePage() {
         </video>
       </section>
       <SuccessSteps />
+
+      <GetStartedVideo
+        videoWrapClass="[background-position:center_10%]"
+        className="pt-0 md:pt-0 lg:pt-0"
+        shortDesc="Frank combines Al-powered responsiveness, personalized interaction, and real-time adaptability to keep customers engaged, even as you grow."
+        title="Get Started With Frank Today."
+        videoUrl="asdf"
+        thumbnail={FrankGetStartedVideoThumb}
+      />
+
       <WhyChooseFrank />
       <SalesDrive salesDrive={PhoneRepresentativeSalesDrive} />
       <AiDrivenOutreach />

@@ -10,7 +10,8 @@ import Inteligence from "@/components/app/home/Inteligence";
 import ComparisonTable from "@/components/app/shared/comparison-table";
 import { homePageComparisonData } from "@/data";
 import HeroVideo from "@/assets/videos/hero-video.mp4";
-// import SmoothScroll from "@/components/app/animation/smooth-scrool";
+import GetStartedVideo from "@/components/app/shared/get-started-video";
+import HomeGetStartedVideoThumb from "@/assets/home-video-thumbnail.webp";
 
 function HomePage() {
   return (
@@ -42,6 +43,14 @@ function HomePage() {
       </section>
 
       <Agent />
+
+      <GetStartedVideo
+        className="pt-0 md:pt-0 lg:pt-0"
+        shortDesc="Experience the power of Genie, your 24/7 Al Sales Development Representative, at a fraction of the cost of a human SDR."
+        title="Get Started With Genie Today."
+        videoUrl="asdf"
+        thumbnail={HomeGetStartedVideoThumb}
+      />
 
       <Inteligence />
 

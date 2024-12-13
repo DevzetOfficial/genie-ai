@@ -12,6 +12,8 @@ import RealWorldApp from "@/components/app/phone-representitive/real-world-app";
 import CustomerSupport from "@/components/app/phone-representitive/customer-support";
 import ComparisonTable from "@/components/app/shared/comparison-table";
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
+import GetStartedVideo from "@/components/app/shared/get-started-video";
+import SoniaGetStartedVideoThumb from "@/assets/sonya.webp";
 
 function AISDRPage() {
   return (
@@ -43,6 +45,15 @@ function AISDRPage() {
       </section>
 
       <SuccessSteps />
+
+      <GetStartedVideo
+        videoWrapClass="[background-position:center_30%]"
+        className="pt-0 md:pt-0 lg:pt-0"
+        shortDesc="Experience the power of Sonya, your 24/7 Al Sales Development Representative, at a fraction of the cost of a human SDR."
+        title="Get Started With Sonya Today."
+        videoUrl="asdf"
+        thumbnail={SoniaGetStartedVideoThumb}
+      />
 
       <WhyChooseSonya />
 
