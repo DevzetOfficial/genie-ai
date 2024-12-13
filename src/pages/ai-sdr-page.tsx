@@ -55,7 +55,7 @@ function AISDRPage() {
         className="pt-0 md:pt-0 lg:pt-0"
         shortDesc="Experience the power of Sonya, your 24/7 Al Sales Development Representative, at a fraction of the cost of a human SDR."
         title="Get Started With Sonya Today."
-        videoUrl="asdf"
+        videoUrl="https://www.youtube.com/embed/Oa0ZHfcalCM?si=u3DXwGf1_8N16I8I?autoplay=1"
         thumbnail={SoniaGetStartedVideoThumb}
       />
 

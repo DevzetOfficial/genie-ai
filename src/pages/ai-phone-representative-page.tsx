@@ -56,7 +56,7 @@ function AIPhoneRepresentativePage() {
         className="pt-0 md:pt-0 lg:pt-0"
         shortDesc="Frank combines Al-powered responsiveness, personalized interaction, and real-time adaptability to keep customers engaged, even as you grow."
         title="Get Started With Frank Today."
-        videoUrl="asdf"
+        videoUrl="https://www.youtube.com/embed/Oa0ZHfcalCM?si=u3DXwGf1_8N16I8I?autoplay=1"
         thumbnail={FrankGetStartedVideoThumb}
       />
 

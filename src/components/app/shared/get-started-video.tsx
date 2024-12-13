@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import YoutubePlayIcon from "@/assets/youtube-play-icon.svg";
@@ -17,6 +18,12 @@ const GetStartedVideo = ({
   videoWrapClass?: string;
   thumbnail: string;
 }) => {
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+
+  const handlePlayVideo = () => {
+    setIsVideoVisible(true);
+  };
+
   return (
     <section className={cn("section_gap", className)}>
       <div className="container">
@@ -52,11 +59,14 @@ const GetStartedVideo = ({
 
         <motion.div
           className={cn(
-            "relative rounded-2xl z-[1] md:rounded-3xl lg:rounded-[32px] overflow-hidden w-full h-72 sm:h-80 md:h-[400px] lg:h-[560px] bg-cover bg-center after:absolute after:inset-0 after:bg-black/40 after:z-[-1]",
+            "relative rounded-2xl z-[1] md:rounded-3xl lg:rounded-[32px] overflow-hidden w-full h-72 sm:h-80 md:h-[400px] lg:h-[560px] bg-cover bg-center",
+            isVideoVisible
+              ? "bg-black"
+              : "after:absolute after:inset-0 after:bg-black/40 after:z-[-1]",
             videoWrapClass
           )}
           style={{
-            backgroundImage: `url('${thumbnail}')`,
+            backgroundImage: isVideoVisible ? "none" : `url('${thumbnail}')`,
           }}
           initial="hidden"
           whileInView="visible"
@@ -67,9 +77,22 @@ const GetStartedVideo = ({
             hidden: { opacity: 0, translateY: 100 },
           }}
         >
-          <button className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <img src={YoutubePlayIcon} alt="Youtube play icon" />
-          </button>
+          {isVideoVisible ? (
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={`${videoUrl}`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <button
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              onClick={handlePlayVideo}
+            >
+              <img src={YoutubePlayIcon} alt="Youtube play icon" />
+            </button>
+          )}
         </motion.div>
       </div>
     </section>
