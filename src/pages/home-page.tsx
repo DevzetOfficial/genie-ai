@@ -14,6 +14,7 @@ import GetStartedVideo from "@/components/app/shared/get-started-video";
 import HomeGetStartedVideoThumb from "@/assets/home-video-thumbnail.webp";
 import NotRegularAi from "@/components/app/home/not-regular-ai";
 import Showcase from "@/components/app/home/showcase";
+import MeetAgentFeature from "@/components/app/home/meet-agent-feature";
 
 function HomePage() {
   return (
@@ -64,7 +65,9 @@ function HomePage() {
 
       <Showcase />
 
-      <ComparisonTable data={homePageComparisonData} />
+      <MeetAgentFeature />
+
+      <ComparisonTable className="bg-[#F0F6FF]" data={homePageComparisonData} />
 
       <Testimonial />
 

@@ -1,25 +1,16 @@
-import { WhyChooseProp } from "@/types";
-import WhyChoose from "@/components/app/shared/why-chose";
 import whyChoseCover from "@/assets/whychose.webp";
+import { FeatureBoxProp } from "@/types";
+import FeatureBox from "../shared/feature-box";
 
-const whyChoose: WhyChooseProp = {
+const whyChoose: FeatureBoxProp = {
   title: "Why Choose Mark?",
-  details: `Genie handles your prospecting, outreach, and lead engagement so your sales team can focus on closing deals. It seamlessly automates your sales processes, identifies hot leads, and provides hyper-personalized outreach at a scale humans can't achieve.`,
+  description: `Genie handles your prospecting, outreach, and lead engagement so your sales team can focus on closing deals. It seamlessly automates your sales processes, identifies hot leads, and provides hyper-personalized outreach at a scale humans can't achieve.`,
+  shortDesc: "",
   image: whyChoseCover,
-  features: [
-    {
-      id: 1,
-      featureData: "24/7 Operation: Reach leads anytime, without delays.",
-    },
-    {
-      id: 2,
-      featureData: "Cost Efficiency: Save on SDR hiring and training costs.",
-    },
-    {
-      id: 3,
-      featureData:
-        "Consistent Engagement: No fatigue, maximizing outreach volume and quality.",
-    },
+  capabilities: [
+    "24/7 Operation: Reach leads anytime, without delays.",
+    "Cost Efficiency: Save on SDR hiring and training costs.",
+    "Consistent Engagement: No fatigue, maximizing outreach volume and quality.",
   ],
 };
 
@@ -27,7 +18,7 @@ const WhyChooseMark: React.FC = () => {
   return (
     <section className="section_gap bg-[#E1E9FE]">
       <div className="container">
-        <WhyChoose whyChoose={whyChoose} />
+        <FeatureBox featureData={whyChoose} />
       </div>
     </section>
   );

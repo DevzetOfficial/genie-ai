@@ -4,6 +4,7 @@ import { Button } from "@/components/app/shared/frontend-button";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
+import HeroFeature from "./hero-feature";
 
 type HeroProps = {
   heroImage?: string;
@@ -64,6 +65,8 @@ const Hero: React.FC<HeroProps> = ({
             </Button>
           </Link>
         </motion.div>
+
+        <HeroFeature />
       </div>
 
       {heroImage && (

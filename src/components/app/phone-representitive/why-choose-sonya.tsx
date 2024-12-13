@@ -1,25 +1,18 @@
-import { WhyChooseProp } from "@/types";
-import WhyChoose from "@/components/app/shared/why-chose";
 import sonyasImg from "@/assets/sonya.webp";
+import FeatureBox from "../shared/feature-box";
+import { FeatureBoxProp } from "@/types";
 
-const whyChoose: WhyChooseProp = {
+const whyChoose: FeatureBoxProp = {
   title: "Why Choose Sonya?",
-  details: `Genie handles your prospecting, outreach, and lead engagement so your sales team can focus on closing deals. It seamlessly automates your sales processes, identifies hot leads, and provides hyper-personalized outreach at a scale humans can't achieve.`,
+  description:
+    "Sonya handles your prospecting, outreach, and lead engagement so your sales team can focus on closing deals. <br/> <br/> Sonya’s AI SDR suite combines advanced personalization, 24/7 operation, and multi-channel engagement, making it the go-to choice for automating sales development pipelines.",
   image: sonyasImg,
-  features: [
-    {
-      id: 1,
-      featureData: "24/7 Operation: Reach leads anytime, without delays.",
-    },
-    {
-      id: 2,
-      featureData: "Cost Efficiency: Save on SDR hiring and training costs.",
-    },
-    {
-      id: 3,
-      featureData:
-        "Consistent Engagement: No fatigue, maximizing outreach volume and quality.",
-    },
+  shortDesc: "Ramp Up Growth Without Growing Headcount",
+  capabilities: [
+    "Instant Inquiry Responses",
+    "Efficient Transaction Handling",
+    "Effortless Escalation",
+    "Multi-Language Support",
   ],
 };
 
@@ -27,7 +20,7 @@ const WhyChooseSonya: React.FC = () => {
   return (
     <section className="section_gap bg-[#E1E9FE]">
       <div className="container">
-        <WhyChoose whyChoose={whyChoose} />
+        <FeatureBox featureData={whyChoose} />
       </div>
     </section>
   );

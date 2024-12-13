@@ -18,21 +18,18 @@ const realWorldAppInfo = [
     icon: lighting,
     title: "E-commerce and Retail",
     bgColor: "#EDE6C4",
-    shortDetails: `In industries where order status updates, return processing, and product inquiries make up a significant volume of calls, Genie Al Phone Representative streamlines these interactions, answers questions instantly, and frees up human agents to focus on specific upselling or handling complex cases.`,
   },
   {
     id: 2,
     icon: graph,
     title: "Healthcare and Patient Services",
     bgColor: "#CBE6E6",
-    shortDetails: `Healthcare providers can leverage Genie to handle appointment scheduling, prescription refills, and routine questions, alleviating the burden on medical staff. Genie keeps patient inquiries organized and allows healthcare teams to spend more time on care rather than administration.`,
   },
   {
     id: 3,
     icon: mail,
     title: "Financial Services and Account Management",
     bgColor: "#EFCFC2",
-    shortDetails: `For banks and financial service providers, Genie provides accurate, secure support for account-related inquiries, transactions, and guidance. With a robust compliance framework, Genie ensures that customer information is handled with care and security, adding a layer of trust to every interaction.`,
   },
 ];
 function RealWorldApp() {
@@ -49,7 +46,6 @@ function RealWorldApp() {
               index={index}
               bgColor={step.bgColor}
               title={step.title}
-              shortDetails={step.shortDetails}
               icon={step.icon}
               className={`p-8 md:p-10 ${
                 step.id > 3 ? "lg:col-span-3" : "lg:col-span-2"

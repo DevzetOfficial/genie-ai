@@ -1,4 +1,4 @@
-import { Button } from "@/components/app/shared/frontend-button";
+import NewsLetter from "@/components/app/shared/news-letter";
 
 const BlogHero = () => {
   return (
@@ -18,18 +18,7 @@ const BlogHero = () => {
               will help you harness the power of Al to drive growth, streamline
               operations, and deliver unparalleled customer experiences.
             </p>
-            <form
-              className="pt-2 flex gap-y-1 flex-wrap md:flex-nowrap items-center "
-              action="#"
-            >
-              <input
-                className="h-10 md:h-[60px] px-5 md:px-6 py-4 md:py-[18px] placeholder:text-[#B9C0CA] focus:outline-none md:min-w-[400px] border rounded-[40px]"
-                type="text"
-                placeholder="Enter your email"
-              />
-
-              <Button type="submit">Subscribe</Button>
-            </form>
+            <NewsLetter />
           </div>
         </div>
       </div>

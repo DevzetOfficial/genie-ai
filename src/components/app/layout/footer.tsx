@@ -1,6 +1,7 @@
 import React from "react";
 import footerLogo from "@/assets/logo-w.svg";
 import { Link } from "react-router-dom";
+import NewsLetter from "../shared/news-letter";
 
 const FooterNavTitle = ({ text }: { text: string }) => (
   <div className="mb-6 md:mb-8">
@@ -32,11 +33,19 @@ const Footer: React.FC = () => {
     <section className="bg-black">
       <footer className="pt-20 md:pt-[222px] font-instrument">
         <div className="container">
-          <div className="grid grid-cols-2 sm:grid-cols-12 gap-8 md:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-12 items-start gap-8 md:gap-4">
             <div className="col-span-2 sm:col-span-4 sm:row-span-2 lg:row-span-1 lg:col-span-5">
               <Link to="/">
                 <img src={footerLogo} alt="Footer Logo" />
               </Link>
+              <p className="mb-8 mt-14 text-lg text-white">
+                Join our newsletter to stay up to date on features and releases.
+              </p>
+              <NewsLetter inputClass="max-w-[351px] border-white/30 text-white" />
+              <p className="mt-4 text-white/50">
+                By subscribing you agree to with our Privacy Policy and provide
+                consent to receive updates from our company.
+              </p>
             </div>
 
             <div className="sm:col-span-3 lg:col-span-2">

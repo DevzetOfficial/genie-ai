@@ -416,8 +416,6 @@ export const aiDrivenData: AiDrivenProp[] = [
   {
     id: 1,
     title: "Book More Meetings with Al",
-    details:
-      "Genie tailors each message based on the lead's recent LinkedIn activity and bio, ensuring your outreach feels personal and relevant, helping you stand out from the noise.",
     features: [
       "Respond in 10 Minutes or Less: Engage leads in real time.",
       "Manage Responses: Handle auto-replies, negative responses, and follow-ups.",
@@ -425,29 +423,31 @@ export const aiDrivenData: AiDrivenProp[] = [
   },
   {
     id: 2,
-    title: "Generate Leads from Our Extensive Database",
-    details:
-      "Genie provides access to over 700 million leads across 30 million companies, letting you filter for your ideal customer with precision to keep your campaigns running smoothly.",
+    title: "Run Event Communications",
+    features: [
+      "Personalized Invites: Engage prospects with tailored event messages.",
+      "Efficient Follow-Ups: Reconnect with attendees to boost engagement.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Generate Leads from Our Extensive  Database",
     features: [
       "Enrich Data: Add value to existing leads with additional data points.",
       "ABM Outreach: Target specific accounts for a focused approach.",
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Manage Your Sales Pipeline",
-    details:
-      "Convert trial users to paying clients with Genie's Al-powered nurturing that highlights your product's value, resolves questions, and encourages subscription upgrades.",
     features: [
       "Automated Scheduling: Sync with Calendly or HubSpot to streamline meetings.",
       "Re-Engagement Campaigns: Keep your pipeline active and moving.",
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Empower Sales Engagement",
-    details:
-      "Convert trial users to paying clients with Genie's Al-powered nurturing that highlights your product's value, resolves questions, and encourages subscription upgrades.",
     features: [
       "Upsell and Cross-Sell: Increase lifetime value through targeted offers.",
       "Stay Top of Mind: Use multi-channel outreach to keep users engaged.",
@@ -608,7 +608,7 @@ export const homePageComparisonData: ComparisonDataProp = {
 };
 
 export const aiPhonePageComparisonData: ComparisonDataProp = {
-  title: "Sonya - Genie AI Phone Representative VS Traditional Call Centers",
+  title: "How Frank Compares to Traditional Call Centers",
   items: [
     {
       id: 1,

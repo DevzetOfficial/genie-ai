@@ -1,4 +1,7 @@
-import { PhoneRepresentativeSalesDrive } from "@/data";
+import {
+  aiPhonePageComparisonData,
+  PhoneRepresentativeSalesDrive,
+} from "@/data";
 import franksImg from "@/assets/frank.webp";
 import Hero from "@/components/app/shared/Hero";
 import Layout from "@/components/app/layout";
@@ -6,15 +9,15 @@ import SalesDrive from "@/components/app/shared/sales-drive";
 import { BrandsMarquee } from "@/components/app/shared/brands";
 import SuccessSteps from "@/components/app/sdr/success-steps";
 import WhyChooseFrank from "@/components/app/sdr/why-chose-frank";
-import AiDrivenOutreach from "@/components/app/sdr/ai-driven-outreach";
-import RevenueOportunities from "@/components/app/sdr/revenue-oportunities";
-import CompareToCallCenter from "@/components/app/sdr/compare-to-call-center";
+
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
 import Testimonial from "@/components/app/shared/testimonial";
 import FAQ from "@/components/app/shared/faq";
 import GetStartedVideo from "@/components/app/shared/get-started-video";
 import FrankGetStartedVideoThumb from "@/assets/frank.webp";
 import FeatureHighlight from "@/components/app/shared/feature-highlight";
+import RealWorldApp from "@/components/app/phone-representitive/real-world-app";
+import ComparisonTable from "@/components/app/shared/comparison-table";
 
 function AIPhoneRepresentativePage() {
   return (
@@ -58,11 +61,18 @@ function AIPhoneRepresentativePage() {
       />
 
       <WhyChooseFrank />
+
       <SalesDrive salesDrive={PhoneRepresentativeSalesDrive} />
-      <AiDrivenOutreach />
-      <RevenueOportunities />
-      <CompareToCallCenter />
+
+      <RealWorldApp />
+
+      <ComparisonTable
+        className="md:pt-0 lg:pt-0"
+        data={aiPhonePageComparisonData}
+      />
+
       <Testimonial />
+
       <FAQ />
     </Layout>
   );

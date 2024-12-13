@@ -17,7 +17,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   return (
-    <motion.h1
+    <motion.h2
       ref={ref}
       className={cn(
         `text-3xl md:text-5xl xl:text-[64px] duration-700  ${
@@ -30,7 +30,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
       style={{ color, fontWeight: weight }}
     >
       {children}
-    </motion.h1>
+    </motion.h2>
   );
 };
 

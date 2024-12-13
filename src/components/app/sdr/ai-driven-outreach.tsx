@@ -13,7 +13,16 @@ function AiDrivenOutreach() {
           </SectionTitle>
           <ShortDesc text="Outbound Lead Management: Convert Connections into Opportunities"></ShortDesc>
         </div>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 items-start">
+          <div className="grid gap-6">
+            <h4 className="text-xl font-semibold md:text-2xl text-[#010609]">
+              Outbound Lead Management
+            </h4>
+            <h2 className="text-3xl font-semibold md:text-4xl lg:text-[40px]">
+              Convert Connections into Opportunities
+            </h2>
+          </div>
+
           {aiDrivenData.map((data) => (
             <OutReach key={data.id} outreach={data} />
           ))}

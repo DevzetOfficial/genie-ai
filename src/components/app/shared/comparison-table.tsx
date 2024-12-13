@@ -2,9 +2,24 @@ import { ComparisonDataProp } from "@/types";
 import checkIcon from "@/assets/check-circle.svg";
 import cancelIcon from "@/assets/x-circle.svg";
 import { motion } from "framer-motion";
-const ComparisonTable = ({ data }: { data: ComparisonDataProp }) => {
+import { cn } from "@/lib/utils";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "./frontend-button";
+import { ArrowRight } from "lucide-react";
+const ComparisonTable = ({
+  data,
+  className,
+}: {
+  data: ComparisonDataProp;
+  className?: string;
+  children?: React.ReactNode;
+}) => {
+  const { pathname } = useLocation();
+
+  const isHomePage = pathname === "/";
+
   return (
-    <section className="section_gap ">
+    <section className={cn("section_gap", className)}>
       <div className="container lg:px-14">
         <div className=" space-y-4 md:space-y-8   max-w-4xl text-center mx-auto mb-10 md:mb-20">
           <motion.h3
@@ -37,10 +52,14 @@ const ComparisonTable = ({ data }: { data: ComparisonDataProp }) => {
               key={item.id}
               className="grid group lg:grid-cols-[1fr_3.75fr] font-medium"
             >
-              <div className="bg-gray-200 group-first:hidden lg:group-first:block  group-first:border-b-0 group-first:bg-transparent lg:bg-transparent text-center lg:text-start lg:border-l lg:group-[:nth-child(2)]:rounded-tl-3xl lg:group-[:nth-child(2)]:border-t group-first:border-l-0 items-center p-3 md:p-5 lg:p-6  border-b border-[#E9EAEC]">
+              <div
+                className={`bg-gray-200 group-first:hidden lg:group-first:block  group-first:border-b-0 group-first:bg-transparent ${
+                  isHomePage ? "lg:bg-white" : "lg:bg-transparent"
+                } text-center lg:text-start lg:border-l lg:group-[:nth-child(2)]:rounded-tl-3xl lg:group-[:nth-child(2)]:border-t group-first:border-l-0 items-center p-3 md:p-5 lg:p-6  border-b border-[#E9EAEC]`}
+              >
                 {item.category}
               </div>
-              <div className="grid group-first:hidden lg:group-first:grid lg:grid-cols-[1.15fr_1fr] lg:items-end">
+              <div className="grid group-first:hidden lg:group-first:grid lg:grid-cols-[1.15fr_1fr]">
                 <div className="table-feature-block lg:bg-[#00224D] border-b group-first:border-b-0 group-last:border-b-0  lg:border-[#002D66]  h-full lg:text-white group-first:rounded-tl-3xl lg:group-first:rounded-t-3xl group-first:text-xl md:group-first:text-[28px] group-first:font-bold group-first:border-t">
                   <div className="table-mobile-label">With Genie</div>
                   <div className="relative">
@@ -52,7 +71,11 @@ const ComparisonTable = ({ data }: { data: ComparisonDataProp }) => {
                     <div className="table-content">{item.genieFeature}</div>
                   </div>
                 </div>
-                <div className="table-feature-block group-first:rounded-tr-3xl lg:border-r  group-first:border-b-0 border-b border-[#E9EAEC]">
+                <div
+                  className={`table-feature-block group-first:rounded-tr-3xl lg:border-r ${
+                    isHomePage && "bg-white"
+                  } group-first:border-b-0 border-b border-[#E9EAEC]`}
+                >
                   <div className="table-mobile-label text-black">Other AI</div>
                   <div className="relative">
                     <img
@@ -67,6 +90,15 @@ const ComparisonTable = ({ data }: { data: ComparisonDataProp }) => {
             </div>
           ))}
         </motion.div>
+
+        {isHomePage && (
+          <Link to="/contact">
+            <Button className="mx-auto mt-14 lg:mt-16">
+              Start your free trial today
+              <ArrowRight className="h-8 w-8 shrink-0 " />
+            </Button>
+          </Link>
+        )}
       </div>
     </section>
   );

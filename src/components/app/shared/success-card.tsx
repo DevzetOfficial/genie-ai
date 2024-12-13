@@ -2,11 +2,12 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInAnimationVariants } from "@/lib/utils";
+
 interface SuccessCardProps {
-  bgColor: string; // Background color (CSS color string)
-  icon: string; // URL or path to the icon image
-  title: string; // Card title
-  shortDetails: string; // Brief details or description
+  bgColor: string;
+  icon: string;
+  title: string;
+  shortDetails?: string;
   className?: string;
   index: number;
 }

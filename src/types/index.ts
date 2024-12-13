@@ -13,16 +13,19 @@ export type BlogProp = {
   type: "featured" | "top-story";
 };
 
-interface FeatureData {
-  id: number;
-  featureData: string;
-}
-
-export type WhyChooseProp = {
+export type FeatureBoxProp = {
   title: string;
-  details: string;
+  titleClass?: string;
+  imageClass?: string;
+  description: string;
   image: string;
-  features?: FeatureData[];
+  highlight?: string;
+  shortDesc: string;
+  button?: {
+    label: string;
+    url: string;
+  };
+  capabilities: string[];
 };
 
 export type SalesDriveProp = {
@@ -38,7 +41,6 @@ export type SalesDriveProp = {
 export type AiDrivenProp = {
   id: number;
   title: string;
-  details: string;
   features: string[];
 };
 

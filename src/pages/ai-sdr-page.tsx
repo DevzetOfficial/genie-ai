@@ -1,21 +1,21 @@
 import FAQ from "@/components/app/shared/faq";
 import Hero from "@/components/app/shared/Hero";
 import Layout from "@/components/app/layout";
-import { aiPhonePageComparisonData, aiSalesDrive } from "@/data";
+import { aiSalesDrive } from "@/data";
 import sonyasImg from "@/assets/sonya.webp";
 import SalesDrive from "@/components/app/shared/sales-drive";
 import Testimonial from "@/components/app/shared/testimonial";
 import { BrandsMarquee } from "@/components/app/shared/brands";
 import SuccessSteps from "@/components/app/phone-representitive/success-steps";
 import WhyChooseSonya from "@/components/app/phone-representitive/why-choose-sonya";
-import RealWorldApp from "@/components/app/phone-representitive/real-world-app";
-import CustomerSupport from "@/components/app/phone-representitive/customer-support";
-import ComparisonTable from "@/components/app/shared/comparison-table";
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
 import GetStartedVideo from "@/components/app/shared/get-started-video";
 import SoniaGetStartedVideoThumb from "@/assets/sonya.webp";
 import FeatureHighlight from "@/components/app/shared/feature-highlight";
 import Showcase from "@/components/app/sdr/showcase";
+import RevenueOportunities from "@/components/app/sdr/revenue-oportunities";
+import CompareToCallCenter from "@/components/app/sdr/compare-to-call-center";
+import AiDrivenOutreach from "@/components/app/sdr/ai-driven-outreach";
 
 function AISDRPage() {
   return (
@@ -63,13 +63,13 @@ function AISDRPage() {
 
       <SalesDrive salesDrive={aiSalesDrive} />
 
-      <RealWorldApp />
+      <AiDrivenOutreach />
 
-      <CustomerSupport />
+      <RevenueOportunities />
+
+      <CompareToCallCenter />
 
       <Showcase />
-
-      <ComparisonTable data={aiPhonePageComparisonData} />
 
       <Testimonial />
 
