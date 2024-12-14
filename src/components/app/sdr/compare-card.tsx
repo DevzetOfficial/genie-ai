@@ -19,7 +19,7 @@ const CompareCard = ({
           data.withGenie ? "bg-[#8BE958] text-black" : "bg-[#EC4343] text-white"
         } py-3 md:py-4 px-5 whitespace-nowrap lg:py-3 lg:px-6  rounded-[40px] -translate-x-1/2 -translate-y-1/2 top-0 left-1/2 absolute leading-none`}
       >
-        {data.withGenie ? "With Genie" : "Before Genie"}
+        {data.withGenie ? " Before Sonya (Genie)" : " With Sonya (Genie)"}
       </span>
       <ul className="space-y-3 md:space-y-4 lg:space-y-6">
         {data.items.map((item) => (

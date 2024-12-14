@@ -36,12 +36,7 @@ const firstRow = brands.slice(0, brands.length);
 const Brand = ({ img }: { img: string }) => {
   return (
     <div className="flex flex-row items-center gap-4 md:gap-10 lg:gap-[90px]">
-      <img
-        className="rounded-full h-7 "
-        height="28"
-        alt="brand-logo"
-        src={img}
-      />
+      <img className=" h-7 " height="28" alt="brand-logo" src={img} />
       <div className="flex flex-col"></div>
     </div>
   );

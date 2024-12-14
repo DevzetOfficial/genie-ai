@@ -44,7 +44,8 @@ function SuccessSteps() {
               hidden: { opacity: 0, translateY: 100 },
             }}
           >
-            Features Built for the Modern Business
+            Genie AI Phone Representative: Features Built for the Modern
+            Business
           </motion.h2>
 
           <motion.p

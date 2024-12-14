@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
-import React from "react";
 import { motion } from "framer-motion";
+import { Image } from "lucide-react";
+import { TestimonialCardProp } from "@/types";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -16,37 +17,20 @@ const fadeInAnimationVariants = {
   }),
 };
 
-interface TestimonialCardProps {
-  logo: boolean;
-  testimonialLogo?: string;
-  review?: string;
-  profileImg?: string;
-  reviewerName?: string;
-  designation?: string;
-  bgColor: string;
-  className?: string;
-  index: number;
-}
-const TestimonialCard: React.FC<TestimonialCardProps> = ({
-  logo,
-  testimonialLogo,
-  review,
-  profileImg,
-  reviewerName,
-  designation,
-  bgColor,
-  className,
-  index,
+const TestimonialCard = ({
+  testimonial,
+}: {
+  testimonial: TestimonialCardProp;
 }) => {
   return (
     <motion.div
       className={cn(
-        "rounded-2xl p-4 md:p-6 lg:p-8 min-h-64 md:[&:nth-of-type(3)]:col-span-2 [&:nth-of-type(5)]:order-last md:[&:nth-of-type(5)]:col-span-2 lg:[&:nth-of-type(5)]:order-none",
+        "rounded-2xl p-4 md:p-6 lg:p-8 min-h-64",
 
-        className
+        testimonial.className
       )}
       style={{
-        backgroundColor: bgColor,
+        backgroundColor: testimonial.bgColor,
       }}
       variants={fadeInAnimationVariants}
       initial="initial"
@@ -54,14 +38,14 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       viewport={{
         once: true,
       }}
-      custom={index}
+      custom={testimonial.index}
     >
-      {logo ? (
+      {testimonial.logo ? (
         <div className="flex justify-center items-center size-full">
-          {testimonialLogo && (
+          {testimonial.testimonialLogo && (
             <div>
               <img
-                src={testimonialLogo}
+                src={testimonial.testimonialLogo}
                 alt="Brand Logo"
                 className="size-full"
               />
@@ -70,30 +54,32 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         </div>
       ) : (
         <div className=" size-full flex flex-col justify-between gap-12">
-          {review && (
-            <p className="text-xl md:text-2xl font-semibold text-[rgba(0,0,0,0.70)]">
-              “{review}”
+          {testimonial.reviewTitle && (
+            <h4 className="text-xl md:text-2xl font-semibold text-black">
+              {testimonial.reviewTitle}
+            </h4>
+          )}
+
+          {testimonial.review && (
+            <p className="text-lg md:text-xl font-semibold text-[rgba(0,0,0,0.70)]">
+              “{testimonial.review}”
             </p>
           )}
           <div className="flex items-center gap-2.5">
-            {profileImg && (
-              <img
-                className="rounded-full object-cover"
-                src={profileImg}
-                alt={`${reviewerName}'s Profile`}
-                width={48}
-                height={48}
-              />
+            {testimonial.profileImg && (
+              <div className="size-12 rounded-full bg-white flex items-center justify-center">
+                <Image className="text-gray-500 h-5 w-5" />
+              </div>
             )}
             <div>
-              {reviewerName && (
+              {testimonial.reviewerName && (
                 <span className="font-medium text-black block">
-                  {reviewerName}
+                  {testimonial.reviewerName}
                 </span>
               )}
-              {designation && (
+              {testimonial.designation && (
                 <span className="text-[rgba(0,0,0,0.7)] block">
-                  {designation}
+                  {testimonial.designation}
                 </span>
               )}
             </div>

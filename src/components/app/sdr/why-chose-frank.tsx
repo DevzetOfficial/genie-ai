@@ -4,9 +4,7 @@ import FeatureBox from "../shared/feature-box";
 
 const whyChoose: FeatureBoxProp = {
   title: "Why Frank ? - Genie AI Phone Representative",
-  description: `Traditional customer service models can’t keep
-up with rising demands for round-the-clock
-availability and fast, reliable service.`,
+  description: `Traditional customer service models can’t keep up with rising demands for round-the-clock availability and fast, reliable service.`,
   image: franksImg,
   shortDesc: "Key Benefits of Genie AI Phone Representative:",
   capabilities: [

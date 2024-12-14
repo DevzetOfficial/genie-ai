@@ -1,5 +1,6 @@
 import {
   aiPhonePageComparisonData,
+  aiPhoneRepresentativeTestimonials,
   PhoneRepresentativeSalesDrive,
 } from "@/data";
 import franksImg from "@/assets/frank.webp";
@@ -9,10 +10,8 @@ import SalesDrive from "@/components/app/shared/sales-drive";
 import { BrandsMarquee } from "@/components/app/shared/brands";
 import SuccessSteps from "@/components/app/phone-representitive/success-steps";
 import WhyChooseFrank from "@/components/app/sdr/why-chose-frank";
-
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
 import Testimonial from "@/components/app/shared/testimonial";
-import FAQ from "@/components/app/shared/faq";
 import GetStartedVideo from "@/components/app/shared/get-started-video";
 import FrankGetStartedVideoThumb from "@/assets/frank.webp";
 import FeatureHighlight from "@/components/app/shared/feature-highlight";
@@ -27,10 +26,10 @@ function AIPhoneRepresentativePage() {
           <div className="py-10 md:pb-14 lg:pb-56 ">
             <Hero
               heroImage={franksImg}
-              title={"Frank - Genie AI Phone <br/> Representative"}
+              title={"Frank - AI Phone Representative"}
               titleClass={"xl:text-[80px]"}
               shortDesc={
-                "Using AI-Driven Operations to Accelerate Business Growth"
+                "Your 24/7 Customer Service Solution.  Using AI-Driven Operations to Accelerate Business Growth"
               }
             />
           </div>
@@ -71,9 +70,12 @@ function AIPhoneRepresentativePage() {
         data={aiPhonePageComparisonData}
       />
 
-      <Testimonial />
-
-      <FAQ />
+      <Testimonial
+        className="mb-16 md:mb-20 lg:mb-24"
+        title=" Client Testimonials "
+        description="Proven Success with Genie AI Phone Representative"
+        testimonials={aiPhoneRepresentativeTestimonials}
+      />
     </Layout>
   );
 }

@@ -3,11 +3,13 @@ import { ArrowRight } from "lucide-react";
 import fingerprint from "@/assets/fingerprint.webp";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { useModal } from "@/context/modal-context";
 
 function FingerPrint() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+  const { openModal } = useModal();
+
   return (
     <section className="section_gap bg-[#E1E9FE]">
       <div className="container" ref={ref}>
@@ -21,7 +23,7 @@ function FingerPrint() {
               }
               `}
             >
-              Business Intelligence at Your Fingertips.
+              Smarter Decisions, Better Outcomes.
             </motion.h3>
 
             <motion.p
@@ -43,13 +45,10 @@ function FingerPrint() {
                   : "translate-y-[200px] opacity-0"
               }`}
             >
-              <Link to={"/contact"}>
-                {" "}
-                <Button variant={"default"}>
-                  Book a Demo
-                  <ArrowRight className="w-8 h-8 shrink-0 " />
-                </Button>
-              </Link>
+              <Button onClick={() => openModal()}>
+                Book a Demo
+                <ArrowRight className="w-8 h-8 shrink-0 " />
+              </Button>
             </motion.div>
           </div>
           <motion.div

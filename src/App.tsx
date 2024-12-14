@@ -13,6 +13,7 @@ import AISDRPage from "@/pages/ai-sdr-page";
 import AIPhoneRepresentativePage from "@/pages/ai-phone-representative-page";
 import ContactPage from "@/pages/contact-page";
 import { Toaster } from "@/components/ui/toaster";
+import { ModalProvider } from "./context/modal-context";
 // import AIWorker from "./pages/ai-worker";
 
 function ScrollToTop() {
@@ -31,19 +32,21 @@ function App() {
       <ScrollToTop />
       <Toaster />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/blog/:id" element={<BlogDetailPage />} />
-        <Route path="/ai-sdr" element={<AISDRPage />} />
-        {/* <Route path="/ai-worker" element={<AIWorker />} /> */}
-        <Route
-          path="/ai-phone-representative"
-          element={<AIPhoneRepresentativePage />}
-        />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <ModalProvider>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blog/:id" element={<BlogDetailPage />} />
+          <Route path="/ai-sdr" element={<AISDRPage />} />
+          {/* <Route path="/ai-worker" element={<AIWorker />} /> */}
+          <Route
+            path="/ai-phone-representative"
+            element={<AIPhoneRepresentativePage />}
+          />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </ModalProvider>
     </Router>
   );
 }

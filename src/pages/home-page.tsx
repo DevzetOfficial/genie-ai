@@ -1,33 +1,31 @@
 import Layout from "@/components/app/layout";
-import { BrandsMarquee } from "@/components/app/shared/brands";
+import Hero from "@/components/app/shared/Hero";
+import { homeFaq, homePageComparisonData, homeTestimonials } from "@/data";
 import Agent from "@/components/app/home/agent";
+import Showcase from "@/components/app/home/showcase";
+import HeroVideo from "@/assets/videos/hero-video.mp4";
 import Statistics from "@/components/app/home/statistics";
 import FingerPrint from "@/components/app/home/finger-print";
-import FAQ from "@/components/app/shared/faq";
 import Testimonial from "@/components/app/shared/testimonial";
-import Hero from "@/components/app/shared/Hero";
-// import Inteligence from "@/components/app/home/Inteligence";
+import Inteligence from "@/components/app/home/Inteligence";
+import { BrandsMarquee } from "@/components/app/shared/brands";
+import NotRegularAi from "@/components/app/home/not-regular-ai";
 import ComparisonTable from "@/components/app/shared/comparison-table";
-import { homePageComparisonData } from "@/data";
-import HeroVideo from "@/assets/videos/hero-video.mp4";
 import GetStartedVideo from "@/components/app/shared/get-started-video";
 import HomeGetStartedVideoThumb from "@/assets/home-video-thumbnail.webp";
-import NotRegularAi from "@/components/app/home/not-regular-ai";
-import Showcase from "@/components/app/home/showcase";
 import MeetAgentFeature from "@/components/app/home/meet-agent-feature";
+import FAQArea from "@/components/app/shared/faq";
 
 function HomePage() {
   return (
     <Layout>
-      <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
-        <div className="container pt-16 pb-10 md:pb-16 lg:pt-28 ">
-          <div className="py-10 md:pb-14 lg:pb-56 ">
+      <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-black/60">
+        <div className="container pt-16 pb-10 md:pb-16 lg:pt-32">
+          <div className="py-10 md:pb-14 lg:pb-40">
             <Hero
-              title={
-                "More Meetings, Zero Stress.<br/> AI-Powered Conversations That Convert."
-              }
+              title={"More Meetings, Zero Stress."}
               shortDesc={
-                "For Sales, RevOps, and Go-to-Market Teams Ready to Scale Smarter"
+                "AI-Powered Conversations That Convert. <br/> For Sales, RevOps, and Go-to-Market Teams Ready to Scale Smarter"
               }
             />
           </div>
@@ -55,7 +53,7 @@ function HomePage() {
         thumbnail={HomeGetStartedVideoThumb}
       />
 
-      {/* <Inteligence /> */}
+      <Inteligence />
 
       <Statistics />
 
@@ -69,9 +67,13 @@ function HomePage() {
 
       <ComparisonTable className="bg-[#F0F6FF]" data={homePageComparisonData} />
 
-      <Testimonial />
+      <Testimonial
+        title="Client Testimonials"
+        description=" Why Companies Choose Genie AI"
+        testimonials={homeTestimonials}
+      />
 
-      <FAQ />
+      <FAQArea faqs={homeFaq} />
     </Layout>
   );
 }

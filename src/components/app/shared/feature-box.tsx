@@ -62,15 +62,17 @@ const FeatureBox = ({
             dangerouslySetInnerHTML={{ __html: featureData.description }}
           />
 
-          <h4
-            className={`font-semibold mt-8 md:mt-10 text-[#010609] leading-normal duration-1000   ${
-              isInView
-                ? "opacity-100 translate-y-0 rotate-0"
-                : "translate-y-[100px] opacity-0"
-            }`}
-          >
-            {featureData.shortDesc}
-          </h4>
+          {featureData.shortDesc && (
+            <h4
+              className={`font-semibold mt-8 md:mt-10 text-[#010609] leading-normal duration-1000   ${
+                isInView
+                  ? "opacity-100 translate-y-0 rotate-0"
+                  : "translate-y-[100px] opacity-0"
+              }`}
+            >
+              {featureData.shortDesc}
+            </h4>
+          )}
 
           {featureData.button && (
             <motion.div

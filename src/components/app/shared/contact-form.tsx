@@ -22,6 +22,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/app/shared/frontend-button";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
+import { useModal } from "@/context/modal-context";
 
 const FormSchema = z.object({
   name: z
@@ -43,14 +44,9 @@ const FormSchema = z.object({
   message: z.string().optional(),
 });
 
-export default function ContactForm({
-  className,
-  handleCloseModal,
-}: {
-  className?: string;
-  handleCloseModal?: () => void;
-}) {
+export default function ContactForm({ className }: { className?: string }) {
   const { toast } = useToast();
+  const { isOpen, closeModal } = useModal();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -82,8 +78,8 @@ export default function ContactForm({
         title: "Your message submitted",
       });
       form.reset();
-      if (handleCloseModal) {
-        handleCloseModal();
+      if (isOpen) {
+        closeModal();
       }
     }
   }

@@ -6,12 +6,13 @@ import {
   SalesDriveProp,
   WorkforceRevulationProp,
 } from "@/types";
-import inteligenceOne from "@/assets/inteligence-1.webp";
-import inteligenceTwo from "@/assets/inteligence-2.webp";
-import inteligenceThree from "@/assets/inteligence-3.webp";
+import inteligenceOne from "@/assets/intelligence/intelligence-1.webp";
+import inteligenceTwo from "@/assets/intelligence/intelligence-2.webp";
+import inteligenceThree from "@/assets/intelligence/intelligence-3.webp";
+import inteligenceFour from "@/assets/intelligence/intelligence-4.webp";
+import inteligenceFive from "@/assets/intelligence/intelligence-5.jpg";
+import inteligenceSix from "@/assets/intelligence/intelligence-6.webp";
 import profile from "@/assets/profile.png";
-import testimonialBrandLogo from "@/assets/testimonial-brand.png";
-import testimonialBrandLogoTwo from "@/assets/testimonial-brand2.png";
 import aiPhoneSalesImgOne from "@/assets/ai-sales-drive-1.webp";
 import aiPhoneSalesImgTwo from "@/assets/ai-sales-drive-2.webp";
 import aiPhoneSalesImgThree from "@/assets/ai-sales-drive-3.webp";
@@ -26,100 +27,162 @@ import franksImg from "@/assets/frank.webp";
 
 export const inteligences = [
   {
-    id: 0,
-    img: inteligenceOne,
-    title: "Markets with Intelligence",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
-  },
-  {
     id: 1,
-    img: inteligenceTwo,
-    title: "Book More Meetings with Al",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+    img: inteligenceOne,
+    title: "24/7 Sales Engagement",
+    shortDesc: `Reach, qualify, and engage leads round-the-clock with zero downtime.`,
   },
   {
     id: 2,
-    img: inteligenceThree,
-    title: "Empower Sales Engagement",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+    img: inteligenceTwo,
+    title: "Hyper-Personalized Outreach",
+    shortDesc: `Deliver tailored messages that resonate, driving higher conversions effortlessly.`,
   },
   {
     id: 3,
-    img: inteligenceOne,
-    title: "Markets with Intelligence",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+    img: inteligenceThree,
+    title: "Seamless Multi-Channel Integration",
+    shortDesc: `Engage leads via email, LinkedIn, and calls—all in one unified platform.`,
   },
   {
     id: 4,
-    img: inteligenceTwo,
-    title: "Book More Meetings with Al",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+    img: inteligenceFour,
+    title: "Automated Scheduling",
+    shortDesc: `Book meetings and sync calendars without lifting a finger.`,
   },
   {
     id: 5,
-    img: inteligenceThree,
-    title: "Empower Sales Engagement",
-    shortDesc: `Entering new markets can be complex, with shifting dynamics and unfamiliar business markets.`,
+    img: inteligenceFive,
+    title: "Real-Time Insights",
+    shortDesc: `Track lead interest and prioritize hot opportunities with precision.`,
+  },
+  {
+    id: 6,
+    img: inteligenceSix,
+    title: "Global Reach, Local Impact",
+    shortDesc: `Operate across time zones and languages, connecting with leads wherever they are.`,
   },
 ];
 
-export const testimonials = [
+export const homeTestimonials = [
   {
     id: 1,
     logo: false,
     review:
-      "AI SDRs automate repetitive tasks, freeing up sales teams to focus",
+      "Genie transformed our sales process. With adaptive AI and seamless automation, we’ve achieved unmatched efficiency and lead conversion. Truly game-changing!",
     profileImg: profile,
-    reviewerName: "Jenny Wilson",
-    designation: "IBM",
+    reviewerName: "Sriram",
+    designation: " CEO, hrtech.sg",
     bgColor: "#EECBBD",
   },
   {
     id: 2,
-    logo: true,
-    testimonialLogo: testimonialBrandLogo,
-    bgColor: "#E1DAE6",
+    logo: false,
+    review:
+      "Genie Platforms streamlined our sales efforts, enabling us to reach global clients with hyper-personalized outreach like never before.",
+    profileImg: profile,
+    reviewerName: "Ashish",
+    designation: "CRO, Nityo Infotech",
+    bgColor: "#DAE6E3",
+  },
+
+  {
+    id: 3,
+    logo: false,
+    review:
+      "Thanks to Genie Platforms, we connected with thousands of potential learners worldwide, increasing enrollment rates exponentially.",
+    profileImg: profile,
+    reviewerName: "Robert",
+    designation: "Head of Marketing & Operations",
+    bgColor: "#B6BBDC",
   },
   {
     id: 3,
     logo: false,
     review:
-      "“AI SDRs automate repetitive tasks, freeing up sales teams to focus on high-value activities, boosting overall productivity.”",
+      "Genie Platforms transformed our marketing strategy, helping us engage educators and students with precision and scale.",
     profileImg: profile,
-    reviewerName: "Jenny Wilson",
-    designation: "IBM",
+    reviewerName: "Sanjeev",
+    designation: "CEO, TeachingKrow",
+    bgColor: "#B6BBDC",
+  },
+];
+
+export const aiSdrTestimonials = [
+  {
+    id: 1,
+    logo: false,
+    reviewTitle: "Genie has delivered outstanding results.",
+    review:
+      "Building our outreach strategy around Genie has transformed our sales efforts, shifting focus from tedious prospecting to engaging in valuable customer meetings.",
+    profileImg: profile,
+    reviewerName: "Fredrik Eriksson",
+    designation: " CCO & Co-Founder",
+    bgColor: "#EECBBD",
+  },
+  {
+    id: 2,
+    logo: false,
+    reviewTitle: "Genie opened the door to enterprise deals, on autopilot.",
+    review:
+      "We’ve reached top-tier enterprises  consistently with Genie, generating high quality meetings and consolidating our tech stack from 5 platforms into one.",
+    profileImg: profile,
+    reviewerName: " Che Sampat",
+    designation: "Founder",
     bgColor: "#DAE6E3",
   },
 
   {
-    id: 4,
-    logo: true,
-    testimonialLogo: testimonialBrandLogoTwo,
-    bgColor: "#B6DCDC",
-  },
-  {
-    id: 5,
+    id: 3,
     logo: false,
+    reviewTitle: "Genie is a game-changer for personalization at scale.",
     review:
-      "I SDRs automate repetitive tasks, freeing up sales teams to focus on high-value activities, boosting overall productivity.",
+      "Genie’s precision in identifying and engaging ideal prospects has drastically increased our outreach engagement rates. It’s like having a dedicated SDR who works tirelessly.",
     profileImg: profile,
-    reviewerName: "Jenny Wilson",
-    designation: "IBM",
+    reviewerName: " Amr Mashlah",
+    designation: " Founder & CEO",
     bgColor: "#B6BBDC",
-  },
-  {
-    id: 6,
-    logo: false,
-    review:
-      "AI SDRs automate repetitive tasks, freeing up sales teams to focus",
-    profileImg: profile,
-    reviewerName: "Jenny Wilson",
-    designation: "IBM",
-    bgColor: "#E7BCD6",
   },
 ];
 
-export const genieFAQ = [
+export const aiPhoneRepresentativeTestimonials = [
+  {
+    id: 1,
+    logo: false,
+    reviewTitle: " A game-changer for our customer service.",
+    review:
+      "Genie’s instant response times and 24/7 availability have transformed how our customers view our brand. The feedback has been overwhelmingly positive, and it’s freed our team to handle complex cases.",
+    profileImg: profile,
+    reviewerName: "Amanda Lee",
+    designation: "Head of Customer Experience",
+    bgColor: "#EECBBD",
+  },
+  {
+    id: 2,
+    logo: false,
+    reviewTitle: " Scalability without compromise.",
+    review:
+      "We’ve scaled our customer support without the costs of additional staffing, and Genie’s ability to personalize each interaction has improved our customer loyalty.",
+    profileImg: profile,
+    reviewerName: "John Michaels",
+    designation: "Director of Operations",
+    bgColor: "#DAE6E3",
+  },
+
+  {
+    id: 3,
+    logo: false,
+    reviewTitle: " Ideal for global support.",
+    review:
+      "Genie’s multi-language feature has enabled us to reach customers worldwide with ease. It’s allowed us to provide the same level of service, no matter where our customers are.",
+    profileImg: profile,
+    reviewerName: "Lillian Chen",
+    designation: "VP of International Support",
+    bgColor: "#B6BBDC",
+  },
+];
+
+export const homeFaq = [
   {
     id: 1,
     question: "What makes Genie different from other Al tools on the market?",
@@ -174,6 +237,64 @@ export const genieFAQ = [
     id: 10,
     question: "What support and training do you provide for Genie users?",
     answer: "Need content of this question",
+  },
+];
+
+export const aiSdrFaq = [
+  {
+    id: 1,
+    question:
+      "What makes Genie AI SDR different from other sales automation tools?",
+    answer:
+      "Genie is more than a typical sales automation tool—it’s a fully autonomous, AI-driven SDR that doesn’t just automate tasks but actively engages, qualifies, and nurtures leads. With advanced hyper-personalization, multi-channel engagement, and continuous operation, Genie transforms sales development from routine outreach to strategic, high-conversion engagement",
+  },
+  {
+    id: 2,
+    question: "Does Genie replace my existing sales team?",
+    answer: "Need content",
+  },
+  {
+    id: 3,
+    question: "Can Genie work across multiple channels simultaneously?",
+    answer: "Need content",
+  },
+  {
+    id: 4,
+    question: "What kind of ROI can I expect with Genie?",
+    answer: "Need content",
+  },
+  {
+    id: 5,
+    question: "How does Genie ensure my outreach doesn’t end up in spam?",
+    answer: "Need content",
+  },
+  {
+    id: 6,
+    question:
+      "How quickly can Genie be integrated with my current sales tools?",
+    answer: "Need content",
+  },
+  {
+    id: 7,
+    question: "How does Genie personalize outreach at scale?",
+    answer: "Need content",
+  },
+  {
+    id: 8,
+    question:
+      "Is Genie suitable for startups and small teams, or just large enterprises?",
+    answer: "Need content",
+  },
+  {
+    id: 9,
+    question: "How does Genie help identify and prioritize hot leads?",
+    answer: "Need content",
+  },
+  {
+    id: 10,
+    question:
+      "What support is provided to help my team get started with Genie?",
+    answer: "Need content",
   },
 ];
 
@@ -402,7 +523,7 @@ export const PhoneRepresentativeSalesDrive: SalesDriveProp = {
   ],
 };
 export const aiSalesDrive: SalesDriveProp = {
-  title: "How Genie Drives Your Sales",
+  title: "How Sonya Drives Your Sales",
   items: [
     {
       id: 1,
@@ -507,7 +628,7 @@ export const agentData = [
     name: "Sonya",
     agentImg: sonyasImg,
     designation: "Al SDR",
-    about: `Sonya optimizes the frontlines of your sales process, enhancing your team's ability to reach, connect with, and engage prospective clients.`,
+    about: `Sonya AI SDR revolutionizes sales with 24/7 automated lead engagement, hyper-personalized outreach, and scalable efficiency—boosting conversions effortlessly.`,
     route: "/ai-sdr",
   },
   {
@@ -515,7 +636,7 @@ export const agentData = [
     name: "Frank",
     agentImg: franksImg,
     designation: "Al Phone Representative",
-    about: `Frank optimizes the frontlines of your sales process, enhancing your team's ability to reach, connect with, and engage prospective clients.`,
+    about: `Frank AI Phone Representative automates customer interactions with 24/7 intelligent call handling, seamless routing, and hyper-personalized support—boosting efficiency and satisfaction.`,
     route: "/ai-phone-representative",
   },
 ];
@@ -597,14 +718,6 @@ export const homePageComparisonData: ComparisonDataProp = {
     },
     {
       id: 7,
-      category: "Customer Experience",
-      genieFeature:
-        "Provides 24/7 support with seamless escalation, boosting satisfaction and loyalty.",
-      otherAIFeature:
-        "Limited customer support options, often lacking real-time assistance and escalation.",
-    },
-    {
-      id: 8,
       category: "Data Security",
       genieFeature:
         "Industry-standard encryption and compliance, ensuring customer and business data remain secure",
@@ -612,7 +725,7 @@ export const homePageComparisonData: ComparisonDataProp = {
         "May lack comprehensive security measures and compliance standards.",
     },
     {
-      id: 9,
+      id: 8,
       category: "Scalability",
       genieFeature:
         "Grows with your business—handles increasing volume without sacrificing performance or quality.",
@@ -620,7 +733,7 @@ export const homePageComparisonData: ComparisonDataProp = {
         "Often requires additional resources or customization to scale effectively",
     },
     {
-      id: 10,
+      id: 9,
       category: "ROI Tracking",
       genieFeature:
         "Built-in analytics for clear insights on AI-driven performance and ROI across all functions",

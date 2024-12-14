@@ -5,10 +5,11 @@ import { fadeInAnimationSlowVarients } from "@/lib/utils";
 import { useRef } from "react";
 import { Button } from "./frontend-button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useModal } from "@/context/modal-context";
 const SalesDrive = ({ salesDrive }: { salesDrive: SalesDriveProp }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+  const { openModal } = useModal();
 
   return (
     <section className="bg-[#00224D] section_gap">
@@ -57,11 +58,9 @@ const SalesDrive = ({ salesDrive }: { salesDrive: SalesDriveProp }) => {
               : "translate-y-[100px] opacity-0"
           }`}
         >
-          <Link to={"/contact"}>
-            <Button variant={"default"}>
-              Book a Demo <ArrowRight className="w-8 h-8 shrink-0 " />
-            </Button>
-          </Link>
+          <Button onClick={() => openModal()}>
+            Book a Demo <ArrowRight className="w-8 h-8 shrink-0 " />
+          </Button>
         </motion.div>
       </div>
     </section>

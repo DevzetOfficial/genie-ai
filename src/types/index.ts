@@ -20,12 +20,26 @@ export type FeatureBoxProp = {
   description: string;
   image: string;
   highlight?: string;
-  shortDesc: string;
+  shortDesc?: string;
   button?: {
     label: string;
     url: string;
   };
   capabilities?: string[];
+};
+
+export type TestimonialCardProp = {
+  logo: boolean;
+  testimonialLogo?: string;
+  reviewTitle?: string;
+  review?: string;
+  profileImg?: string;
+  reviewerName?: string;
+  designation?: string;
+  bgColor: string;
+  className?: string;
+  index?: number;
+  id: number;
 };
 
 export type SalesDriveProp = {

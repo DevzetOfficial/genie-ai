@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/app/shared/frontend-button";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { Link } from "react-router-dom";
 import HeroFeature from "./hero-feature";
+import { useModal } from "@/context/modal-context";
 
 type HeroProps = {
   heroImage?: string;
@@ -21,6 +21,7 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+  const { openModal } = useModal();
 
   return (
     <div
@@ -32,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className={`text-white `}>
         <motion.h1
           className={cn(
-            `[&_br]:hidden lg:[&_br]:inline-block text-3xl md:text-5xl lg:text-6xl xl:text-[64px] font-bold  leading-tight mb-5 md:mb-10 duration-700 delay-100 ${
+            `[&_br]:hidden lg:[&_br]:inline-block text-3xl md:text-5xl lg:text-6xl lg:leading-[1.2] xl:text-[64px] font-bold   mb-5 md:mb-10 duration-700 delay-100 ${
               isInView
                 ? "opacity-100 translate-y-0 rotate-0"
                 : "translate-y-[200px] opacity-0"
@@ -48,9 +49,9 @@ const Hero: React.FC<HeroProps> = ({
               ? "opacity-100 translate-y-0 rotate-0"
               : "translate-y-[200px] opacity-0"
           }`}
-        >
-          {shortDesc}
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: shortDesc || "" }}
+        />
+
         <motion.div
           className={` duration-1000 delay-300 ${
             isInView
@@ -58,12 +59,10 @@ const Hero: React.FC<HeroProps> = ({
               : "translate-y-[200px] opacity-0"
           }`}
         >
-          <Link to="/contact">
-            <Button variant={"default"}>
-              Book a Demo
-              <ArrowRight className="h-8 w-8 shrink-0 " />
-            </Button>
-          </Link>
+          <Button onClick={() => openModal()}>
+            Book a Demo
+            <ArrowRight className="h-8 w-8 shrink-0 " />
+          </Button>
         </motion.div>
 
         <HeroFeature />

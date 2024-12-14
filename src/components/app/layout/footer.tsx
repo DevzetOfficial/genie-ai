@@ -12,13 +12,14 @@ const FooterNavTitle = ({ text }: { text: string }) => (
 const FooterNavList = ({
   lists,
 }: {
-  lists: { label: string; href: string }[];
+  lists: { label: string; href: string; isExternal?: boolean }[];
 }) => (
   <ul className="flex flex-col gap-5 md:gap-6 lg:gap-8">
-    {lists?.map(({ label, href }, index) => (
+    {lists?.map(({ label, href, isExternal }, index) => (
       <li key={index}>
         <Link
           to={href}
+          target={`${isExternal ? "_blank" : "_self"}`}
           className="text-white hover:text-primary transition-all duration-300 leading-[140%]"
         >
           {label}
@@ -49,7 +50,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="sm:col-span-3 lg:col-span-2">
-              <FooterNavTitle text="Features" />
+              {/* <FooterNavTitle text="Features" />
 
               <FooterNavList
                 lists={[
@@ -74,11 +75,11 @@ const Footer: React.FC = () => {
                     href: "/",
                   },
                 ]}
-              />
+              /> */}
             </div>
 
             <div className="sm:col-span-3 lg:col-span-2">
-              <FooterNavTitle text="Product" />
+              {/* <FooterNavTitle text="Product" />
 
               <FooterNavList
                 lists={[
@@ -95,11 +96,11 @@ const Footer: React.FC = () => {
                     href: "/blog",
                   },
                 ]}
-              />
+              /> */}
             </div>
 
             <div className="sm:col-span-3 lg:col-span-2">
-              <FooterNavTitle text="Company" />
+              {/* <FooterNavTitle text="Company" />
 
               <FooterNavList
                 lists={[
@@ -116,7 +117,7 @@ const Footer: React.FC = () => {
                     href: "/contact",
                   },
                 ]}
-              />
+              /> */}
             </div>
 
             <div className="md:col-span-3 lg:col-span-1">
@@ -125,8 +126,14 @@ const Footer: React.FC = () => {
               <FooterNavList
                 lists={[
                   {
-                    label: "Help Center",
-                    href: "/",
+                    label: "Terms",
+                    isExternal: true,
+                    href: "https://www.genieplatforms.ai/terms",
+                  },
+                  {
+                    label: "Privacy",
+                    isExternal: true,
+                    href: "https://www.genieplatforms.ai/privacy",
                   },
                   {
                     label: "Contact",
@@ -137,8 +144,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between py-10 text-xs md:py-16 text-white/50">
-            <div className="flex items-center gap-1">
+          <div className="flex items-center justify-center text-center py-10 text-xs md:py-16 text-white/50">
+            {/* <div className="flex items-center gap-2">
               <Link to="/">Privacy Policy</Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,8 +157,8 @@ const Footer: React.FC = () => {
                 <circle cx="2" cy="2" r="2" fill="#9FA4AD" />
               </svg>
               <Link to="/">Terms & Condition</Link>
-            </div>
-            <span>Copyright. All rights reserved</span>
+            </div> */}
+            <span>© 2024 Genie AI. All rights reserved.</span>
           </div>
         </div>
       </footer>

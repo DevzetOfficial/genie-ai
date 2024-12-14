@@ -3,9 +3,12 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "./frontend-button";
 import CtaVideo from "@/assets/videos/cta-video.mp4";
 import { motion, useInView } from "framer-motion";
-const CTA: FC = () => {
+import { useModal } from "@/context/modal-context";
+const CTAArea: FC = () => {
   const ref = useRef(null);
+  const { openModal } = useModal();
   const isInView = useInView(ref, { once: false });
+
   return (
     <div className="container relative -bottom-10 md:-bottom-20 -mt-10 md:-mt-20">
       <div className="bg-primary grid lg:grid-cols-2 items-center gap-4 md:gap-8 p-4 md:p-6 rounded-3xl">
@@ -18,7 +21,7 @@ const CTA: FC = () => {
             }
               `}
           >
-            Revolutionize Your <br className="md:block hidden" /> Sales Process?
+            Revolutionize Your Sales Process
           </motion.h3>
 
           <motion.p
@@ -28,9 +31,8 @@ const CTA: FC = () => {
                 : "translate-y-[200px] opacity-0"
             }`}
           >
-            Start your free trial today and experience the power of AI-driven
-            sales development. Unlock your team's potential and boost your
-            revenue!
+            Start today and experience the power of AI-driven sales development.
+            Unlock your team’s potential and boost your revenue!
           </motion.p>
 
           <motion.div
@@ -40,7 +42,7 @@ const CTA: FC = () => {
                 : "translate-y-[200px] opacity-0"
             }`}
           >
-            <Button variant="footer">
+            <Button variant="footer" onClick={() => openModal()}>
               Book a Demo <ArrowRight className="h-8 w-8 shrink-0" />
             </Button>
           </motion.div>
@@ -64,4 +66,4 @@ const CTA: FC = () => {
   );
 };
 
-export default CTA;
+export default CTAArea;

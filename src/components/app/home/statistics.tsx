@@ -1,12 +1,15 @@
-import statisticsImage from "@/assets/statistics.webp";
+import statisticsImage from "@/assets/real-time-insights.jpg";
 import { Button } from "@/components/app/shared/frontend-button";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useModal } from "@/context/modal-context";
 
 function Statistics() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+  const { openModal } = useModal();
+
   return (
     <>
       <section className="section_gap bg-[#1D2427]">
@@ -66,7 +69,7 @@ function Statistics() {
                     : "translate-y-[100px] opacity-0"
                 }`}
               >
-                <Button variant={"default"}>
+                <Button onClick={() => openModal()}>
                   Book a Demo <ArrowRight className="h-8 w-8 shrink-0 " />
                 </Button>
               </motion.div>

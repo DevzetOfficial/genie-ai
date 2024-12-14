@@ -1,7 +1,6 @@
-import FAQ from "@/components/app/shared/faq";
 import Hero from "@/components/app/shared/Hero";
 import Layout from "@/components/app/layout";
-import { aiSalesDrive } from "@/data";
+import { aiSalesDrive, aiSdrFaq, aiSdrTestimonials } from "@/data";
 import sonyasImg from "@/assets/sonya.webp";
 import SalesDrive from "@/components/app/shared/sales-drive";
 import Testimonial from "@/components/app/shared/testimonial";
@@ -16,6 +15,7 @@ import Showcase from "@/components/app/sdr/showcase";
 import RevenueOportunities from "@/components/app/sdr/revenue-oportunities";
 import CompareToCallCenter from "@/components/app/sdr/compare-to-call-center";
 import AiDrivenOutreach from "@/components/app/sdr/ai-driven-outreach";
+import FAQArea from "@/components/app/shared/faq";
 
 function AISDRPage() {
   return (
@@ -25,10 +25,10 @@ function AISDRPage() {
           <div className="py-10 md:pb-14 lg:pb-56 ">
             <Hero
               heroImage={sonyasImg}
-              title={"Sonya - Genie AI SDR"}
+              title={"Sonya - AI SDR"}
               titleClass={"xl:text-[80px]"}
               shortDesc={
-                "Put Your Sales on Autopilot. Boost Engagement, Reach More Leads, and Close Deals- All with Genie."
+                "Put Your Sales on Autopilot. Boost Engagement, Reach More Leads, and Close Deals- All with Genie.  Using AI-Driven Operations to Accelerate Business Growth."
               }
             />
           </div>
@@ -47,7 +47,7 @@ function AISDRPage() {
       </section>
 
       <FeatureHighlight
-        title="Experience the power of Frank, your 24/7 <br/>
+        title="Experience the power of Sonya, your 24/7 <br/>
 Al Sales Development Representative, at a fraction of <br/> the cost of a human SDR."
       />
 
@@ -74,9 +74,13 @@ Al Sales Development Representative, at a fraction of <br/> the cost of a human 
 
       <Showcase />
 
-      <Testimonial />
+      <Testimonial
+        title=" Success Stories"
+        description=" Why Companies Choose Genie AI SDR"
+        testimonials={aiSdrTestimonials}
+      />
 
-      <FAQ />
+      <FAQArea faqs={aiSdrFaq} />
     </Layout>
   );
 }

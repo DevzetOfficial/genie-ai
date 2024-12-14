@@ -15,13 +15,14 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "../shared/frontend-button";
 import ContactForm from "../shared/contact-form";
+import { useModal } from "@/context/modal-context";
 
 const Header: React.FC = () => {
-  let navigate = useNavigate();
-  const [open, setOpen] = useState(false);
+  const { isOpen, setIsOpen, openModal } = useModal();
+  const navigate = useNavigate();
   const [scroll, setScroll] = useState<boolean>(false);
   const location = useLocation();
-  const keywords = ["blog", "contact"]; // Add all your keywords here
+  const keywords = ["blog", "contact"];
   const isWhiteNavbar: boolean = keywords.some((keyword) =>
     location.pathname.includes(keyword)
   );
@@ -30,12 +31,8 @@ const Header: React.FC = () => {
     if (location.pathname === "/contact") {
       navigate("/contact");
     } else {
-      setOpen(true);
+      openModal();
     }
-  };
-
-  const handleCloseModal = () => {
-    setOpen(false);
   };
 
   const isMobile = useIsMobile();
@@ -105,9 +102,9 @@ const Header: React.FC = () => {
           Book a Demo
         </Button>
 
-        <Dialog open={open} onOpenChange={setOpen}>
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogContent className="!p-0 max-w-2xl">
-            <ContactForm handleCloseModal={handleCloseModal} />
+            <ContactForm />
           </DialogContent>
         </Dialog>
       </>

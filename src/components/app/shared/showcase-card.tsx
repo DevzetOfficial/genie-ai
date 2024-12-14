@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { Button } from "./frontend-button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useModal } from "@/context/modal-context";
 
 const ShowcaseCard = ({
   title,
@@ -17,6 +17,8 @@ const ShowcaseCard = ({
     url: string;
   };
 }) => {
+  const { openModal } = useModal();
+
   return (
     <motion.div
       className="grid bg-white p-10 rounded-[32px] group md:grid-cols-[5fr_7fr] even:md:grid-cols-[7fr_5fr] gap-10 "
@@ -39,12 +41,10 @@ const ShowcaseCard = ({
           </p>
         )}
         {button && (
-          <Link to={button.url}>
-            <Button>
-              {button.label}
-              <ArrowRight className="w-8 h-8 shrink-0 " />
-            </Button>
-          </Link>
+          <Button onClick={() => openModal()}>
+            {button.label}
+            <ArrowRight className="w-8 h-8 shrink-0 " />
+          </Button>
         )}
       </div>
       <img

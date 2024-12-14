@@ -5,9 +5,8 @@ import { FeatureBoxProp } from "@/types";
 const whyChoose: FeatureBoxProp = {
   title: "Why Choose Sonya?",
   description:
-    "Sonya’s AI SDR suite combines advanced personalization, 24/7 operation, and multi-channel engagement, making it the go-to choice for automating sales development pipelines.",
+    "Sonya’s handles your prospecting, outreach, and lead engagement so your sales team can focus on closing deals.",
   image: sonyasImg,
-  shortDesc: "Ramp Up Growth Without Growing Headcount",
   capabilities: [
     "Instant Inquiry Responses",
     "Efficient Transaction Handling",

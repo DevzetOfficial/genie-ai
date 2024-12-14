@@ -5,11 +5,13 @@ import HomeShowcaseTwoImg from "@/assets/home-showcase-2.png";
 import ShowcaseCard from "../shared/showcase-card";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { useModal } from "@/context/modal-context";
 
 const Showcase = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+  const { openModal } = useModal();
+
   return (
     <section className="section_gap bg-[#00224D]">
       <div className="container">
@@ -38,13 +40,6 @@ const Showcase = () => {
           ))}
         </div>
 
-        {/* <Link to="/">
-          <Button variant={"default"} className="mx-auto">
-            Start your free trial today
-            <ArrowRight className="w-8 h-8 shrink-0 " />
-          </Button>
-        </Link> */}
-
         <motion.div
           ref={ref}
           viewport={{ once: true }}
@@ -54,11 +49,9 @@ const Showcase = () => {
               : "translate-y-[100px] opacity-0"
           }`}
         >
-          <Link to={"/contact"}>
-            <Button variant={"default"}>
-              Book a Demo <ArrowRight className="w-8 h-8 shrink-0 " />
-            </Button>
-          </Link>
+          <Button onClick={() => openModal()}>
+            Book a Demo <ArrowRight className="w-8 h-8 shrink-0 " />
+          </Button>
         </motion.div>
       </div>
     </section>

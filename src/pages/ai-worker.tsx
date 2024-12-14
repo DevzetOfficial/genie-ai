@@ -1,7 +1,10 @@
-import FAQ from "@/components/app/shared/faq";
 import Hero from "@/components/app/shared/Hero";
 import Layout from "@/components/app/layout";
-import { aiSalesDrive, aiWorkerPageComparisonData } from "@/data";
+import {
+  aiSalesDrive,
+  aiWorkerPageComparisonData,
+  homeTestimonials,
+} from "@/data";
 import heroImg from "@/assets/ai-worker.webp";
 import SalesDrive from "@/components/app/shared/sales-drive";
 import Testimonial from "@/components/app/shared/testimonial";
@@ -53,9 +56,11 @@ function AIWorker() {
 
       <WorkforceRevolution />
 
-      <Testimonial />
-
-      <FAQ />
+      <Testimonial
+        title="Client Testimonials"
+        description=" Why Companies Choose Genie AI"
+        testimonials={homeTestimonials}
+      />
     </Layout>
   );
 }

@@ -1,10 +1,21 @@
-import { testimonials } from "@/data";
 import TestimonialCard from "./testimonial-card";
 import { motion } from "framer-motion";
+import { TestimonialCardProp } from "@/types";
+import { cn } from "@/lib/utils";
 
-function Testimonial() {
+function Testimonial({
+  title,
+  description,
+  testimonials,
+  className,
+}: {
+  title: string;
+  description: string;
+  className?: string;
+  testimonials: TestimonialCardProp[];
+}) {
   return (
-    <section className="section_gap bg-[rgba(32,34,35,1)]">
+    <section className={cn("section_gap bg-[rgba(32,34,35,1)]", className)}>
       <div className="container">
         <div className="mb-10 space-y-4 text-center text-white md:space-y-8 md:mb-20">
           <motion.h3
@@ -18,7 +29,7 @@ function Testimonial() {
               hidden: { opacity: 0, translateY: 100 },
             }}
           >
-            Testimonials
+            {title}
           </motion.h3>
 
           <motion.p
@@ -32,15 +43,17 @@ function Testimonial() {
               hidden: { opacity: 0, translateY: 120 },
             }}
           >
-            Our features makes AI SDRs a valuable asset for any business.
+            {description}
           </motion.p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-8">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8">
           {testimonials?.map((testimonial, index) => (
             <TestimonialCard
-              key={testimonial.id}
-              index={index}
-              {...testimonial}
+              key={index}
+              testimonial={{
+                ...testimonial,
+                index,
+              }}
             />
           ))}
         </div>

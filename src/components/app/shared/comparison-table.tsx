@@ -2,11 +2,12 @@ import { ComparisonDataProp } from "@/types";
 import checkIcon from "@/assets/check-circle.svg";
 import cancelIcon from "@/assets/x-circle.svg";
 import { cn } from "@/lib/utils";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { Button } from "./frontend-button";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
+import { useModal } from "@/context/modal-context";
 const ComparisonTable = ({
   data,
   className,
@@ -18,6 +19,7 @@ const ComparisonTable = ({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const { pathname } = useLocation();
+  const { openModal } = useModal();
 
   const isHomePage = pathname === "/";
 
@@ -105,11 +107,9 @@ const ComparisonTable = ({
                 : "translate-y-[100px] opacity-0"
             }`}
           >
-            <Link to={"/contact"}>
-              <Button variant={"default"}>
-                Book a Demo <ArrowRight className="w-8 h-8 shrink-0 " />
-              </Button>
-            </Link>
+            <Button onClick={() => openModal()}>
+              Book a Demo <ArrowRight className="w-8 h-8 shrink-0 " />
+            </Button>
           </motion.div>
         )}
       </div>

@@ -4,10 +4,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { genieFAQ } from "@/data";
+
 import SectionTitle from "./title";
 import { motion } from "framer-motion";
-function FAQ() {
+function FAQArea({
+  faqs,
+}: {
+  faqs: {
+    id: number;
+    question: string;
+    answer: string;
+  }[];
+}) {
   return (
     <section className="section_gap">
       <div className="container">
@@ -27,7 +35,7 @@ function FAQ() {
           }}
         >
           <Accordion type="single" collapsible>
-            {genieFAQ?.map((item) => (
+            {faqs?.map((item) => (
               <AccordionItem key={item.id} value={`item-${item.id}`}>
                 <AccordionTrigger>{item.question}</AccordionTrigger>
                 <AccordionContent>{item.answer}</AccordionContent>
@@ -40,4 +48,4 @@ function FAQ() {
   );
 }
 
-export default FAQ;
+export default FAQArea;
