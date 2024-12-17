@@ -22,7 +22,7 @@ function AISDRPage() {
     <Layout>
       <section className="bg-black relative z-[1] overflow-hidden after:inset-0 after:absolute after:z-[-1] after:bg-[linear-gradient(270deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.90)_100%)]">
         <div className="container pt-16 pb-10 md:pb-16 lg:pt-28 ">
-          <div className="py-10 md:pb-14 lg:pb-56 ">
+          <div className="py-10 md:pb-14 lg:pb-36">
             <Hero
               heroImage={sonyasImg}
               title={"Sonya - AI SDR"}
