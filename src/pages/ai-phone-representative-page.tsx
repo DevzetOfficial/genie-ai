@@ -12,8 +12,8 @@ import SuccessSteps from "@/components/app/phone-representitive/success-steps";
 import WhyChooseFrank from "@/components/app/sdr/why-chose-frank";
 import AiPageVideo from "@/assets/videos/ai-page-video.mp4";
 import Testimonial from "@/components/app/shared/testimonial";
-import GetStartedVideo from "@/components/app/shared/get-started-video";
-import FrankGetStartedVideoThumb from "@/assets/frank.webp";
+// import GetStartedVideo from "@/components/app/shared/get-started-video";
+// import FrankGetStartedVideoThumb from "@/assets/frank.webp";
 import FeatureHighlight from "@/components/app/shared/feature-highlight";
 import RealWorldApp from "@/components/app/phone-representitive/real-world-app";
 import ComparisonTable from "@/components/app/shared/comparison-table";
@@ -29,7 +29,7 @@ function AIPhoneRepresentativePage() {
               title={"Frank - AI Phone Representative"}
               titleClass={"xl:text-[80px]"}
               shortDesc={
-                "Your 24/7 Customer Service Solution.  Using AI-Driven Operations to Accelerate Business Growth"
+                "The ultimate 24/7 AI-powered phone representative, Frank eliminates the busywork and complexities of calling so you can focus on building meaningful connections and driving business growth."
               }
             />
           </div>
@@ -46,18 +46,18 @@ function AIPhoneRepresentativePage() {
         </video>
       </section>
 
-      <FeatureHighlight title="Customer Support Without <br/> Extra Costs or Complexity" />
+      <FeatureHighlight title="Simplify Calling. Amplify Results. <br/> Let Frank handle the tedious work while you focus on what matters: connecting with prospects and driving growth." />
 
       <SuccessSteps />
 
-      <GetStartedVideo
+      {/* <GetStartedVideo
         videoWrapClass="[background-position:center_10%]"
         className="pt-0 md:pt-0 lg:pt-0"
         shortDesc="Frank combines Al-powered responsiveness, personalized interaction, and real-time adaptability to keep customers engaged, even as you grow."
         title="Get Started With Frank Today."
         videoUrl="https://www.youtube.com/embed/Oa0ZHfcalCM?si=u3DXwGf1_8N16I8I?autoplay=1"
         thumbnail={FrankGetStartedVideoThumb}
-      />
+      /> */}
 
       <WhyChooseFrank />
 

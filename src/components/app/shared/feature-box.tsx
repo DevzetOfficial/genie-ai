@@ -16,7 +16,7 @@ const FeatureBox = ({
   index: number;
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   return (
     <div className="grid group lg:grid-cols-2 items-center gap-10 text-[#010609]">

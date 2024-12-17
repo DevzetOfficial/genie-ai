@@ -5,8 +5,8 @@ const NotRegularAi = () => {
   return (
     <section className="section_gap">
       <div className="container">
-        <div className="grid gap-14 md:gap-16 lg:gap-20 max-w-[1150px] mx-auto">
-          <div className="grid items-center gap-12 text-center">
+        <div className="grid gap-10 sm:gap-14 md:gap-16 lg:gap-20 max-w-[1150px] mx-auto">
+          <div className="grid items-center gap-8 sm:gap-10 md:gap-12 text-center">
             <motion.h2
               className="text-3xl font-semibold md:text-4xl lg:text-5xl text-gradient"
               initial="hidden"
@@ -18,7 +18,7 @@ const NotRegularAi = () => {
                 hidden: { opacity: 0, translateY: 150 },
               }}
             >
-              This is not regular AI;
+              This is not regular AI:
             </motion.h2>
 
             <motion.p
@@ -37,10 +37,10 @@ const NotRegularAi = () => {
             </motion.p>
           </div>
 
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center flex-wrap justify-center gap-4">
             {[
               {
-                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 41 40" fill="none">
                         <path d="M37.1667 11.6667L24.0523 24.7811C23.3923 25.4412 23.0623 25.7712 22.6817 25.8948C22.347 26.0036 21.9864 26.0036 21.6517 25.8948C21.2711 25.7712 20.9411 25.4412 20.2811 24.7811L15.719 20.219C15.059 19.559 14.729 19.229 14.3484 19.1053C14.0137 18.9966 13.6531 18.9966 13.3183 19.1053C12.9378 19.229 12.6078 19.559 11.9478 20.219L3.83337 28.3334M37.1667 11.6667H25.5M37.1667 11.6667V23.3334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
                 title: "AI SDR",
                 link: "/ai-sdr",
@@ -54,7 +54,7 @@ const NotRegularAi = () => {
               <Link to={link}>
                 <motion.button
                   key={index}
-                  className="p-px rounded-3xl bg-gradient-to-tr from-primary via-[#D103C0] to-primary overflow-hidden"
+                  className="p-px rounded-2xl md:rounded-3xl bg-gradient-to-tr from-primary via-[#D103C0] to-primary overflow-hidden"
                   variants={fadeInAnimationVariants}
                   initial="initial"
                   whileInView="animate"
@@ -63,13 +63,15 @@ const NotRegularAi = () => {
                   }}
                   custom={index}
                 >
-                  <div className="p-4 md:p-6 rounded-[23px] flex items-center gap-4 bg-white">
+                  <div className="p-2 sm:p-4 md:p-6 rounded-[15px] md:rounded-[23px] flex items-center gap-2 md:gap-4 bg-white">
                     <div
-                      className="flex items-center justify-center size-[72px] rounded-full text-[40px] bg-primary"
+                      className="flex items-center justify-center size-10 sm:size-14 md:size-[72px] rounded-full text-2xl shrink-0 md:text-[40px] bg-primary"
                       dangerouslySetInnerHTML={{ __html: icon }}
                     />
 
-                    <p className="text-2xl text-black">{title}</p>
+                    <p className="text-base sm:text-xl md:text-2xl text-black">
+                      {title}
+                    </p>
                   </div>
                 </motion.button>
               </Link>

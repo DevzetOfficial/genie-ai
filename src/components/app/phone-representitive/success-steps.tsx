@@ -8,23 +8,23 @@ const successSteps = [
   {
     id: 1,
     icon: lighting,
-    title: "Unified Customer Profiles",
+    title: "Unified Prospect Profiles",
     bgColor: "#EDE6C4",
-    shortDetails: `All Interactions And Data Are Consolidated For A Full View Of Each Customer's History.`,
+    shortDetails: `Bring all interactions and data together for a complete view of each prospect’s history. Frank enables personalized, meaningful conversations that move deals forward.`,
   },
   {
     id: 2,
     icon: graph,
     title: "Seamless Handoffs",
     bgColor: "#CBCFE6",
-    shortDetails: `Genie Transfers Complex Calls To Human Agents With Full Context, Ensuring Efficient, Informed Resolutions.`,
+    shortDetails: `When prospects require a deeper touch, Frank passes them to your team with full context, ensuring smooth and informed transitions.`,
   },
   {
     id: 3,
     icon: mail,
-    title: "Real-Time Data Flow",
+    title: "Real-Time Data Integration",
     bgColor: "#CBE6E6",
-    shortDetails: `With Complete CRM Integration, Genie Enhances Every Touchpoint With Rich Customer Data, Creating A Seamless Experience.`,
+    shortDetails: `Frank syncs with your CRM to enrich every call with fresh, actionable data, so you can focus on building pipeline and closing deals.`,
   },
 ];
 
@@ -44,8 +44,8 @@ function SuccessSteps() {
               hidden: { opacity: 0, translateY: 100 },
             }}
           >
-            Genie AI Phone Representative: Features Built for the Modern
-            Business
+            Frank - Your AI Prospecting Assistant: Built for the Modern Sales
+            Team
           </motion.h2>
 
           <motion.p
@@ -60,7 +60,7 @@ function SuccessSteps() {
             className="text-[#010609]/70 [&_br]:hidden [&_br]:lg:block lg:text-xl"
             dangerouslySetInnerHTML={{
               __html:
-                "Genie AI Phone Representative integrates smoothly with your existing CRM, customer support, and communication platforms. If you’re using HubSpot, Salesforce, Zendesk, or other systems, Genie syncs data instantly, providing full customer insights to agents and maintaining consistent service",
+                "Frank integrates seamlessly with your CRM, sales tools, and communication platforms, streamlining your prospecting efforts. Whether you’re using Salesforce, HubSpot, or other systems, Frank ensures real-time data flow, delivering insights that empower your team to connect and close with confidence.",
             }}
           />
         </div>

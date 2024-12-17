@@ -22,7 +22,7 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
   const [scroll, setScroll] = useState<boolean>(false);
   const location = useLocation();
-  const keywords = ["blog", "contact"];
+  const keywords = ["blog", "contact", "terms"];
   const isWhiteNavbar: boolean = keywords.some((keyword) =>
     location.pathname.includes(keyword)
   );
@@ -67,11 +67,12 @@ const Header: React.FC = () => {
                 Frank - AI Phone Representative
               </Link>
             </li>
-            <Link to={"/contact"}>
-              <Button size="sm" variant="default">
+
+            <li>
+              <Button size="sm" onClick={() => openModal()} variant="default">
                 Book a Demo
               </Button>
-            </Link>
+            </li>
           </ul>
         </SheetContent>
       </Sheet>
@@ -101,38 +102,40 @@ const Header: React.FC = () => {
         <Button size="md" onClick={handleModalOpen} variant="default">
           Book a Demo
         </Button>
-
-        <Dialog open={isOpen} onOpenChange={setIsOpen}>
-          <DialogContent className="!p-0 max-w-2xl">
-            <ContactForm />
-          </DialogContent>
-        </Dialog>
       </>
     );
   }
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-10 py-8 duration-300 ${
-        scroll ? "isSticky" : ""
-      } [&.isSticky]:bg-black [&.isSticky]:py-4`}
-    >
-      <div className="container">
-        <div className="flex items-center justify-between">
-          <Link to="/">
-            {isWhiteNavbar && !scroll ? (
-              <img src={logob} alt="Logo Black" />
-            ) : isWhiteNavbar && scroll ? (
-              <img src={logow} alt="Logo White" />
-            ) : (
-              <img src={logow} alt="Logo White" />
-            )}
-          </Link>
+    <>
+      <nav
+        className={`fixed top-0 left-0 w-full z-10 py-8 duration-300 ${
+          scroll ? "isSticky" : ""
+        } [&.isSticky]:bg-black [&.isSticky]:py-4`}
+      >
+        <div className="container">
+          <div className="flex items-center justify-between">
+            <Link to="/">
+              {isWhiteNavbar && !scroll ? (
+                <img src={logob} alt="Logo Black" />
+              ) : isWhiteNavbar && scroll ? (
+                <img src={logow} alt="Logo White" />
+              ) : (
+                <img src={logow} alt="Logo White" />
+              )}
+            </Link>
 
-          {content}
+            {content}
+
+            <Dialog open={isOpen} onOpenChange={setIsOpen}>
+              <DialogContent className="!p-0 max-w-2xl">
+                <ContactForm />
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 

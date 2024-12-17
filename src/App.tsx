@@ -14,7 +14,8 @@ import AIPhoneRepresentativePage from "@/pages/ai-phone-representative-page";
 import ContactPage from "@/pages/contact-page";
 import { Toaster } from "@/components/ui/toaster";
 import { ModalProvider } from "./context/modal-context";
-// import AIWorker from "./pages/ai-worker";
+import TermsPage from "./pages/terms-page";
+import PrivacyPage from "./pages/privacy-page";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,11 +40,12 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog/:id" element={<BlogDetailPage />} />
           <Route path="/ai-sdr" element={<AISDRPage />} />
-          {/* <Route path="/ai-worker" element={<AIWorker />} /> */}
           <Route
             path="/ai-phone-representative"
             element={<AIPhoneRepresentativePage />}
           />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </ModalProvider>

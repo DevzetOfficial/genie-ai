@@ -17,10 +17,10 @@ import aiPhoneSalesImgOne from "@/assets/ai-sales-drive-1.webp";
 import aiPhoneSalesImgTwo from "@/assets/ai-sales-drive-2.webp";
 import aiPhoneSalesImgThree from "@/assets/ai-sales-drive-3.webp";
 import aiPhoneSalesImgFour from "@/assets/ai-sales-drive-4.webp";
-import aiSDRImgOne from "@/assets/ai-sdr-1.webp";
-import aiSDRImgTwo from "@/assets/ai-sdr-2.webp";
-import aiSDRImgThree from "@/assets/ai-sdr-3.webp";
-import aiSDRImgFour from "@/assets/ai-sdr-4.webp";
+import aiPhoneSaleDriveOne from "@/assets/ai-phone-representative/sales-drive-1.webp";
+import aiPhoneSaleDriveTwo from "@/assets/ai-phone-representative/sales-drive-2.webp";
+import aiPhoneSaleDriveThree from "@/assets/ai-phone-representative/sales-drive-3.webp";
+import aiPhoneSaleDriveFour from "@/assets/ai-phone-representative/sales-drive-4.webp";
 
 import sonyasImg from "@/assets/sonya.webp";
 import franksImg from "@/assets/frank.webp";
@@ -67,7 +67,6 @@ export const inteligences = [
 export const homeTestimonials = [
   {
     id: 1,
-    logo: false,
     review:
       "Genie transformed our sales process. With adaptive AI and seamless automation, we’ve achieved unmatched efficiency and lead conversion. Truly game-changing!",
     profileImg: profile,
@@ -77,7 +76,6 @@ export const homeTestimonials = [
   },
   {
     id: 2,
-    logo: false,
     review:
       "Genie Platforms streamlined our sales efforts, enabling us to reach global clients with hyper-personalized outreach like never before.",
     profileImg: profile,
@@ -88,7 +86,6 @@ export const homeTestimonials = [
 
   {
     id: 3,
-    logo: false,
     review:
       "Thanks to Genie Platforms, we connected with thousands of potential learners worldwide, increasing enrollment rates exponentially.",
     profileImg: profile,
@@ -97,8 +94,7 @@ export const homeTestimonials = [
     bgColor: "#B6BBDC",
   },
   {
-    id: 3,
-    logo: false,
+    id: 4,
     review:
       "Genie Platforms transformed our marketing strategy, helping us engage educators and students with precision and scale.",
     profileImg: profile,
@@ -111,36 +107,39 @@ export const homeTestimonials = [
 export const aiSdrTestimonials = [
   {
     id: 1,
-    logo: false,
-    reviewTitle: "Genie has delivered outstanding results.",
     review:
-      "Building our outreach strategy around Genie has transformed our sales efforts, shifting focus from tedious prospecting to engaging in valuable customer meetings.",
+      "Genie transformed our sales process. With adaptive AI and seamless automation, we’ve achieved unmatched efficiency and lead conversion. Truly game-changing!",
     profileImg: profile,
-    reviewerName: "Fredrik Eriksson",
-    designation: " CCO & Co-Founder",
+    reviewerName: "Sriram",
+    designation: " CEO, hrtech.sg",
     bgColor: "#EECBBD",
   },
   {
     id: 2,
-    logo: false,
-    reviewTitle: "Genie opened the door to enterprise deals, on autopilot.",
     review:
-      "We’ve reached top-tier enterprises  consistently with Genie, generating high quality meetings and consolidating our tech stack from 5 platforms into one.",
+      "Genie Platforms streamlined our sales efforts, enabling us to reach global clients with hyper-personalized outreach like never before.",
     profileImg: profile,
-    reviewerName: " Che Sampat",
-    designation: "Founder",
+    reviewerName: "Ashish",
+    designation: "CRO, Nityo Infotech",
     bgColor: "#DAE6E3",
   },
 
   {
     id: 3,
-    logo: false,
-    reviewTitle: "Genie is a game-changer for personalization at scale.",
     review:
-      "Genie’s precision in identifying and engaging ideal prospects has drastically increased our outreach engagement rates. It’s like having a dedicated SDR who works tirelessly.",
+      "Thanks to Genie Platforms, we connected with thousands of potential learners worldwide, increasing enrollment rates exponentially.",
     profileImg: profile,
-    reviewerName: " Amr Mashlah",
-    designation: " Founder & CEO",
+    reviewerName: "Robert",
+    designation: "Head of Marketing & Operations",
+    bgColor: "#B6BBDC",
+  },
+  {
+    id: 4,
+    review:
+      "Genie Platforms transformed our marketing strategy, helping us engage educators and students with precision and scale.",
+    profileImg: profile,
+    reviewerName: "Sanjeev",
+    designation: "CEO, TeachingKrow",
     bgColor: "#B6BBDC",
   },
 ];
@@ -148,36 +147,39 @@ export const aiSdrTestimonials = [
 export const aiPhoneRepresentativeTestimonials = [
   {
     id: 1,
-    logo: false,
-    reviewTitle: " A game-changer for our customer service.",
     review:
-      "Genie’s instant response times and 24/7 availability have transformed how our customers view our brand. The feedback has been overwhelmingly positive, and it’s freed our team to handle complex cases.",
+      "Genie transformed our sales process. With adaptive AI and seamless automation, we’ve achieved unmatched efficiency and lead conversion. Truly game-changing!",
     profileImg: profile,
-    reviewerName: "Amanda Lee",
-    designation: "Head of Customer Experience",
+    reviewerName: "Sriram",
+    designation: " CEO, hrtech.sg",
     bgColor: "#EECBBD",
   },
   {
     id: 2,
-    logo: false,
-    reviewTitle: " Scalability without compromise.",
     review:
-      "We’ve scaled our customer support without the costs of additional staffing, and Genie’s ability to personalize each interaction has improved our customer loyalty.",
+      "Genie Platforms streamlined our sales efforts, enabling us to reach global clients with hyper-personalized outreach like never before.",
     profileImg: profile,
-    reviewerName: "John Michaels",
-    designation: "Director of Operations",
+    reviewerName: "Ashish",
+    designation: "CRO, Nityo Infotech",
     bgColor: "#DAE6E3",
   },
 
   {
     id: 3,
-    logo: false,
-    reviewTitle: " Ideal for global support.",
     review:
-      "Genie’s multi-language feature has enabled us to reach customers worldwide with ease. It’s allowed us to provide the same level of service, no matter where our customers are.",
+      "Thanks to Genie Platforms, we connected with thousands of potential learners worldwide, increasing enrollment rates exponentially.",
     profileImg: profile,
-    reviewerName: "Lillian Chen",
-    designation: "VP of International Support",
+    reviewerName: "Robert",
+    designation: "Head of Marketing & Operations",
+    bgColor: "#B6BBDC",
+  },
+  {
+    id: 4,
+    review:
+      "Genie Platforms transformed our marketing strategy, helping us engage educators and students with precision and scale.",
+    profileImg: profile,
+    reviewerName: "Sanjeev",
+    designation: "CEO, TeachingKrow",
     bgColor: "#B6BBDC",
   },
 ];
@@ -490,38 +492,39 @@ export const blogs: BlogProp[] = [
 ];
 
 export const PhoneRepresentativeSalesDrive: SalesDriveProp = {
-  title: "How Genie Drives Your Sales",
+  title: "Here’s How Frank Accelerates Your Success:",
   items: [
     {
       id: 1,
-      title: "1. Instant Responses That Keep Customers Engaged",
+      title: "1. Effortless Calling with AI Parallel Dialer",
       details:
-        "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
-      image: aiSDRImgOne,
+        "Skip the hassle of answering machines and endless ringing. Automatically logs calls, leaves voicemails, and takes notes while you concentrate on selling. Delivers best-in-class audio quality with the fastest connections.",
+      image: aiPhoneSaleDriveOne,
     },
     {
       id: 2,
-      title: "2. Personalized, Data-Driven Interactions",
+      title: "2. More Conversations, Less Work",
       details:
-        "Engage consistently through email, Linkedin, and other platforms, ensuring a unified approach to every prospect. Genie automates follow-ups, keeping leads warm and engaged across channels without extra manual input.",
-      image: aiSDRImgTwo,
+        "Increase connect rates with built-in spam detection and voice integrity. Finds accurate phone numbers, dials automatically, and even cleans your call list as you go. Enables more human-to-human conversations that lead to a bigger, healthier pipeline.",
+      image: aiPhoneSaleDriveTwo,
     },
     {
       id: 3,
-      title: "3. Real-Time Call Routing and Escalation",
+      title: "3. Be the Expert on Every Call",
       details:
-        "Genie's Al-driven insights allow for targeted outreach with precision that goes beyond human capabilities. Each email and message is customized based on the prospect's role, industry, and specific pain points, resulting in higher engagement and conversion rates.",
-      image: aiSDRImgThree,
+        "Hours of pre-call research delivered in seconds, empowering you with critical insights. Frank isn’t just a dialer; it’s your copilot, ensuring you’re prepared for every conversation.",
+      image: aiPhoneSaleDriveThree,
     },
     {
       id: 4,
-      title: "4. Multi-Language Capabilities for Global Reach",
+      title: "4. Virtual Salesfloor",
       details:
-        "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
-      image: aiSDRImgFour,
+        "Live coaching and real-time collaboration on calls to boost team performance. Managers can provide feedback in the moment, shortening ramp time and increasing conversions",
+      image: aiPhoneSaleDriveFour,
     },
   ],
 };
+
 export const aiSalesDrive: SalesDriveProp = {
   title: "How Sonya Drives Your Sales",
   items: [
@@ -702,14 +705,6 @@ export const homePageComparisonData: ComparisonDataProp = {
     },
     {
       id: 5,
-      category: "Technology",
-      genieFeature:
-        "Plug-and-play, integrates seamlessly with CRM, ERP, and analytics tools",
-      otherAIFeature:
-        "Requires extensive setup and customization to fit workflows.",
-    },
-    {
-      id: 6,
       category: "Management Efficiency",
       genieFeature:
         "Automates across departments, reducing management workload and allowing teams to focus on high-impact tasks.",
@@ -717,7 +712,7 @@ export const homePageComparisonData: ComparisonDataProp = {
         "Single-purpose tools that require manual coordination across systems.",
     },
     {
-      id: 7,
+      id: 6,
       category: "Data Security",
       genieFeature:
         "Industry-standard encryption and compliance, ensuring customer and business data remain secure",
@@ -725,7 +720,7 @@ export const homePageComparisonData: ComparisonDataProp = {
         "May lack comprehensive security measures and compliance standards.",
     },
     {
-      id: 8,
+      id: 7,
       category: "Scalability",
       genieFeature:
         "Grows with your business—handles increasing volume without sacrificing performance or quality.",
@@ -733,7 +728,7 @@ export const homePageComparisonData: ComparisonDataProp = {
         "Often requires additional resources or customization to scale effectively",
     },
     {
-      id: 9,
+      id: 8,
       category: "ROI Tracking",
       genieFeature:
         "Built-in analytics for clear insights on AI-driven performance and ROI across all functions",
@@ -744,61 +739,77 @@ export const homePageComparisonData: ComparisonDataProp = {
 };
 
 export const aiPhonePageComparisonData: ComparisonDataProp = {
-  title: "How Frank Compares to Traditional Call Centers",
+  title: "How Frank Compares to Traditional SDR Teams",
   items: [
     {
       id: 1,
       category: "",
-      genieFeature: "Genie AI Phone Representative",
-      otherAIFeature: "Traditional Call Centers",
+      genieFeature: "Frank - AI Dialing Assistant",
+      otherAIFeature: "Traditional SDR Teams",
     },
     {
       id: 2,
       category: "Cost Efficiency",
       genieFeature:
-        "Automates high-volume inquiries, reducing the need for additional staffing and associated costs. ",
+        "Automates dialing, voicemail drops, note-taking, and list management, reducing overhead and maximizing productivity.",
       otherAIFeature:
-        "Requires extensive staffing and training, leading to higher costs.",
+        "Requires extensive staffing, with added costs for training, coaching, and manual processes.",
     },
     {
       id: 3,
-      category: "24/7 Availability",
+      category: "Anytime Availability",
       genieFeature:
-        "Operates continuously, providing round-the-clock service to customers, regardless of time zones. ",
+        "Can operate in any timezone, allowing prospecting to happen round-the-clock, even outside of business hours.",
       otherAIFeature:
-        "Limited to business hours or incurs significant extra costs for after-hours coverage",
+        "Limited to working hours, with no activity after hours unless additional staff is hired.",
     },
     {
       id: 4,
       category: "Consistency In Quality",
       genieFeature:
-        "Delivers uniform, standardized responses with every interaction, ensuring a consistent experience.",
+        "Provides consistent performance using AI-driven processes, ensuring uniform outreach and follow-ups.",
       otherAIFeature:
-        "Quality can vary between agents due to fatigue or knowledge gaps.",
+        " Quality depends on individual SDRs’ experience, energy levels, and adherence to processes.",
     },
     {
       id: 5,
       category: "Personalization Capabilities",
       genieFeature:
-        "Leverages CRM data and AI to tailor responses based on customer history and preferences, creating a personalized experience.",
+        "Leverages CRM data and AI to tailor every interaction based on a prospect's role, industry, and pain points.",
       otherAIFeature:
-        "Personalization depends on agents’ memory or use of notes, which can lead to inconsistency.",
+        " Personalization relies on manual research and memory, leading to variability in outreach quality.",
     },
     {
       id: 6,
       category: "Call Routing & Escalation",
       genieFeature:
-        "Instantly identifies and routes complex issues to the appropriate team, with context provided for seamless handoffs.",
+        "Seamlessly identifies qualified prospects and hands them off to Account Executives with full context and insights.",
       otherAIFeature:
-        "Often involves lengthy transfers and customers may need to repeat information.",
+        "Transfers may lack context, requiring AEs to requalify leads and potentially frustrating prospects.",
     },
     {
       id: 7,
+      category: "Call Efficiency",
+      genieFeature:
+        "Skips answering machines, automates voicemail drops, and speeds up dialing, maximizing live connections.",
+      otherAIFeature:
+        "SDRs spend significant time manually dialing, leaving voicemails, and navigating unproductive calls.",
+    },
+    {
+      id: 8,
       category: "Multi-Language Support",
       genieFeature:
-        "Provides support across multiple languages automatically, improving access for a global customer base",
+        "Handles outreach in multiple languages using AI capabilities, enabling global prospecting.",
       otherAIFeature:
-        "Limited language support, dependent on availability of multilingual agents.",
+        "Limited to the linguistic capabilities of individual SDRs, restricting international reach.",
+    },
+    {
+      id: 9,
+      category: "Scalability",
+      genieFeature:
+        "Easily scales to handle increased call volumes without additional headcount or training.",
+      otherAIFeature:
+        "Scalability depends on hiring, onboarding, and training new SDRs, which can take months.",
     },
   ],
 };

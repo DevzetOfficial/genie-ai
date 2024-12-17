@@ -127,13 +127,11 @@ const Footer: React.FC = () => {
                 lists={[
                   {
                     label: "Terms",
-                    isExternal: true,
-                    href: "https://www.genieplatforms.ai/terms",
+                    href: "/terms",
                   },
                   {
                     label: "Privacy",
-                    isExternal: true,
-                    href: "https://www.genieplatforms.ai/privacy",
+                    href: "/privacy",
                   },
                   {
                     label: "Contact",

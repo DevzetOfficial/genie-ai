@@ -29,8 +29,6 @@ export type FeatureBoxProp = {
 };
 
 export type TestimonialCardProp = {
-  logo: boolean;
-  testimonialLogo?: string;
   reviewTitle?: string;
   review?: string;
   profileImg?: string;

@@ -10,7 +10,6 @@ const Showcase = () => {
           shortDesc="Our guide to creating high-impact personas will help you target the right leads, enhancing Genie's performance and driving even better results"
           button={{
             label: "Build my persona",
-            url: "/",
           }}
           image={HomeShowcaseOneImg}
         />

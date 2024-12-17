@@ -25,7 +25,7 @@ function HomePage() {
             <Hero
               title={"More Meetings, Zero Stress."}
               shortDesc={
-                "AI-Powered Conversations That Convert. <br/> For Sales, RevOps, and Go-to-Market Teams Ready to Scale Smarter"
+                "AI-Powered Conversations That Convert. <br/> For Sales, RevOps, and Go-to-Market Teams Ready to Scale Smarter."
               }
             />
           </div>

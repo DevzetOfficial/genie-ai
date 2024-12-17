@@ -20,7 +20,7 @@ const WhyChoseFrank: React.FC = () => {
   return (
     <section className="section_gap bg-[#E1E9FE]">
       <div className="container">
-        <FeatureBox index={1} featureData={whyChoose} />
+        <FeatureBox index={0} featureData={whyChoose} />
       </div>
     </section>
   );

@@ -14,14 +14,13 @@ const ShowcaseCard = ({
   shortDesc?: string;
   button?: {
     label: string;
-    url: string;
   };
 }) => {
   const { openModal } = useModal();
 
   return (
     <motion.div
-      className="grid bg-white p-10 rounded-[32px] group md:grid-cols-[5fr_7fr] even:md:grid-cols-[7fr_5fr] gap-10 "
+      className="grid bg-white p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl md:rounded-[32px] group md:grid-cols-[5fr_7fr] even:md:grid-cols-[7fr_5fr] gap-10 "
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
