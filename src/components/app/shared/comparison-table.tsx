@@ -8,6 +8,7 @@ import { Button } from "./frontend-button";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { useModal } from "@/context/modal-context";
+import ShortDesc from "./short-details";
 const ComparisonTable = ({
   data,
   className,
@@ -27,7 +28,7 @@ const ComparisonTable = ({
     <section className={cn("section_gap", className)}>
       <div className="container lg:px-14">
         <div className="max-w-4xl mx-auto mb-10 space-y-4 text-center md:space-y-8 md:mb-20">
-          <motion.h3
+          <motion.h2
             className="text-3xl font-semibold md:text-5xl [&_br]:hidden md:[&_br]:block"
             initial="hidden"
             whileInView="visible"
@@ -39,6 +40,7 @@ const ComparisonTable = ({
             }}
             dangerouslySetInnerHTML={{ __html: data.title || "" }}
           />
+          {data.description && <ShortDesc text={data.description} />}
         </div>
         <motion.div
           className="border rounded-2xl max-lg:overflow-hidden lg:border-none"

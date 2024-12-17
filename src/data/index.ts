@@ -13,10 +13,10 @@ import inteligenceFour from "@/assets/intelligence/intelligence-4.webp";
 import inteligenceFive from "@/assets/intelligence/intelligence-5.jpg";
 import inteligenceSix from "@/assets/intelligence/intelligence-6.webp";
 import profile from "@/assets/profile.png";
-import aiPhoneSalesImgOne from "@/assets/ai-sales-drive-1.webp";
-import aiPhoneSalesImgTwo from "@/assets/ai-sales-drive-2.webp";
-import aiPhoneSalesImgThree from "@/assets/ai-sales-drive-3.webp";
-import aiPhoneSalesImgFour from "@/assets/ai-sales-drive-4.webp";
+import aiSdrSalesImgOne from "@/assets/ai-sdr/sale-drive-1.webp";
+import aiSdrSalesImgTwo from "@/assets/ai-sdr/sale-drive-2.webp";
+import aiSdrSalesImgThree from "@/assets/ai-sdr/sale-drive-3.webp";
+import aiSdrSalesImgFour from "@/assets/ai-sdr/sale-drive-3.webp";
 import aiPhoneSaleDriveOne from "@/assets/ai-phone-representative/sales-drive-1.webp";
 import aiPhoneSaleDriveTwo from "@/assets/ai-phone-representative/sales-drive-2.webp";
 import aiPhoneSaleDriveThree from "@/assets/ai-phone-representative/sales-drive-3.webp";
@@ -533,28 +533,28 @@ export const aiSalesDrive: SalesDriveProp = {
       title: "1. Find Your Ideal Buyers ",
       details:
         "With Genie, create an Ideal Customer Profile and reach high-value buyers globally. Genie connects with potential leads across industries, pinpointing those who match your target profile and positioning your brand to make the best impression.",
-      image: aiPhoneSalesImgOne,
+      image: aiSdrSalesImgOne,
     },
     {
       id: 2,
       title: "2. Unified Multi-Channel Engagement",
       details:
         "Engage consistently through email, Linkedin, and other platforms, ensuring a unified approach to every prospect. Genie automates follow-ups, keeping leads warm and engaged across channels without extra manual input.",
-      image: aiPhoneSalesImgTwo,
+      image: aiSdrSalesImgTwo,
     },
     {
       id: 3,
       title: "3. Hyper-Personalization at Scale",
       details:
         "Genie's Al-driven insights allow for targeted outreach with precision that goes beyond human capabilities. Each email and message is customized based on the prospect's role, industry, and specific pain points, resulting in higher engagement and conversion rates.",
-      image: aiPhoneSalesImgThree,
+      image: aiSdrSalesImgThree,
     },
     {
       id: 4,
       title: "4. Always-On Functionality",
       details:
         "Operate your sales function 24/7 with Genie's autonomous capabilities. Genie SDR runs continuously, engaging leads, qualifying interest, and setting up appointments while your team focuses on strategic growth initiatives.",
-      image: aiPhoneSalesImgFour,
+      image: aiSdrSalesImgFour,
     },
   ],
 };
@@ -740,6 +740,8 @@ export const homePageComparisonData: ComparisonDataProp = {
 
 export const aiPhonePageComparisonData: ComparisonDataProp = {
   title: "How Frank Compares to Traditional SDR Teams",
+  description:
+    "Frank empowers sales teams to focus on meaningful conversations and pipeline growth while eliminating manual busywork, offering a scalable, efficient, and consistent solution for modern prospecting.",
   items: [
     {
       id: 1,

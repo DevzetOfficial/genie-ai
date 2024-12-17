@@ -21,10 +21,18 @@ const meetAgentFeatures: FeatureBoxProp[] = [
       url: "/ai-sdr",
     },
     capabilities: [
-      "Targeted Outreach",
-      "Lead Qualification",
-      "Smart Personalization",
-      "Automated Follow-Ups",
+      {
+        title: "Targeted Outreach",
+      },
+      {
+        title: "Lead Qualification",
+      },
+      {
+        title: "Smart Personalization",
+      },
+      {
+        title: "Automated Follow-Ups",
+      },
     ],
   },
   {
@@ -42,10 +50,18 @@ const meetAgentFeatures: FeatureBoxProp[] = [
       url: "/ai-phone-representative",
     },
     capabilities: [
-      "Instant Inquiry Responses",
-      "Efficient Transaction Handling",
-      "Effortless Escalation",
-      "Multi-Language Support",
+      {
+        title: "Instant Inquiry Responses",
+      },
+      {
+        title: "Efficient Transaction Handling",
+      },
+      {
+        title: "Effortless Escalation",
+      },
+      {
+        title: "Multi-Language Support",
+      },
     ],
   },
 ];

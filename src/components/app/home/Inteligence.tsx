@@ -7,14 +7,16 @@ import IntelligenceCard from "./inteligence-card";
 import { Autoplay } from "swiper/modules";
 import SectionTitle from "../shared/title";
 import { inteligences } from "@/data";
+import ShortDesc from "../shared/short-details";
 
 function Inteligence() {
   return (
     <section className="section_gap bg-[#E1E9FE] px-4 lg:px-0">
-      <div className="max-w-[660px] mx-auto mb-8 md:mb-16 text-center">
+      <div className="max-w-4xl grid gap-4 mx-auto mb-8 md:mb-16 text-center">
         <SectionTitle color={"#010609"} weight={600}>
-          Business Intelligence at Your Fingertips.
+          Get Started With Genie Today.
         </SectionTitle>
+        <ShortDesc text="Experience the power of Genie, your 24/7 Al Sales Development Representative, </br> at a fraction of the cost of a human SDR." />
       </div>
 
       <Swiper

@@ -11,9 +11,10 @@ function ShortDesc({ text }: { text: string }) {
           ? "opacity-100 translate-y-0 rotate-0"
           : "translate-y-[100px] opacity-0"
       }`}
-    >
-      {text}
-    </motion.p>
+      dangerouslySetInnerHTML={{
+        __html: text,
+      }}
+    />
   );
 }
 

@@ -22,7 +22,7 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
   const [scroll, setScroll] = useState<boolean>(false);
   const location = useLocation();
-  const keywords = ["blog", "contact", "terms"];
+  const keywords = ["blog", "contact", "terms", "privacy"];
   const isWhiteNavbar: boolean = keywords.some((keyword) =>
     location.pathname.includes(keyword)
   );

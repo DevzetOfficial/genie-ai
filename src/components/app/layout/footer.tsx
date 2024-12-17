@@ -1,13 +1,12 @@
 import React from "react";
 import footerLogo from "@/assets/foooter-logo.svg";
 import { Link } from "react-router-dom";
-import NewsLetter from "../shared/news-letter";
 
-const FooterNavTitle = ({ text }: { text: string }) => (
-  <div className="mb-6 md:mb-8">
-    <h5 className="text-sm  text-[#637189] font-instrument">{text}</h5>
-  </div>
-);
+// const FooterNavTitle = ({ text }: { text: string }) => (
+//   <div className="mb-6 md:mb-8">
+//     <h5 className="text-sm  text-[#637189] font-instrument">{text}</h5>
+//   </div>
+// );
 
 const FooterNavList = ({
   lists,
@@ -42,7 +41,6 @@ const Footer: React.FC = () => {
               <p className="mb-8 text-lg text-white mt-14">
                 Join our newsletter to stay up to date on features and releases.
               </p>
-              <NewsLetter inputClass="max-w-[351px] border-white/30 text-white" />
               <p className="mt-4 text-white/50">
                 By subscribing you agree to with our Privacy Policy and provide
                 consent to receive updates from our company.
@@ -121,8 +119,6 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="md:col-span-3 lg:col-span-1">
-              <FooterNavTitle text="Support" />
-
               <FooterNavList
                 lists={[
                   {

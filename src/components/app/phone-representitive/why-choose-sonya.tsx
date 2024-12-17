@@ -8,10 +8,18 @@ const whyChoose: FeatureBoxProp = {
     "Sonya’s handles your prospecting, outreach, and lead engagement so your sales team can focus on closing deals.",
   image: sonyasImg,
   capabilities: [
-    "Instant Inquiry Responses",
-    "Efficient Transaction Handling",
-    "Effortless Escalation",
-    "Multi-Language Support",
+    {
+      title: "Instant Inquiry Responses",
+    },
+    {
+      title: "Efficient Transaction Handling",
+    },
+    {
+      title: "Effortless Escalation",
+    },
+    {
+      title: "Multi-Language Support",
+    },
   ],
 };
 

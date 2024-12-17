@@ -25,7 +25,7 @@ export type FeatureBoxProp = {
     label: string;
     url: string;
   };
-  capabilities?: string[];
+  capabilities?: { title: string; description?: string }[];
 };
 
 export type TestimonialCardProp = {
@@ -70,6 +70,7 @@ export type WorkforceRevulationProp = {
 
 export type ComparisonDataProp = {
   title: string;
+  description?: string;
   items: {
     id: number;
     category?: string;

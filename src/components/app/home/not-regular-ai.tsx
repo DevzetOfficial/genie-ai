@@ -51,9 +51,8 @@ const NotRegularAi = () => {
                 link: "/ai-phone-representative",
               },
             ].map(({ title, icon, link }, index) => (
-              <Link to={link}>
+              <Link to={link} key={index}>
                 <motion.button
-                  key={index}
                   className="p-px rounded-2xl md:rounded-3xl bg-gradient-to-tr from-primary via-[#D103C0] to-primary overflow-hidden"
                   variants={fadeInAnimationVariants}
                   initial="initial"

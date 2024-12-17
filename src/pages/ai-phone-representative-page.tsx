@@ -36,8 +36,7 @@ function AIPhoneRepresentativePage() {
           <BrandsMarquee />
         </div>
         <video
-          id="heroVideo"
-          className="z-[-2] max-sm:hidden absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="z-[-2] absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-auto max-w-none 2xl:w-full 2xl:h-auto"
           autoPlay
           loop
           muted

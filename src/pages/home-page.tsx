@@ -11,8 +11,8 @@ import Inteligence from "@/components/app/home/Inteligence";
 import { BrandsMarquee } from "@/components/app/shared/brands";
 import NotRegularAi from "@/components/app/home/not-regular-ai";
 import ComparisonTable from "@/components/app/shared/comparison-table";
-import GetStartedVideo from "@/components/app/shared/get-started-video";
-import HomeGetStartedVideoThumb from "@/assets/home-video-thumbnail.webp";
+// import GetStartedVideo from "@/components/app/shared/get-started-video";
+// import HomeGetStartedVideoThumb from "@/assets/home-video-thumbnail.webp";
 import MeetAgentFeature from "@/components/app/home/meet-agent-feature";
 import FAQArea from "@/components/app/shared/faq";
 
@@ -33,8 +33,7 @@ function HomePage() {
         </div>
 
         <video
-          id="heroVideo"
-          className="max-sm:hidden z-[-2] absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="z-[-2] absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-auto max-w-none 2xl:w-full 2xl:h-auto"
           autoPlay
           loop
           muted
@@ -45,13 +44,13 @@ function HomePage() {
 
       <Agent />
 
-      <GetStartedVideo
+      {/* <GetStartedVideo
         className="pt-0 md:pt-0 lg:pt-0"
         shortDesc="Experience the power of Genie, your 24/7 Al Sales Development <br/> Representative, at a fraction of the cost of a human SDR."
         title="Get Started With Genie Today."
         videoUrl="https://www.youtube.com/embed/Oa0ZHfcalCM?si=u3DXwGf1_8N16I8I?autoplay=1"
         thumbnail={HomeGetStartedVideoThumb}
-      />
+      /> */}
 
       <Inteligence />
 

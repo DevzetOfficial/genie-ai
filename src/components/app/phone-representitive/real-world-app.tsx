@@ -43,6 +43,7 @@ function RealWorldApp() {
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8">
           {realWorldAppInfo.map((step, index) => (
             <SuccessCard
+              key={index}
               index={index}
               bgColor={step.bgColor}
               title={step.title}

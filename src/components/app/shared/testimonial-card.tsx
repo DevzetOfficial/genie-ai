@@ -40,52 +40,38 @@ const TestimonialCard = ({
       }}
       custom={testimonial.index}
     >
-      {testimonial.logo ? (
-        <div className="flex justify-center items-center size-full">
-          {testimonial.testimonialLogo && (
-            <div>
-              <img
-                src={testimonial.testimonialLogo}
-                alt="Brand Logo"
-                className="size-full"
-              />
-            </div>
-          )}
-        </div>
-      ) : (
-        <div className=" size-full flex flex-col justify-between gap-12">
-          {testimonial.reviewTitle && (
-            <h4 className="text-xl md:text-2xl font-semibold text-black">
-              {testimonial.reviewTitle}
-            </h4>
-          )}
+      <div className="size-full flex flex-col justify-between gap-12">
+        {testimonial.reviewTitle && (
+          <h4 className="text-xl md:text-2xl font-semibold text-black">
+            {testimonial.reviewTitle}
+          </h4>
+        )}
 
-          {testimonial.review && (
-            <p className="text-lg md:text-xl font-semibold text-[rgba(0,0,0,0.70)]">
-              “{testimonial.review}”
-            </p>
-          )}
-          <div className="flex items-center gap-2.5">
-            {testimonial.profileImg && (
-              <div className="size-12 rounded-full bg-white flex items-center justify-center">
-                <Image className="text-gray-500 h-5 w-5" />
-              </div>
-            )}
-            <div>
-              {testimonial.reviewerName && (
-                <span className="font-medium text-black block">
-                  {testimonial.reviewerName}
-                </span>
-              )}
-              {testimonial.designation && (
-                <span className="text-[rgba(0,0,0,0.7)] block">
-                  {testimonial.designation}
-                </span>
-              )}
+        {testimonial.review && (
+          <p className="text-lg md:text-xl font-semibold text-[rgba(0,0,0,0.70)]">
+            “{testimonial.review}”
+          </p>
+        )}
+        <div className="flex items-center gap-2.5">
+          {testimonial.profileImg && (
+            <div className="size-12 rounded-full bg-white flex items-center justify-center">
+              <Image className="text-gray-500 h-5 w-5" />
             </div>
+          )}
+          <div>
+            {testimonial.reviewerName && (
+              <span className="font-medium text-black block">
+                {testimonial.reviewerName}
+              </span>
+            )}
+            {testimonial.designation && (
+              <span className="text-[rgba(0,0,0,0.7)] block">
+                {testimonial.designation}
+              </span>
+            )}
           </div>
         </div>
-      )}
+      </div>
     </motion.div>
   );
 };

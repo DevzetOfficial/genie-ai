@@ -22,9 +22,9 @@ const CompareCard = ({
         {data.withGenie ? "With Sonya (Genie)" : "Without Sonya (Genie)"}
       </span>
       <ul className="space-y-3 md:space-y-4 lg:space-y-6">
-        {data.items.map((item) => (
+        {data.items.map((item, i) => (
           <motion.li
-            key={data.id}
+            key={i}
             className="text-lg lg:text-xl font-medium text-[#282828] flex items-center gap-4"
             variants={fadeInAnimationSlowVarients}
             initial="initial"

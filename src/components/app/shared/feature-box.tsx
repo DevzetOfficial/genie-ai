@@ -1,12 +1,11 @@
-import { FeatureBoxProp } from "@/types";
-import KeyFeature from "./keyfeatures";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { Button } from "./frontend-button";
 import { ArrowRight } from "lucide-react";
+import { FeatureBoxProp } from "@/types";
+import { Button } from "./frontend-button";
+import { motion, useInView } from "framer-motion";
+import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
 const FeatureBox = ({
   featureData,
@@ -32,7 +31,7 @@ const FeatureBox = ({
           >
             <h2
               className={cn(
-                `text-3xl md:text-5xl xl:text-[64px] font-semibold  `,
+                `text-3xl md:text-5xl xl:text-6xl font-semibold  `,
                 featureData.titleClass
               )}
             >
@@ -114,9 +113,20 @@ const FeatureBox = ({
           {!!featureData.capabilities && (
             <ul className="space-y-3 md:space-y-5">
               {featureData.capabilities?.map((item, index) => (
-                <KeyFeature key={index} index={index}>
-                  {item}
-                </KeyFeature>
+                <li
+                  key={index}
+                  className="pl-6 relative text-black font-medium  text-lg leading-snug  md:text-xl before:left-0 before:absolute before:top-2.5 before:size-2 before:bg-primary before:rounded-full"
+                >
+                  <h4>{item.title}</h4>
+                  {item.description && (
+                    <p
+                      className="text-sm opacity-80"
+                      dangerouslySetInnerHTML={{
+                        __html: item.description,
+                      }}
+                    />
+                  )}
+                </li>
               ))}
             </ul>
           )}

@@ -13,7 +13,7 @@ const CompareToCallCenter: React.FC = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-12 md:gap-4">
           {compareToCallData?.map((data, index) => (
-            <CompareCard key={data.id} data={data} index={index} />
+            <CompareCard key={index} data={data} index={index} />
           ))}
         </div>
       </div>

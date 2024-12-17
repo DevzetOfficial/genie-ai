@@ -8,9 +8,16 @@ const whyChoose: FeatureBoxProp = {
   shortDesc: "",
   image: whyChoseCover,
   capabilities: [
-    "24/7 Operation: Reach leads anytime, without delays.",
-    "Cost Efficiency: Save on SDR hiring and training costs.",
-    "Consistent Engagement: No fatigue, maximizing outreach volume and quality.",
+    {
+      title: "24/7 Operation: Reach leads anytime, without delays.",
+    },
+    {
+      title: "Cost Efficiency: Save on SDR hiring and training costs.",
+    },
+    {
+      title:
+        "Consistent Engagement: No fatigue, maximizing outreach volume and quality.",
+    },
   ],
 };
 
