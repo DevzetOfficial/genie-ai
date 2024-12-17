@@ -29,18 +29,31 @@ const FormSchema = z.object({
     .string({
       required_error: "Please enter your name",
     })
-    .min(2, {
+    .min(1, {
       message: "Name must be at least 2 characters.",
     }),
-  email: z.string().email().min(1, {
-    message: "Email is required",
-  }),
-  team: z.string({
-    required_error: "Please select an team.",
-  }),
-  worker_type: z.string({
-    required_error: "Please select an worker type.",
-  }),
+  email: z
+    .string()
+    .email({
+      message: "Please enter your email",
+    })
+    .min(1, {
+      message: "Email is required",
+    }),
+  team: z
+    .string({
+      required_error: "Please select an team.",
+    })
+    .min(1, {
+      message: "Please select a team",
+    }),
+  worker_type: z
+    .string({
+      required_error: "Please select an worker type.",
+    })
+    .min(1, {
+      message: "Please select a worker type",
+    }),
   message: z.string().optional(),
 });
 
