@@ -16,7 +16,7 @@ import profile from "@/assets/profile.png";
 import aiSdrSalesImgOne from "@/assets/ai-sdr/sale-drive-1.webp";
 import aiSdrSalesImgTwo from "@/assets/ai-sdr/sale-drive-2.webp";
 import aiSdrSalesImgThree from "@/assets/ai-sdr/sale-drive-3.webp";
-import aiSdrSalesImgFour from "@/assets/ai-sdr/sale-drive-3.webp";
+import aiSdrSalesImgFour from "@/assets/ai-sales-drive-4.webp";
 import aiPhoneSaleDriveOne from "@/assets/ai-phone-representative/sales-drive-1.webp";
 import aiPhoneSaleDriveTwo from "@/assets/ai-phone-representative/sales-drive-2.webp";
 import aiPhoneSaleDriveThree from "@/assets/ai-phone-representative/sales-drive-3.webp";
