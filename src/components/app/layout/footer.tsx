@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "@/assets/foooter-logo.svg";
+import footerLogo from "@/assets/logoai.png";
 import { Link } from "react-router-dom";
 
 // const FooterNavTitle = ({ text }: { text: string }) => (
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           <div className="grid items-start grid-cols-2 gap-8 sm:grid-cols-12 md:gap-4">
             <div className="col-span-2 sm:col-span-4 sm:row-span-2 lg:row-span-1 lg:col-span-5">
               <Link to="/">
-                <img src={footerLogo} alt="Footer Logo" />
+                <img src={footerLogo} className="h-12" alt="Footer Logo" />
               </Link>
               <p className="mb-8 text-lg text-white mt-14">
                 Join our newsletter to stay up to date on features and releases.

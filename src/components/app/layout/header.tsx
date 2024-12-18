@@ -7,8 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignRight } from "lucide-react";
-import logow from "@/assets/logo-w.svg";
-import logob from "@/assets/logo-black.svg";
+import logoAi from "@/assets/logoai.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -116,13 +115,7 @@ const Header: React.FC = () => {
         <div className="container">
           <div className="flex items-center justify-between">
             <Link to="/">
-              {isWhiteNavbar && !scroll ? (
-                <img src={logob} alt="Logo Black" />
-              ) : isWhiteNavbar && scroll ? (
-                <img src={logow} alt="Logo White" />
-              ) : (
-                <img src={logow} alt="Logo White" />
-              )}
+              <img src={logoAi} className="h-10" alt="Logo" />
             </Link>
 
             {content}
