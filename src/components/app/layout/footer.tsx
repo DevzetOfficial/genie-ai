@@ -13,7 +13,7 @@ const FooterNavList = ({
 }: {
   lists: { label: string; href: string; isExternal?: boolean }[];
 }) => (
-  <ul className="flex flex-col gap-5 md:gap-6 lg:gap-8">
+  <ul className="flex md:flex-col flex-row gap-5 md:gap-6 lg:gap-8">
     {lists?.map(({ label, href, isExternal }, index) => (
       <li key={index}>
         <Link
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
     <section className="bg-black">
       <footer className="pt-20 md:pt-[222px] font-instrument">
         <div className="container">
-          <div className="grid items-start grid-cols-2 gap-8 sm:grid-cols-12 md:gap-4">
+          <div className="flex items-center flex-col md:flex-row md:justify-between gap-5">
             <div className="col-span-2 sm:col-span-4 sm:row-span-2 lg:row-span-1 lg:col-span-5">
               <Link to="/">
                 <img src={footerLogo} className="h-12" alt="Footer Logo" />
@@ -47,8 +47,27 @@ const Footer: React.FC = () => {
               </p>
             </div>
 
-            <div className="sm:col-span-3 lg:col-span-2">
-              {/* <FooterNavTitle text="Features" />
+            <div>
+              <FooterNavList
+                lists={[
+                  {
+                    label: "Terms",
+                    href: "/terms",
+                  },
+                  {
+                    label: "Privacy",
+                    href: "/privacy",
+                  },
+                  {
+                    label: "Contact",
+                    href: "/contact",
+                  },
+                ]}
+              />
+            </div>
+
+            {/* <div className="sm:col-span-3 lg:col-span-2"> */}
+            {/* <FooterNavTitle text="Features" />
 
               <FooterNavList
                 lists={[
@@ -74,10 +93,10 @@ const Footer: React.FC = () => {
                   },
                 ]}
               /> */}
-            </div>
+            {/* </div> */}
 
-            <div className="sm:col-span-3 lg:col-span-2">
-              {/* <FooterNavTitle text="Product" />
+            {/* <div className="sm:col-span-3 lg:col-span-2"> */}
+            {/* <FooterNavTitle text="Product" />
 
               <FooterNavList
                 lists={[
@@ -95,10 +114,10 @@ const Footer: React.FC = () => {
                   },
                 ]}
               /> */}
-            </div>
+            {/* </div> */}
 
-            <div className="sm:col-span-3 lg:col-span-2">
-              {/* <FooterNavTitle text="Company" />
+            {/* <div className="sm:col-span-3 lg:col-span-2"> */}
+            {/* <FooterNavTitle text="Company" />
 
               <FooterNavList
                 lists={[
@@ -116,26 +135,7 @@ const Footer: React.FC = () => {
                   },
                 ]}
               /> */}
-            </div>
-
-            <div className="md:col-span-3 lg:col-span-1">
-              <FooterNavList
-                lists={[
-                  {
-                    label: "Terms",
-                    href: "/terms",
-                  },
-                  {
-                    label: "Privacy",
-                    href: "/privacy",
-                  },
-                  {
-                    label: "Contact",
-                    href: "/contact",
-                  },
-                ]}
-              />
-            </div>
+            {/* </div> */}
           </div>
 
           <div className="flex items-center justify-center text-center py-10 text-xs md:py-16 text-white/50">
