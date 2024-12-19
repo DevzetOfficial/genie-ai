@@ -40,6 +40,7 @@ function AIPhoneRepresentativePage() {
           autoPlay
           loop
           muted
+          playsInline
         >
           <source src={AiPageVideo} type="video/mp4" />
         </video>

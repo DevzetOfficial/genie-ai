@@ -37,6 +37,7 @@ function HomePage() {
           autoPlay
           loop
           muted
+          playsInline
         >
           <source src={HeroVideo} type="video/mp4" />
         </video>
