@@ -62,15 +62,15 @@ const FeatureBox = ({
           />
 
           {featureData.shortDesc && (
-            <h4
-              className={`font-semibold mt-8 md:mt-10 text-[#010609] leading-normal duration-1000   ${
+            <span
+              className={`block font-semibold mt-8 md:mt-10 text-[#010609] leading-normal duration-1000   ${
                 isInView
                   ? "opacity-100 translate-y-0 rotate-0"
                   : "translate-y-[100px] opacity-0"
               }`}
             >
               {featureData.shortDesc}
-            </h4>
+            </span>
           )}
 
           {featureData.button && (
@@ -100,7 +100,7 @@ const FeatureBox = ({
           {!!featureData.capabilities && (
             <motion.span
               ref={ref}
-              className={`text-xl opacity-50 font-semibold duration-700 ${
+              className={`text-xl opacity-80 font-semibold duration-700 ${
                 isInView
                   ? "opacity-100 translate-y-0 rotate-0"
                   : "translate-y-[100px] opacity-0"
@@ -117,7 +117,7 @@ const FeatureBox = ({
                   key={index}
                   className="pl-6 relative text-black font-medium  text-lg leading-snug  md:text-xl before:left-0 before:absolute before:top-2.5 before:size-2 before:bg-primary before:rounded-full"
                 >
-                  <h4>{item.title}</h4>
+                  <span>{item.title}</span>
                   {item.description && (
                     <p
                       className="text-sm opacity-80"

@@ -1,9 +1,9 @@
-import statisticsImage from "@/assets/real-time-insights.jpg";
-import { Button } from "@/components/app/shared/frontend-button";
+import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { useModal } from "@/context/modal-context";
+import statisticsImage from "@/assets/real-time-insights.webp";
+import { Button } from "@/components/app/shared/frontend-button";
 
 function Statistics() {
   const ref = useRef(null);

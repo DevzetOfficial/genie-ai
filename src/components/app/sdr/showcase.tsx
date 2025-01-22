@@ -1,5 +1,5 @@
 import ShowcaseCard from "@/components/app/shared/showcase-card";
-import HomeShowcaseOneImg from "@/assets/home-showcase-1.png";
+import HomeShowcaseOneImg from "@/assets/home-showcase-1.webp";
 
 const Showcase = () => {
   return (

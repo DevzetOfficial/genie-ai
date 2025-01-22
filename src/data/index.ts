@@ -10,7 +10,7 @@ import inteligenceOne from "@/assets/intelligence/intelligence-1.webp";
 import inteligenceTwo from "@/assets/intelligence/intelligence-2.webp";
 import inteligenceThree from "@/assets/intelligence/intelligence-3.webp";
 import inteligenceFour from "@/assets/intelligence/intelligence-4.webp";
-import inteligenceFive from "@/assets/intelligence/intelligence-5.jpg";
+import inteligenceFive from "@/assets/intelligence/intelligence-5.webp";
 import inteligenceSix from "@/assets/intelligence/intelligence-6.webp";
 import profile from "@/assets/profile.png";
 import aiSdrSalesImgOne from "@/assets/ai-sdr/sale-drive-1.webp";

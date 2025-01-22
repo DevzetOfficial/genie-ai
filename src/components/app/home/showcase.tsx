@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/app/shared/frontend-button";
-import HomeShowcaseOneImg from "@/assets/home-showcase-1.png";
-import HomeShowcaseTwoImg from "@/assets/home-showcase-2.png";
+import HomeShowcaseOneImg from "@/assets/home-showcase-1.webp";
+import HomeShowcaseTwoImg from "@/assets/home-showcase-2.webp";
 import ShowcaseCard from "../shared/showcase-card";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";

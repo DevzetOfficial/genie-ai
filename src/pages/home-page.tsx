@@ -1,7 +1,7 @@
 import Layout from "@/components/app/layout";
 import Hero from "@/components/app/shared/Hero";
-import { homeFaq, homePageComparisonData, homeTestimonials } from "@/data";
 import Agent from "@/components/app/home/agent";
+import FAQArea from "@/components/app/shared/faq";
 import Showcase from "@/components/app/home/showcase";
 import HeroVideo from "@/assets/videos/hero-video.mp4";
 import Statistics from "@/components/app/home/statistics";
@@ -14,7 +14,7 @@ import ComparisonTable from "@/components/app/shared/comparison-table";
 // import GetStartedVideo from "@/components/app/shared/get-started-video";
 // import HomeGetStartedVideoThumb from "@/assets/home-video-thumbnail.webp";
 import MeetAgentFeature from "@/components/app/home/meet-agent-feature";
-import FAQArea from "@/components/app/shared/faq";
+import { homeFaq, homePageComparisonData, homeTestimonials } from "@/data";
 
 function HomePage() {
   return (
