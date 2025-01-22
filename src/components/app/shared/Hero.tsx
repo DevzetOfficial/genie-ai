@@ -44,7 +44,7 @@ const Hero: React.FC<HeroProps> = ({
         />
         <motion.p
           ref={ref}
-          className={`text-xl md:text-2xl leading-normal opacity-80 mb-6 md:mb-[56px] duration-1000 delay-200 ${
+          className={`text-lg sm:text-xl md:text-2xl leading-normal opacity-80 mb-6 md:mb-[56px] duration-1000 delay-200 ${
             isInView
               ? "opacity-100 translate-y-0 rotate-0"
               : "translate-y-[200px] opacity-0"
